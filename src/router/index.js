@@ -16,7 +16,7 @@ export const router = createRouter({
   routes,
   scrollBehavior (to, from, saved) {
     if (saved) return saved
-    if (to.hash) return { el: to.hash, behavior: 'smooth' }
+    if (to.hash) return { el: to.hash, behavior: 'smooth', top: 92 }
     return { top: 0 }
   }
 })

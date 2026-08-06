@@ -54,10 +54,16 @@
   --ease:cubic-bezier(.22,.61,.36,1);
   --ease-out:cubic-bezier(.16,1,.3,1);
   --dur:.55s;
+
+  /* don (grain) — qorong'i yuzalarga "plyonka" fakturasi beradi */
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+html{
+  scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;
+  scroll-padding-top:calc(var(--header-h) + 14px);  /* fixed header ostiga tushmasin */
+}
 body{
   margin:0;
   font-family:var(--font-body);
@@ -92,10 +98,68 @@ h1 em,h2 em{font-style:normal;color:var(--azure-soft)}
 .section{padding:96px 0;position:relative}
 .section--tight{padding:64px 0}
 .section--surface{background:var(--surface)}
-.section--ink{background:var(--ink);color:#fff;overflow:hidden}
+.section--ink{
+  color:#fff;overflow:hidden;isolation:isolate;
+  background:
+    radial-gradient(100% 70% at 82% 0%,#1A2358 0%,transparent 58%),
+    radial-gradient(80% 60% at 0% 100%,#141C46 0%,transparent 62%),
+    linear-gradient(165deg,#05081A 0%,#0A1030 60%,#0E1638 100%);
+}
 .section--ink h2,.section--ink h3{color:#fff}
 .section--ink p{color:var(--muted-dark)}
 .seam{height:1px;background:linear-gradient(90deg,transparent,var(--line-2) 18%,var(--line-2) 82%,transparent)}
+
+/* ---------- qorong'i hero: aurora + don + pastki eritma ---------- */
+.dark-hero{
+  position:relative;overflow:hidden;isolation:isolate;color:#fff;
+  background:
+    radial-gradient(120% 80% at 78% -10%,#1B2560 0%,transparent 58%),
+    radial-gradient(90% 70% at 6% 104%,#16204E 0%,transparent 60%),
+    linear-gradient(158deg,#05081A 0%,#0A1030 46%,#101940 100%);
+}
+/* rangli "bulutlar" — sekin suzadi */
+.aurora{position:absolute;inset:-15% -10%;pointer-events:none;z-index:0;filter:blur(60px)}
+.aurora i{position:absolute;display:block;border-radius:50%;opacity:.55;mix-blend-mode:screen}
+.aurora i:nth-child(1){
+  width:46vw;height:46vw;right:-6vw;top:-14vw;
+  background:radial-gradient(circle,rgba(46,61,143,.95),transparent 66%);
+  animation:auroraA 19s ease-in-out infinite;
+}
+.aurora i:nth-child(2){
+  width:34vw;height:34vw;left:-8vw;bottom:-14vw;
+  background:radial-gradient(circle,rgba(91,111,214,.7),transparent 66%);
+  animation:auroraB 23s ease-in-out infinite;
+}
+.aurora i:nth-child(3){
+  width:24vw;height:24vw;right:22vw;bottom:-6vw;opacity:.34;
+  background:radial-gradient(circle,rgba(226,59,51,.75),transparent 66%);
+  animation:auroraC 27s ease-in-out infinite;
+}
+@keyframes auroraA{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-6vw,4vw,0) scale(1.12)}}
+@keyframes auroraB{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(5vw,-4vw,0) scale(1.16)}}
+@keyframes auroraC{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-4vw,-3vw,0) scale(1.2)}}
+
+/* nozik texnik to'r */
+.mesh-lines{
+  position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(90% 70% at 28% 30%,#000 10%,transparent 78%);
+  -webkit-mask-image:radial-gradient(90% 70% at 28% 30%,#000 10%,transparent 78%);
+}
+
+/* plyonka doni */
+.grain{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  opacity:.05;background-image:var(--noise);background-size:180px 180px;
+}
+
+/* qorong'idan oq fonga yumshoq o'tish */
+.hero-fade{
+  position:absolute;left:0;right:0;bottom:0;height:140px;pointer-events:none;z-index:1;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.06) 55%,var(--paper));
+}
 
 .section__head{max-width:760px;margin:0 0 48px}
 .lead{font-size:clamp(17px,1.5vw,19.5px);color:var(--muted);line-height:1.6}
@@ -146,8 +210,12 @@ h1 em,h2 em{font-style:normal;color:var(--azure-soft)}
 .btn--primary:hover{background:var(--red-600);box-shadow:0 18px 38px -16px rgba(226,59,51,.95)}
 .btn--dark{background:var(--ink);color:#fff}
 .btn--dark:hover{background:var(--ink-3)}
-.btn--light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.24);backdrop-filter:blur(6px)}
-.btn--light:hover{background:rgba(255,255,255,.16)}
+.btn--light{
+  background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.26);
+  backdrop-filter:blur(10px) saturate(160%);-webkit-backdrop-filter:blur(10px) saturate(160%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+}
+.btn--light:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.42)}
 .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
 .btn--ghost:hover{border-color:var(--ink);background:var(--surface)}
 .btn--sm{padding:10px 18px;font-size:14px}
@@ -162,10 +230,18 @@ h1 em,h2 em{font-style:normal;color:var(--azure-soft)}
 
 /* ---------- kartochkalar ---------- */
 .card{
-  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);
-  padding:26px;box-shadow:var(--e1);
+  position:relative;isolation:isolate;overflow:hidden;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px;box-shadow:var(--e1);
   transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s;
 }
+/* hover'da yuqoridan yengil rangli yorug'lik tushadi */
+.card::before{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;
+  background:linear-gradient(165deg,rgba(46,61,143,.09),transparent 46%);
+  transition:opacity .4s var(--ease);
+}
+.card:hover::before{opacity:1}
 .card:hover{transform:translateY(-4px);box-shadow:var(--e2);border-color:var(--line-2)}
 .card h3{margin-bottom:8px}
 .card p{color:var(--muted);font-size:15.5px;margin:0}

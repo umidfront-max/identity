@@ -7,9 +7,11 @@ const { t } = useLang()
 </script>
 
 <template>
-  <section class="phero">
+  <section class="phero dark-hero">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="mesh-lines" aria-hidden="true"></div>
     <SignalField :density="34" />
-    <div class="phero__glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
     <div class="wrap phero__in">
       <nav class="crumbs">
         <RouterLink to="/">{{ t('nav.home') }}</RouterLink>
@@ -25,18 +27,13 @@ const { t } = useLang()
 </template>
 
 <style scoped>
-.phero{
-  position:relative;overflow:hidden;
-  background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 55%,var(--ink-3) 100%);
-  color:#fff;padding:74px 0 84px;
+.phero{padding:calc(var(--header-h) + 58px) 0 92px}
+/* pastki chekka — yorug' hairline */
+.phero::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;z-index:2;
+  background:linear-gradient(90deg,transparent,rgba(142,155,228,.45),transparent);
 }
-.phero__glow{
-  position:absolute;width:640px;height:640px;left:-160px;top:-330px;border-radius:50%;
-  background:radial-gradient(circle,rgba(46,61,143,.6),transparent 62%);
-  animation:pheroGlow 12s ease-in-out infinite;
-}
-@keyframes pheroGlow{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,50px)}}
-.phero__in{position:relative;max-width:820px}
+.phero__in{position:relative;z-index:2;max-width:820px}
 .crumbs{
   display:flex;gap:10px;align-items:center;font-family:var(--font-mono);font-size:11.5px;
   letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:22px;

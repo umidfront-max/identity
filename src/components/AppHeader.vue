@@ -6,6 +6,7 @@ import { useScrollY } from '@/composables/useMotion.js'
 import LangSwitch from '@/components/LangSwitch.vue'
 import { PRODUCTS } from '@/data/products.js'
 import logoDark from '@/assets/img/logo.png'
+import logoLight from '@/assets/img/logo-white.png'
 
 const { t, p, lang } = useLang()
 const route = useRoute()
@@ -19,7 +20,9 @@ const megaRef = ref(null)
 /* suzuvchi indikator: nav elementlari orasida siljiydi */
 const pill = ref({ x: 0, w: 0, on: false })
 
+/* sahifa tepasida header qorong'i hero ustida suzadi -> oq logotip va yorug' matn */
 const solid = computed(() => y.value > 10)
+const overDark = computed(() => !solid.value && !drawer.value)
 const products = computed(() => PRODUCTS.map(x => ({ slug: x.slug, code: x.code, name: p(x).name })))
 
 function movePill (el) {
@@ -65,11 +68,12 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="hdr" :class="{ 'is-solid': solid, 'is-open': drawer }">
+  <header class="hdr" :class="{ 'is-solid': solid, 'is-open': drawer, 'is-over': overDark }">
     <div class="hdr__rail">
       <div class="shell">
         <RouterLink to="/" class="logo" aria-label="Identity">
-          <img :src="logoDark" alt="Identity" width="150">
+          <img class="logo__img" :src="logoDark" alt="Identity" width="150">
+          <img class="logo__img logo__img--light" :src="logoLight" alt="" aria-hidden="true" width="150">
           <span class="logo__sheen" aria-hidden="true"></span>
         </RouterLink>
 
@@ -182,14 +186,20 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* ============ karkas: balandlik doim o'zgarmas, ichki qobiq suziladi ============ */
-.hdr{position:sticky;top:0;z-index:60}
+/* ============ karkas: qorong'i hero ustida suzadi, scroll'da shisha orolga aylanadi ============ */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:60}
 .hdr::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(255,255,255,.92) 15%,rgba(255,255,255,0));
-  transition:opacity .45s var(--ease);
+  content:'';position:absolute;inset:0 0 -30px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,8,26,.55),transparent);
+  opacity:0;transition:opacity .45s var(--ease);
 }
-.hdr.is-solid::before{opacity:0}
+.hdr.is-over::before{opacity:1}
+/* menyu ochiq — panel yorug', shuning uchun tepa qism ham yorug' bo'ladi */
+.hdr.is-open{
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(26px) saturate(180%);
+  -webkit-backdrop-filter:blur(26px) saturate(180%);
+}
 
 .hdr__rail{
   position:relative;display:flex;align-items:center;
@@ -215,8 +225,12 @@ onBeforeUnmount(() => {
 
 /* ============ logo ============ */
 .logo{position:relative;display:block;overflow:hidden;border-radius:8px;flex:none}
-.logo img{height:34px;width:auto;transition:transform .5s var(--ease)}
-.logo:hover img{transform:scale(1.03)}
+.logo__img{height:34px;width:auto;transition:transform .5s var(--ease),opacity .4s var(--ease)}
+/* oq va qora variant bir-birining ustida — o'tish yumshoq */
+.logo__img--light{position:absolute;inset:0;opacity:0}
+.hdr.is-over .logo__img{opacity:0}
+.hdr.is-over .logo__img--light{opacity:1}
+.logo:hover .logo__img{transform:scale(1.03)}
 .logo__sheen{
   position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.85) 50%,transparent 62%);
@@ -243,6 +257,22 @@ onBeforeUnmount(() => {
   transition:color .3s var(--ease);
 }
 .nav__a:hover,.nav__a.router-link-active{color:var(--ink)}
+
+/* --- qorong'i hero ustidagi variant --- */
+.hdr.is-over .nav__a{color:rgba(255,255,255,.72)}
+.hdr.is-over .nav__a:hover,.hdr.is-over .nav__a.router-link-active{color:#fff}
+.hdr.is-over .nav__pill{
+  background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.06));
+  border-color:rgba(255,255,255,.16);
+}
+.hdr.is-over .nav__a::after{background:var(--red-soft)}
+.hdr.is-over .burger{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+.hdr.is-over .burger:hover{background:rgba(255,255,255,.16)}
+.hdr.is-over .burger span{background:#fff}
+.hdr.is-over :deep(.lang__btn){
+  color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);
+}
+.hdr.is-over :deep(.lang__btn:hover){background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.3)}
 .nav__a::after{
   content:'';position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;
   border-radius:50%;background:var(--red);
