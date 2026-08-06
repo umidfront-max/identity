@@ -153,14 +153,14 @@ const why = computed(() => [1, 2, 3, 4].map(n => ({ t: t(`home.why${n}.t`), d: t
 }
 .hero__copy{will-change:transform}
 .hero__h1{
-  font-size:clamp(38px,5.4vw,70px);font-weight:500;max-width:15ch;
-  letter-spacing:-.035em;line-height:1.02;
+  font-size:clamp(31px,3.9vw,52px);font-weight:500;max-width:15ch;
+  letter-spacing:-.03em;line-height:1.08;
   background:linear-gradient(178deg,#fff 42%,rgba(207,214,232,.72));
   -webkit-background-clip:text;background-clip:text;color:transparent;
   animation:heroIn .9s var(--ease-out) .1s both;
 }
 .hero__sub{
-  margin-top:24px;max-width:46ch;font-size:clamp(16.5px,1.5vw,19px);color:var(--muted-dark);
+  margin-top:22px;max-width:46ch;font-size:clamp(16px,1.35vw,18px);color:var(--muted-dark);
   animation:heroIn .9s var(--ease-out) .24s both;
 }
 .hero__cta{
@@ -189,7 +189,9 @@ const why = computed(() => [1, 2, 3, 4].map(n => ({ t: t(`home.why${n}.t`), d: t
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .hero__stats dd{margin:9px 0 0;font-size:12.5px;color:var(--muted-2);line-height:1.4;max-width:16ch}
-.hero__art{will-change:transform;animation:heroIn 1.1s var(--ease-out) .3s both}
+/* faqat opacity — transform inline scroll-parallaks uchun bo'sh qoladi */
+.hero__art{will-change:transform;animation:artIn 1.1s var(--ease-out) .3s both}
+@keyframes artIn{from{opacity:0}to{opacity:1}}
 
 /* ---------- kirish + iqtibos ---------- */
 .intro{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:start}
