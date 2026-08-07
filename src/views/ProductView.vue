@@ -8,6 +8,7 @@ import PageHero from '@/components/PageHero.vue'
 import SectionHead from '@/components/SectionHead.vue'
 import LeadForm from '@/components/LeadForm.vue'
 import ProductTabs from '@/components/ProductTabs.vue'
+import ProductModules from '@/components/ProductModules.vue'
 
 const props = defineProps({ slug: String })
 const { t, p } = useLang()
@@ -29,7 +30,8 @@ const lists = computed(() => [
   { key: 'p.delivery', items: data.value.delivery },
   { key: 'p.compliance', items: data.value.compliance },
   { key: 'p.detectors', items: data.value.detectors },
-  { key: 'p.solutions', items: data.value.solutions }
+  { key: 'p.solutions', items: data.value.solutions },
+  { key: 'p.roadmap', items: data.value.roadmap }
 ].filter(s => Array.isArray(s.items) && s.items.length))
 
 function register () {
@@ -60,6 +62,14 @@ watch(() => props.slug, register)
             {{ t('cta.pilot') }}
           </RouterLink>
         </div>
+      </div>
+    </section>
+
+    <!-- modullar: rasm + imkoniyatlar -->
+    <section v-if="data.modules && data.modules.length" class="section">
+      <div class="wrap">
+        <SectionHead :title="t('p.modules')" :lead="t('p.modulesLead')" />
+        <ProductModules :modules="data.modules" />
       </div>
     </section>
 
