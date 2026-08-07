@@ -21,7 +21,7 @@ function items (layer) {
       v-for="(l, i) in LAYERS" :key="l.k"
       class="layer" :class="{ 'is-active': active === i }"
       :style="{ '--accent': l.c, '--i': i }"
-      v-reveal="i * 90"
+      v-reveal="i * 55"
       @mouseenter="active = i" @focusin="active = i">
       <div class="layer__bar" aria-hidden="true"></div>
 

@@ -10,12 +10,15 @@ function getObserver () {
   if (observer) return observer
   observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-in')
-        observer.unobserve(e.target)
-      }
+      if (!e.isIntersecting) return
+      /* Tez scroll qilinganda element allaqachon ekran tepasidan o'tib ketgan
+         bo'ladi — bunday holda stagger kechikishini bekor qilamiz, aks holda
+         bo'lim bir necha yuz millisekund bo'sh ko'rinib turadi. */
+      if (e.boundingClientRect.top < 0) e.target.style.setProperty('--d', '0ms')
+      e.target.classList.add('is-in')
+      observer.unobserve(e.target)
     })
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 })
+  }, { rootMargin: '0px 0px 14% 0px', threshold: 0 })
   return observer
 }
 
