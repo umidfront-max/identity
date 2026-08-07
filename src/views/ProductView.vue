@@ -11,6 +11,7 @@ import LeadForm from '@/components/LeadForm.vue'
 import ProductTabs from '@/components/ProductTabs.vue'
 import ProductModules from '@/components/ProductModules.vue'
 import ProductTracks from '@/components/ProductTracks.vue'
+import ProductGallery from '@/components/ProductGallery.vue'
 
 const props = defineProps({ slug: String })
 const { t, p } = useLang()
@@ -73,6 +74,15 @@ watch(() => props.slug, register)
             {{ t('cta.presentation') }}
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- rasmli galereya (masalan, bloklangan DeepFake urinishlari) -->
+    <section v-if="data.gallery && data.gallery.items" class="section">
+      <div class="wrap">
+        <SectionHead :title="data.gallery.title" :lead="data.gallery.lead" />
+        <ProductGallery :items="data.gallery.items" :flag-text="data.gallery.flag" />
+        <p v-if="data.gallery.note" class="galnote" v-reveal>{{ data.gallery.note }}</p>
       </div>
     </section>
 
@@ -172,6 +182,7 @@ watch(() => props.slug, register)
 <style scoped>
 .intro{display:grid;grid-template-columns:1.4fr auto;gap:40px;align-items:center}
 .intro__act{display:flex;flex-wrap:wrap;gap:12px}
+.galnote{margin-top:26px;font-size:13.5px;color:var(--muted-2)}
 .intro__lead{font-size:clamp(17px,1.7vw,21px);color:var(--ink);margin:0;line-height:1.5;max-width:58ch}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useLang } from '@/composables/useLang.js'
 import { PROMOS } from '@/data/promos.js'
-import { PROMO_IMAGES } from '@/data/promoImages.js'
+import { IMAGES } from '@/data/images.js'
 import PageHero from '@/components/PageHero.vue'
 import CtaBand from '@/components/CtaBand.vue'
 
@@ -11,7 +11,7 @@ const { t, p } = useLang()
 const promos = computed(() => PROMOS.map(x => ({
   slug: x.slug,
   code: x.code,
-  cover: x.cover ? PROMO_IMAGES[x.cover] : null,
+  cover: x.cover ? IMAGES[x.cover] : null,
   ...p(x)
 })))
 </script>

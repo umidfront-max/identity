@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 import { useLang } from '@/composables/useLang.js'
 import { useAnalytics } from '@/composables/useAnalytics.js'
 import { promoBySlug } from '@/data/promos.js'
-import { PROMO_IMAGES } from '@/data/promoImages.js'
+import { IMAGES } from '@/data/images.js'
 import PageHero from '@/components/PageHero.vue'
 import SectionHead from '@/components/SectionHead.vue'
 import LeadForm from '@/components/LeadForm.vue'
@@ -56,7 +56,7 @@ watch(() => props.slug, register)
           <figure v-for="(ex, i) in data.examples" :key="i" class="shot" v-reveal="i * 90">
             <div class="shot__frame">
               <img
-                v-if="PROMO_IMAGES[ex.img]" :src="PROMO_IMAGES[ex.img]" :alt="ex.t"
+                v-if="IMAGES[ex.img]" :src="IMAGES[ex.img]" :alt="ex.t"
                 loading="lazy" decoding="async">
               <span class="shot__flag">{{ t('promo.blocked') }}</span>
             </div>

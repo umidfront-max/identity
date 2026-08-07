@@ -82,6 +82,18 @@ export const PRODUCTS = [
     ],
     compliance:["Tizim Tier-3 darajasidagi data-markazda joylashtirilgan","Algoritm NIST reytingida eng yaxshi o'rinlarni egallaydi","Markaziy bank talablariga to'liq javob beradi","Axborot xavfsizligi milliy talablariga muvofiq","Shaxsga doir ma'lumotlar qonunchilikka muvofiq qayta ishlanadi","iBeta kompaniyasidan xalqaro xavfsizlik sertifikati olingan","ISO/IEC 30107-3:2017 standarti talablariga muvofiq","Yechim MDH moliya sektorida faol qo'llaniladi"],
     attacks:["Fotosurat ko'rsatish urinishidan himoya","Video ko'rsatish urinishidan himoya","Qog'oz va silikon niqoblardan himoya"],
+    gallery:{
+      title:"DeepFake'dan himoya",
+      lead:"Zamonaviy neyron tarmoqlar haqiqiy kadrdan farq qilmaydigan yuzlarni yaratadi. Servis fotosuratni generatsiya artefaktlariga tekshiradi — o'tgan yil davomida 400 dan ortiq urinish bloklangan.",
+      flag:'Bloklandi',
+      items:[
+        { img:'deepfake-fake', t:'Generatsiya qilingan yuz', flag:false, d:"Neyron tarmoq yaratgan portret: haqiqiy fotosuratdan ko'z bilan farqlab bo'lmaydi." },
+        { img:'blocked-1', t:"Ekrandan ko'rsatish", d:"Boshqa odamning fotosuratini telefon ekranidan ko'rsatib tekshiruvdan o'tish urinishi." },
+        { img:'blocked-2', t:'DeepFake', d:"Generatsiya qilingan tasvirni taqdim etish orqali identifikatsiyadan o'tish urinishi." },
+        { img:'blocked-3', t:'DeepFake', d:"Generativ model yaratgan yuz bilan tekshiruvni chetlab o'tishga urinish." }
+      ],
+      note:"Fotosuratlar buyurtmachi tomonidan anonimlashtirilgan holda taqdim etilgan."
+    },
     delivery:["Buyurtmachi serverlarida (on-premise)","Xususiy bulutda","API sifatida (SaaS)"]
   },
   ru:{
@@ -118,6 +130,18 @@ export const PRODUCTS = [
     ],
     compliance:['Система развёрнута в датацентре уровня Tier-3','Алгоритм занимает лучшие места в рейтинге NIST','Полностью соответствует требованиям Центрального Банка','Соответствует национальным требованиям информационной безопасности','Обработка персональных данных в соответствии с законодательством','Получен международный сертификат безопасности от компании iBeta','Соответствует требованиям стандарта ISO/IEC 30107-3:2017','Решение активно применяется в финансовом секторе СНГ'],
     attacks:['Защита от попытки предъявить фотографию','Защита от попытки предъявить видео','Защита от бумажных и силиконовых масок'],
+    gallery:{
+      title:'Защита от DeepFake',
+      lead:'Современные нейросети создают лица, не отличимые от реальных кадров. Сервис проверяет фотографию на артефакты генерации — за прошедший год заблокировано более 400 попыток.',
+      flag:'Заблокировано',
+      items:[
+        { img:'deepfake-fake', t:'Сгенерированное лицо', flag:false, d:'Портрет, созданный нейросетью: визуально неотличим от настоящей фотографии.' },
+        { img:'blocked-1', t:'Демонстрация с экрана', d:'Попытка пройти проверку, показав фотографию другого человека с экрана телефона.' },
+        { img:'blocked-2', t:'DeepFake', d:'Попытка пройти идентификацию, предъявив сгенерированное изображение.' },
+        { img:'blocked-3', t:'DeepFake', d:'Попытка обойти проверку с помощью лица, созданного генеративной моделью.' }
+      ],
+      note:'Фотографии предоставлены заказчиком в обезличенном виде.'
+    },
     delivery:['На серверах заказчика (on-premise)','В частном облаке','Как сервис по API (SaaS)']
   },
   en:{
@@ -154,6 +178,18 @@ export const PRODUCTS = [
     ],
     compliance:['Deployed in a Tier-3 data centre','The algorithm ranks among the top in the NIST evaluation','Fully compliant with Central Bank requirements','Meets national information security requirements','Personal data processed in line with legislation','International security certificate from iBeta','Complies with ISO/IEC 30107-3:2017','Actively used across the CIS financial sector'],
     attacks:['Protection against presenting a photo','Protection against presenting a video','Protection against paper and silicone masks'],
+    gallery:{
+      title:'DeepFake protection',
+      lead:'Modern neural networks produce faces indistinguishable from real footage. The service checks a photo for generation artefacts — over the past year more than 400 attempts were blocked.',
+      flag:'Blocked',
+      items:[
+        { img:'deepfake-fake', t:'Generated face', flag:false, d:'A portrait created by a neural network: visually indistinguishable from a real photo.' },
+        { img:'blocked-1', t:'Screen replay', d:'An attempt to pass the check by showing another person’s photo from a phone screen.' },
+        { img:'blocked-2', t:'DeepFake', d:'An attempt to pass identification by presenting a generated image.' },
+        { img:'blocked-3', t:'DeepFake', d:'An attempt to bypass the check with a face produced by a generative model.' }
+      ],
+      note:'Photos supplied by the customer in anonymised form.'
+    },
     delivery:['On customer servers (on-premise)','In a private cloud','As an API service (SaaS)']
   }
 },
