@@ -14,6 +14,13 @@ export const CONFIG = {
      Bo'sh bo'lsa — forma mailto orqali yuboriladi. */
   formEndpoint: '',
 
+  /* Mahsulot taqdimotlari. Kalit — mahsulot slug'i, qiymat — fayl manzili.
+     Faylni public/presentations/ ichiga qo'ying va shu yerga yozing, masalan:
+       'faceid': 'presentations/faceid.pdf'
+     Slug ro'yxatda bo'lmasa — «Taqdimotni yuklab olish» tugmasi ko'rsatilmaydi
+     (buzilgan havola paydo bo'lmasligi uchun). */
+  presentations: {},
+
   /* Aloqa ma'lumotlari (footer, kontaktlar sahifasi, mailto-fallback) */
   contacts: {
     email: 'info@identity-uz.com',

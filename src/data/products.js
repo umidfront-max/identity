@@ -50,8 +50,8 @@ export const PRODUCTS = [
 { slug:'faceid', code:'FACE', page:'faceid.html',
   uz:{
     name:'FaceID — biometrik identifikatsiya',
-    short:"Biometrik identifikatsiya (1:N) va verifikatsiya (1:1), liveness va hujjat bilan solishtirish.",
-    intro:"Mijozni masofadan yoki obyektda soniyalarda tanish: yuz vektorlarini solishtirish, jonlilik (liveness) tekshiruvi va pasport fotosurati bilan moslashtirish.",
+    short:"Bank va moliya sektori uchun tez va xavfsiz biometrik identifikatsiya yechimi.",
+    intro:"Xavfsizlik birinchi qarashdan. Mijozni masofadan yoki obyektda soniyalarda tanish: yuz vektorlarini solishtirish, jonlilik (liveness) tekshiruvi va hujjat fotosurati bilan moslashtirish.",
     tasks:["Masofaviy onboardingda mijoz shaxsini tasdiqlash","Hujjatdagi surat bilan jonli yuzni solishtirish","Ofis va obyektlarga kirishni boshqarish","Qora ro'yxatdagi shaxslarni aniqlash"],
     cases:[{t:'Bank mobil ilovasi',d:"Ilovaga biometrik identifikatsiyani integratsiya qilish."},
            {t:'Self-servis kiosklari',d:"Kiosk va kartomatlarda foydalanuvchini tanish."},
@@ -86,8 +86,8 @@ export const PRODUCTS = [
   },
   ru:{
     name:'FaceID — биометрическая идентификация',
-    short:'Биометрическая идентификация (1:N) и верификация (1:1), liveness и сверка с документом.',
-    intro:'Распознаём клиента удалённо или на объекте за секунды: сравнение векторов лица, проверка живости (liveness) и сверка с фотографией в документе.',
+    short:'Быстрое и безопасное решение биометрической идентификации для банков и финансового сектора.',
+    intro:'Безопасность с первого взгляда. Распознаём клиента удалённо или на объекте за секунды: сравнение векторов лица, проверка живости (liveness) и сверка с фотографией в документе.',
     tasks:['Подтверждение личности при удалённом онбординге','Сверка живого лица с фотографией в документе','Контроль доступа в офисы и на объекты','Выявление лиц из чёрного списка'],
     cases:[{t:'Мобильное приложение банка',d:'Интеграция биометрической идентификации в приложение.'},
            {t:'Киоски самообслуживания',d:'Распознавание пользователя на киосках и картоматах.'},
@@ -122,8 +122,8 @@ export const PRODUCTS = [
   },
   en:{
     name:'FaceID — biometric identification',
-    short:'Biometric identification (1:N) and verification (1:1), liveness and document matching.',
-    intro:'Recognise a customer remotely or on site in seconds: face vector matching, liveness detection and comparison with the photo in an ID document.',
+    short:'A fast and secure biometric identification solution for banks and the financial sector.',
+    intro:'Security at first glance. Recognise a customer remotely or on site in seconds: face vector matching, liveness detection and comparison with the photo in an ID document.',
     tasks:['Verifying identity during remote onboarding','Matching a live face against a document photo','Access control for offices and facilities','Detecting people on a watch list'],
     cases:[{t:'Bank mobile app',d:'Biometric identification embedded into the banking application.'},
            {t:'Self-service kiosks',d:'User recognition at kiosks and card dispensers.'},

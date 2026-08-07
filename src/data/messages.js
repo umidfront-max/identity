@@ -154,6 +154,8 @@ uz: {
 
   'products.title': 'Mahsulot va xizmatlar',
   'products.lead': "Identifikatsiyadan ilova kodini tekshirishgacha — o'nta yo'nalish.",
+  'products.notFound.title': "Kerakli yechimni topmadingizmi?",
+  'products.notFound.text': "Bizga albatta yozing. Hamkorlarimiz orasidan sizga kerakli mahsulotni tanlab beramiz yoki dasturiy ta'minotni noldan yozamiz.",
 
   'p.tasks': 'Vazifalar va maqsad',
   'p.cases': 'Keyslar',
@@ -373,6 +375,8 @@ ru: {
 
   'products.title': 'Продукты и услуги',
   'products.lead': 'От идентификации личности до проверки кода приложений — десять направлений.',
+  'products.notFound.title': 'Не нашли нужного решения?',
+  'products.notFound.text': 'Обязательно напишите нам. Мы подберём у наших партнёров нужный вам продукт или напишем программное обеспечение «с нуля».',
 
   'p.tasks': 'Задачи и назначение',
   'p.cases': 'Кейсы',
@@ -592,6 +596,8 @@ en: {
 
   'products.title': 'Products & services',
   'products.lead': 'From identity verification to application code testing — ten directions.',
+  'products.notFound.title': 'Did not find the solution you need?',
+  'products.notFound.text': 'Do write to us. We will find the right product among our partners or build the software from scratch.',
 
   'p.tasks': 'Objectives and purpose',
   'p.cases': 'Use cases',

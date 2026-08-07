@@ -46,6 +46,23 @@ function open (slug, i) {
       </div>
     </section>
 
+    <!-- kerakli yechim topilmasa -->
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="nf" v-reveal>
+          <div>
+            <h2>{{ t('products.notFound.title') }}</h2>
+            <p>{{ t('products.notFound.text') }}</p>
+          </div>
+          <RouterLink
+            to="/contacts" class="btn btn--primary" v-magnet="0.15"
+            @click="track('cta_click', { cta: 'catalog-not-found' })">
+            {{ t('cta.pilot') }}
+          </RouterLink>
+        </div>
+      </div>
+    </section>
+
     <CtaBand source="products" />
   </div>
 </template>
@@ -82,8 +99,21 @@ function open (slug, i) {
   transition:transform .35s var(--ease),color .3s;
 }
 .row:hover .row__go{transform:translateX(6px);color:var(--red)}
+
+.nf{
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;
+  padding:34px 38px;border-radius:var(--r-xl);
+  background:linear-gradient(150deg,#FFF,#F3F5FC);
+  border:1px solid var(--line);box-shadow:0 26px 60px -38px rgba(7,11,30,.35);
+}
+.nf::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red)}
+.nf h2{font-size:clamp(21px,2.2vw,27px);margin-bottom:10px}
+.nf p{margin:0;color:var(--muted);font-size:16px;max-width:62ch}
+
 @media(max-width:760px){
   .row{grid-template-columns:1fr;gap:10px;padding:22px}
   .row__go{display:none}
+  .nf{grid-template-columns:1fr;gap:22px;padding:28px 24px;justify-items:start}
 }
 </style>

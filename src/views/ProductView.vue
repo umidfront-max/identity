@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { useLang } from '@/composables/useLang.js'
 import { useAnalytics } from '@/composables/useAnalytics.js'
 import { PRODUCTS } from '@/data/products.js'
+import { CONFIG } from '@/data/config.js'
 import PageHero from '@/components/PageHero.vue'
 import SectionHead from '@/components/SectionHead.vue'
 import LeadForm from '@/components/LeadForm.vue'
@@ -18,6 +19,9 @@ const router = useRouter()
 
 const product = computed(() => PRODUCTS.find(x => x.slug === props.slug) || null)
 const data = computed(() => (product.value ? p(product.value) : {}))
+
+/* Taqdimot fayli config'da ko'rsatilgan bo'lsagina tugma chiziladi */
+const presentation = computed(() => (CONFIG.presentations || {})[props.slug] || null)
 
 const related = computed(() =>
   PRODUCTS.filter(x => x.slug !== props.slug)
@@ -63,6 +67,11 @@ watch(() => props.slug, register)
             @click="track('cta_click', { cta: 'product-pilot', product: props.slug })">
             {{ t('cta.pilot') }}
           </RouterLink>
+          <a
+            v-if="presentation" class="btn btn--ghost" :href="presentation" download
+            @click="track('cta_click', { cta: 'product-presentation', product: props.slug })">
+            {{ t('cta.presentation') }}
+          </a>
         </div>
       </div>
     </section>
@@ -162,6 +171,7 @@ watch(() => props.slug, register)
 
 <style scoped>
 .intro{display:grid;grid-template-columns:1.4fr auto;gap:40px;align-items:center}
+.intro__act{display:flex;flex-wrap:wrap;gap:12px}
 .intro__lead{font-size:clamp(17px,1.7vw,21px);color:var(--ink);margin:0;line-height:1.5;max-width:58ch}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
