@@ -9,6 +9,7 @@ import SectionHead from '@/components/SectionHead.vue'
 import LeadForm from '@/components/LeadForm.vue'
 import ProductTabs from '@/components/ProductTabs.vue'
 import ProductModules from '@/components/ProductModules.vue'
+import ProductTracks from '@/components/ProductTracks.vue'
 
 const props = defineProps({ slug: String })
 const { t, p } = useLang()
@@ -31,6 +32,7 @@ const lists = computed(() => [
   { key: 'p.compliance', items: data.value.compliance },
   { key: 'p.detectors', items: data.value.detectors },
   { key: 'p.solutions', items: data.value.solutions },
+  { key: 'p.attacks', items: data.value.attacks },
   { key: 'p.roadmap', items: data.value.roadmap }
 ].filter(s => Array.isArray(s.items) && s.items.length))
 
@@ -62,6 +64,13 @@ watch(() => props.slug, register)
             {{ t('cta.pilot') }}
           </RouterLink>
         </div>
+      </div>
+    </section>
+
+    <!-- yo'nalishlar: ikki tab, har birida o'z kontenti -->
+    <section v-if="data.tracks && data.tracks.length" class="section">
+      <div class="wrap" v-reveal>
+        <ProductTracks :tracks="data.tracks" />
       </div>
     </section>
 

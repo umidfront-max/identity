@@ -106,7 +106,6 @@ onBeforeUnmount(() => {
                       v-for="(pr, i) in products" :key="pr.slug"
                       :to="`/p/${pr.slug}`" class="mega__item"
                       :style="{ '--d': 40 + i * 26 + 'ms' }">
-                      <i>{{ pr.code }}</i>
                       <span class="mega__name">{{ pr.name }}</span>
                       <svg viewBox="0 0 14 10" class="mega__arw" aria-hidden="true">
                         <path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -286,7 +285,7 @@ onBeforeUnmount(() => {
 /* ============ mega menyu ============ */
 .mega-wrap{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px}
 .mega{
-  position:relative;width:min(680px,90vw);padding:16px;border-radius:26px;overflow:hidden;
+  position:relative;width:min(740px,92vw);padding:16px;border-radius:26px;overflow:hidden;
   background:rgba(255,255,255,.86);
   backdrop-filter:blur(26px) saturate(180%);
   -webkit-backdrop-filter:blur(26px) saturate(180%);
@@ -297,18 +296,17 @@ onBeforeUnmount(() => {
   position:absolute;inset:0;pointer-events:none;opacity:.85;
   background:radial-gradient(240px 240px at var(--mx,50%) var(--my,0),rgba(91,111,214,.16),transparent 70%);
 }
-.mega__grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+/* minmax(0,1fr) — bo'lmasa uzun nomlar ustunni panel tashqarisiga cho'zadi */
+.mega__grid{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
 .mega__item{
-  display:flex;align-items:center;gap:12px;padding:11px 13px;border-radius:14px;
-  font-size:14.5px;font-weight:600;
+  display:flex;align-items:center;gap:10px;min-width:0;
+  padding:11px 14px;border-radius:14px;
+  font-size:14.5px;font-weight:600;line-height:1.35;
   animation:megaIn .5s var(--ease-out) both;animation-delay:var(--d);
   transition:background .28s,color .28s;
 }
-.mega__item i{
-  font-style:normal;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;
-  color:var(--red);min-width:38px;flex:none;
-}
-.mega__name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* nom to'liq ko'rinadi: kerak bo'lsa ikkinchi qatorga o'tadi */
+.mega__name{flex:1;min-width:0;overflow-wrap:anywhere}
 .mega__arw{
   width:14px;flex:none;color:var(--blue);
   opacity:0;transform:translateX(-6px);

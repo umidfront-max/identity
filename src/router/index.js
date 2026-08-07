@@ -6,6 +6,7 @@ const routes = [
   { path: '/products', name: 'products', component: () => import('@/views/ProductsView.vue') },
   { path: '/p/:slug', name: 'product', component: () => import('@/views/ProductView.vue'), props: true },
   { path: '/promos', name: 'promos', component: () => import('@/views/PromosView.vue') },
+  { path: '/promo/:slug', name: 'promo', component: () => import('@/views/PromoView.vue'), props: true },
   { path: '/contacts', name: 'contacts', component: () => import('@/views/ContactsView.vue') },
   { path: '/privacy', name: 'privacy', component: () => import('@/views/PrivacyView.vue') },
   { path: '/:pathMatch(.*)*', name: 'notfound', component: () => import('@/views/NotFoundView.vue') }
