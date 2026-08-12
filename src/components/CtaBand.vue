@@ -17,7 +17,7 @@ const { track } = useAnalytics()
           <p>{{ t('p.ctaText') }}</p>
         </div>
         <RouterLink
-          to="/contacts" class="btn btn--primary" v-magnet="0.16"
+          :to="{ path: '/contacts', hash: '#lead' }" class="btn btn--primary" v-magnet="0.16"
           @click="track('cta_click', { cta: props.source })">
           {{ t('cta.discuss') }}
         </RouterLink>

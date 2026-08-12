@@ -55,7 +55,7 @@ function open (slug, i) {
             <p>{{ t('products.notFound.text') }}</p>
           </div>
           <RouterLink
-            to="/contacts" class="btn btn--primary" v-magnet="0.15"
+            :to="{ path: '/contacts', hash: '#lead' }" class="btn btn--primary" v-magnet="0.15"
             @click="track('cta_click', { cta: 'catalog-not-found' })">
             {{ t('cta.pilot') }}
           </RouterLink>

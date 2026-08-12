@@ -9,8 +9,9 @@ const props = defineProps({ product: { type: String, default: '' } })
 const { t, p, lang } = useLang()
 const { track } = useAnalytics()
 
-const form = reactive({ name: '', phone: '', email: '', product: '', message: '', consent: false })
-const errors = reactive({ name: false, phone: false, consent: false })
+/* Rozilik sukut bo'yicha belgilangan, ism majburiy emas */
+const form = reactive({ name: '', phone: '', email: '', product: '', message: '', consent: true })
+const errors = reactive({ phone: false, consent: false })
 const state = ref('idle') // idle | sending | ok | err
 
 const options = computed(() => PRODUCTS.map(x => ({ slug: x.slug, name: p(x).name })))
@@ -22,10 +23,9 @@ onMounted(() => {
 })
 
 function validate () {
-  errors.name = form.name.trim().length < 2
   errors.phone = form.phone.trim().length < 6
   errors.consent = !form.consent
-  return !errors.name && !errors.phone && !errors.consent
+  return !errors.phone && !errors.consent
 }
 
 async function submit () {
@@ -63,7 +63,7 @@ async function submit () {
     })
     if (!res.ok) throw new Error('bad status')
     state.value = 'ok'
-    Object.assign(form, { name: '', phone: '', email: '', message: '', consent: false })
+    Object.assign(form, { name: '', phone: '', email: '', message: '', consent: true })
   } catch (e) {
     state.value = 'err'
   }
@@ -73,8 +73,8 @@ async function submit () {
 <template>
   <form class="form" novalidate @submit.prevent="submit">
     <div class="field">
-      <label for="f-name">{{ t('form.name') }}</label>
-      <input id="f-name" v-model="form.name" type="text" autocomplete="name" :class="{ 'has-err': errors.name }">
+      <label for="f-name">{{ t('form.name') }} <em>{{ t('form.optional') }}</em></label>
+      <input id="f-name" v-model="form.name" type="text" autocomplete="name">
     </div>
 
     <div class="field">
@@ -105,7 +105,7 @@ async function submit () {
       <span>{{ t('form.consent') }}</span>
     </label>
 
-    <p v-if="errors.name || errors.phone" class="msg msg--err field--full">{{ t('form.reqErr') }}</p>
+    <p v-if="errors.phone" class="msg msg--err field--full">{{ t('form.reqErr') }}</p>
     <p v-else-if="errors.consent" class="msg msg--err field--full">{{ t('form.consentErr') }}</p>
 
     <div class="field--full form__foot">

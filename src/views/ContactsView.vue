@@ -26,19 +26,27 @@ const c = CONFIG.contacts
              @click="track('contact_click', { channel: 'email' })">
             <span>{{ t('contacts.email') }}</span><b>{{ c.email }}</b>
           </a>
-          <a :href="c.telegram" target="_blank" rel="noopener" class="cinfo__row" v-reveal="140"
+          <a :href="`mailto:${c.emailBio}`" class="cinfo__row" v-reveal="105"
+             @click="track('contact_click', { channel: 'email-bio' })">
+            <span>{{ t('contacts.emailBio') }}</span><b>{{ c.emailBio }}</b>
+          </a>
+          <a :href="`mailto:${c.emailSec}`" class="cinfo__row" v-reveal="140"
+             @click="track('contact_click', { channel: 'email-sec' })">
+            <span>{{ t('contacts.emailSec') }}</span><b>{{ c.emailSec }}</b>
+          </a>
+          <a :href="c.telegram" target="_blank" rel="noopener" class="cinfo__row" v-reveal="175"
              @click="track('contact_click', { channel: 'telegram' })">
             <span>{{ t('contacts.tg') }}</span><b>@identity_uz</b>
           </a>
           <div class="cinfo__row is-static" v-reveal="210">
             <span>{{ t('contacts.addressLabel') }}</span><b>{{ t('contacts.address') }}</b>
           </div>
-          <div class="cinfo__row is-static" v-reveal="280">
+          <div class="cinfo__row is-static" v-reveal="245">
             <span>{{ t('contacts.hours') }}</span><b>{{ t('contacts.hoursVal') }}</b>
           </div>
         </aside>
 
-        <div class="cform" v-reveal:right>
+        <div id="lead" class="cform" v-reveal:right>
           <SectionHead :eyebrow="t('cta.request')" :title="t('form.title')" />
           <LeadForm />
         </div>

@@ -1,7 +1,8 @@
 export const MESSAGES = {
 /* ------------------------------------------------------------------ UZ */
 uz: {
-  'meta.suffix': ' — Identity',
+  'meta.suffix': ' — IDENTITY',
+  'meta.home': "IDENTITY — sun'iy intellekt asosida zamonaviy texnologiyalar yaratadigan kompaniya",
   'nav.home': 'Bosh sahifa',
   'nav.about': 'Biz haqimizda',
   'nav.products': 'Mahsulot va xizmatlar',
@@ -27,7 +28,6 @@ uz: {
   'home.p1': "«IDENTITY» MChJ bozor yetakchilari va o'z sohasining vizionerlari bilan hamkorlikni tanlaydi. Shu tufayli biz ertangi kun texnologiyalarini bugunoq joriy etamiz. Taklif etilayotgan yechimlar xilma-xil — ularni birlashtirib turadigani, insonlarga o'z ishini avtomatlashtirishga yordam berishidir.",
   'home.p2': "«IDENTITY» MChJ ekspertlari qo'yilgan vazifalarni hal etishda sun'iy intellektni qo'llashga intiladi va bunda axborot xavfsizligi hamda maxfiylikning talab etilgan darajasini ta'minlaydi.",
 
-  'tiles.lead': "Har bir plitka — alohida sahifa: vazifalar, keyslar, afzalliklar va yetkazib berish variantlari bilan.",
   'tile.faceid.n': 'Face-ID',
   'tile.faceid.d': "Tashrif buyuruvchilar va mijozlarni biometrik identifikatsiya (1:N) va verifikatsiya (1:1) qilish.",
   'tile.deepfake.n': 'Anti-DeepFake',
@@ -59,9 +59,9 @@ uz: {
 
   'hero.eyebrow': 'Kiberxavfsizlik va identifikatsiya',
   'hero.title': "Har bir kirish, to'lov va so'rov <em>tekshiruvdan o'tadi</em>",
-  'hero.text': "Identity himoyani qatlamma-qatlam quradi: mijoz shaxsidan tortib ilova kodigacha. To'qqizta yo'nalish va natijaga javob beradigan bitta jamoa.",
-  'hero.stat1': '5', 'hero.stat1l': 'himoya qatlami',
-  'hero.stat2': '9', 'hero.stat2l': "mahsulot yo'nalishi",
+  'hero.text': "Identity himoyani qatlamma-qatlam quradi: mijoz shaxsidan tortib ilova kodigacha. O'nta yo'nalish va natijaga javob beradigan bitta jamoa.",
+  'hero.stat1': '20 mln+', 'hero.stat1l': "foydalanuvchi identifikatsiyadan o'tgan",
+  'hero.stat2': '10', 'hero.stat2l': "mahsulot yo'nalishi",
   'hero.stat3': '24/7', 'hero.stat3l': "monitoring va qo'llab-quvvatlash",
   'hero.stat4': '3', 'hero.stat4l': 'hafta — pilotgacha',
 
@@ -85,7 +85,7 @@ uz: {
   'home.offers.title': "Birinchi qadamning uchta yo'li",
   'home.slide1.badge': 'Antifrod',
   'home.slide1.title': "Uch haftada pilot — o'z ma'lumotlaringizda",
-  'home.slide1.text': "Fuzzy dvigatelini tarixiy tranzaksiyalaringizda ishlatamiz va qancha firibgarlik e'tibordan chetda qolganini ko'rsatamiz.",
+  'home.slide1.text': "Antifrod dvigatelini tarixiy tranzaksiyalaringizda ishlatamiz va qancha firibgarlik e'tibordan chetda qolganini ko'rsatamiz.",
   'home.slide2.badge': 'FaceID',
   'home.slide2.title': 'Mijozni tanish uchun operator kerak emas',
   'home.slide2.text': "Selfi va hujjat orqali masofaviy onboarding, liveness tekshiruvi, ofis hamda obyektlarga kirish nazorati.",
@@ -94,7 +94,7 @@ uz: {
   'home.slide3.text': "Kod va ishlayotgan ilova tahlili, topilmalarni ustuvorlashtirish va tuzatish bo'yicha yo'l xaritasi.",
 
   'home.products.eyebrow': 'Katalog',
-  'home.products.title': "To'qqizta yo'nalish",
+  'home.products.title': "O'nta yo'nalish",
   'home.products.lead': "Har birida vazifalar, keyslar, afzalliklar va yetkazib berish variantlari batafsil yozilgan.",
 
   'home.why.eyebrow': 'Ishlash tartibimiz',
@@ -177,6 +177,8 @@ uz: {
   'contacts.title': 'Kontaktlar',
   'contacts.lead': "Savolingizni yozing yoki qaysi yo'nalish qiziqtirganini belgilang — profil bo'yicha mutaxassis bog'lanadi.",
   'contacts.email': 'Umumiy savollar',
+  'contacts.emailBio': 'Biometriya va analitika',
+  'contacts.emailSec': 'Axborot xavfsizligi',
   'contacts.sales': 'Sotuv va pilotlar',
   'contacts.phone': 'Telefon',
   'contacts.tg': 'Telegram',
@@ -204,7 +206,7 @@ uz: {
   'form.productAny': 'Hali aniq emas / umumiy savol',
   'form.message': 'Vazifa',
   'form.messagePh': 'Nimani himoyalash kerakligini qisqacha yozing…',
-  'form.consent': "Shaxsiy ma'lumotlarim qayta ishlanishiga roziman.",
+  'form.consent': "So'rov yuborish orqali men shaxsiy ma'lumotlarim sayt siyosatiga muvofiq qayta ishlanishiga rozilik bildiraman.",
   'form.ok': "Rahmat! So'rov qabul qilindi — tez orada bog'lanamiz.",
   'form.err': "Yuborishda xatolik. Qayta urinib ko'ring yoki bizga to'g'ridan-to'g'ri yozing.",
   'form.consentErr': 'Davom etish uchun rozilikni belgilang.',
@@ -222,7 +224,8 @@ uz: {
 
 /* ------------------------------------------------------------------ RU */
 ru: {
-  'meta.suffix': ' — Identity',
+  'meta.suffix': ' — IDENTITY',
+  'meta.home': 'IDENTITY – компания, которая создаёт современные технологии с применением ИИ',
   'nav.home': 'Главная',
   'nav.about': 'О нас',
   'nav.products': 'Продукты и услуги',
@@ -248,7 +251,6 @@ ru: {
   'home.p1': 'ООО «IDENTITY» выбирает партнёрства с компаниями, которые являются лидерами рынка и выступают визионерами в своей области. Благодаря этому мы внедряем технологии завтрашнего дня уже сегодня. Предлагаемые решения разнообразны — объединяет их то, что они помогают людям автоматизировать свою работу.',
   'home.p2': 'Эксперты ООО «IDENTITY» стремятся применять искусственный интеллект для решения поставленных задач, при этом обеспечивая требуемый уровень информационной безопасности и конфиденциальности.',
 
-  'tiles.lead': 'Каждая плитка — отдельная страница: задачи, кейсы, преимущества и варианты поставки.',
   'tile.faceid.n': 'Face-ID',
   'tile.faceid.d': 'Биометрическая идентификация (1:N) и верификация (1:1) посетителей и клиентов.',
   'tile.deepfake.n': 'Anti-DeepFake',
@@ -280,9 +282,9 @@ ru: {
 
   'hero.eyebrow': 'Кибербезопасность и идентификация',
   'hero.title': 'Каждый вход, платёж и запрос <em>проходит проверку</em>',
-  'hero.text': 'Identity строит защиту слой за слоем — от личности клиента до кода приложения. Девять направлений и одна команда, которая отвечает за результат.',
-  'hero.stat1': '5', 'hero.stat1l': 'слоёв защиты',
-  'hero.stat2': '9', 'hero.stat2l': 'продуктовых направлений',
+  'hero.text': 'Identity строит защиту слой за слоем — от личности клиента до кода приложения. Десять направлений и одна команда, которая отвечает за результат.',
+  'hero.stat1': '20 млн+', 'hero.stat1l': 'пользователей прошли идентификацию',
+  'hero.stat2': '10', 'hero.stat2l': 'продуктовых направлений',
   'hero.stat3': '24/7', 'hero.stat3l': 'мониторинг и поддержка',
   'hero.stat4': '3', 'hero.stat4l': 'недели до пилота',
 
@@ -306,7 +308,7 @@ ru: {
   'home.offers.title': 'Три сценария первого шага',
   'home.slide1.badge': 'Антифрод',
   'home.slide1.title': 'Пилот за три недели на ваших данных',
-  'home.slide1.text': 'Прогоняем движок Fuzzy по вашим историческим транзакциям и показываем, сколько мошеннических операций прошло мимо.',
+  'home.slide1.text': 'Прогоняем антифрод-движок по вашим историческим транзакциям и показываем, сколько мошеннических операций прошло мимо.',
   'home.slide2.badge': 'FaceID',
   'home.slide2.title': 'Чтобы узнать клиента, оператор не нужен',
   'home.slide2.text': 'Удалённый онбординг по селфи и документу, проверка liveness, контроль доступа в офис и на объекты.',
@@ -315,7 +317,7 @@ ru: {
   'home.slide3.text': 'Анализ кода и работающего приложения, приоритизация находок и дорожная карта исправлений.',
 
   'home.products.eyebrow': 'Каталог',
-  'home.products.title': 'Девять направлений',
+  'home.products.title': 'Десять направлений',
   'home.products.lead': 'По каждому — задачи, кейсы, преимущества и варианты поставки.',
 
   'home.why.eyebrow': 'Как мы работаем',
@@ -398,6 +400,8 @@ ru: {
   'contacts.title': 'Контакты',
   'contacts.lead': 'Напишите вопрос или укажите интересующее направление — ответит профильный специалист.',
   'contacts.email': 'Общие вопросы',
+  'contacts.emailBio': 'Биометрия и аналитика',
+  'contacts.emailSec': 'Информационная безопасность',
   'contacts.sales': 'Продажи и пилоты',
   'contacts.phone': 'Телефон',
   'contacts.tg': 'Telegram',
@@ -425,7 +429,7 @@ ru: {
   'form.productAny': 'Пока не определился / общий вопрос',
   'form.message': 'Задача',
   'form.messagePh': 'Кратко: что нужно защитить…',
-  'form.consent': 'Согласен на обработку персональных данных.',
+  'form.consent': 'Отправляя заявку я даю согласие на обработку персональных данных в соответствии с политикой сайта.',
   'form.ok': 'Спасибо! Заявка принята — скоро свяжемся с вами.',
   'form.err': 'Не удалось отправить. Попробуйте ещё раз или напишите нам напрямую.',
   'form.consentErr': 'Отметьте согласие, чтобы продолжить.',
@@ -443,7 +447,8 @@ ru: {
 
 /* ------------------------------------------------------------------ EN */
 en: {
-  'meta.suffix': ' — Identity',
+  'meta.suffix': ' — IDENTITY',
+  'meta.home': 'IDENTITY — the company building modern AI-powered technologies',
   'nav.home': 'Home',
   'nav.about': 'About us',
   'nav.products': 'Products & services',
@@ -469,7 +474,6 @@ en: {
   'home.p1': 'IDENTITY LLC partners with companies that lead their markets and act as visionaries in their fields. This lets us deploy tomorrow\'s technologies today. The solutions are diverse — what unites them is that they help people automate their work.',
   'home.p2': 'IDENTITY experts strive to apply artificial intelligence to the tasks at hand while maintaining the required level of information security and confidentiality.',
 
-  'tiles.lead': 'Every tile is a full page: objectives, use cases, advantages and delivery options.',
   'tile.faceid.n': 'Face-ID',
   'tile.faceid.d': 'Biometric identification (1:N) and verification (1:1) of visitors and customers.',
   'tile.deepfake.n': 'Anti-DeepFake',
@@ -501,9 +505,9 @@ en: {
 
   'hero.eyebrow': 'Cybersecurity and identification',
   'hero.title': 'Every login, payment and request <em>gets verified</em>',
-  'hero.text': 'Identity builds protection layer by layer — from the customer identity to the application code. Nine directions, one team accountable for the result.',
-  'hero.stat1': '5', 'hero.stat1l': 'layers of defence',
-  'hero.stat2': '9', 'hero.stat2l': 'product directions',
+  'hero.text': 'Identity builds protection layer by layer — from the customer identity to the application code. Ten directions, one team accountable for the result.',
+  'hero.stat1': '20 M+', 'hero.stat1l': 'users identified through our services',
+  'hero.stat2': '10', 'hero.stat2l': 'product directions',
   'hero.stat3': '24/7', 'hero.stat3l': 'monitoring and support',
   'hero.stat4': '3', 'hero.stat4l': 'weeks to a pilot',
 
@@ -527,7 +531,7 @@ en: {
   'home.offers.title': 'Three ways to take the first step',
   'home.slide1.badge': 'Antifraud',
   'home.slide1.title': 'A pilot on your own data in three weeks',
-  'home.slide1.text': 'We run the Fuzzy engine across your historical transactions and report how much fraud slipped through.',
+  'home.slide1.text': 'We run the antifraud engine across your historical transactions and report how much fraud slipped through.',
   'home.slide2.badge': 'FaceID',
   'home.slide2.title': 'Recognising a customer takes no operator',
   'home.slide2.text': 'Remote onboarding from a selfie and an ID, liveness checks, access control for offices and sites.',
@@ -536,7 +540,7 @@ en: {
   'home.slide3.text': 'Analysis of code and the running app, prioritised findings and a remediation roadmap.',
 
   'home.products.eyebrow': 'Catalogue',
-  'home.products.title': 'Nine directions',
+  'home.products.title': 'Ten directions',
   'home.products.lead': 'Each one with objectives, use cases, advantages and delivery options.',
 
   'home.why.eyebrow': 'How we work',
@@ -619,6 +623,8 @@ en: {
   'contacts.title': 'Contacts',
   'contacts.lead': 'Ask a question or pick the direction you need — a specialist in that field will reply.',
   'contacts.email': 'General enquiries',
+  'contacts.emailBio': 'Biometrics and analytics',
+  'contacts.emailSec': 'Information security',
   'contacts.sales': 'Sales and pilots',
   'contacts.phone': 'Phone',
   'contacts.tg': 'Telegram',
@@ -646,7 +652,7 @@ en: {
   'form.productAny': 'Not sure yet / general question',
   'form.message': 'Your case',
   'form.messagePh': 'Briefly: what needs protecting…',
-  'form.consent': 'I agree to the processing of my personal data.',
+  'form.consent': 'By sending this request I consent to the processing of my personal data in accordance with the site policy.',
   'form.ok': 'Thank you! Your request has been received — we will be in touch shortly.',
   'form.err': 'Sending failed. Please try again or write to us directly.',
   'form.consentErr': 'Please confirm your consent to continue.',

@@ -32,7 +32,10 @@ const pageTitle = computed(() => {
 
 /* Sarlavha va analitika — har bir marshrut/til o'zgarishida */
 watch([pageTitle, lang], () => {
-  document.title = pageTitle.value + t('meta.suffix')
+  /* Bosh sahifada — kompaniya to'liq tavsifi, boshqa sahifalarda «Sahifa — IDENTITY» */
+  document.title = route.name === 'home'
+    ? t('meta.home')
+    : pageTitle.value + t('meta.suffix')
 }, { immediate: true })
 
 watch(() => route.fullPath, () => {
@@ -56,7 +59,8 @@ onMounted(() => {
   <main id="main" :class="['app-main', { 'is-booted': booted }]">
     <RouterView v-slot="{ Component }">
       <Transition name="page" mode="out-in">
-        <component :is="Component" :key="route.fullPath + lang" />
+        <!-- kalitda hash yo'q: bir sahifa ichidagi anchor komponentni qayta yuklamaydi -->
+        <component :is="Component" :key="route.path + lang" />
       </Transition>
     </RouterView>
   </main>

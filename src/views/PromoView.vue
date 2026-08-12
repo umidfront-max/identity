@@ -43,7 +43,7 @@ watch(() => props.slug, register)
         <aside class="offer" v-reveal:right>
           <span class="offer__badge">{{ data.badge }}</span>
           <p>{{ data.offer }}</p>
-          <a href="#promo-form" class="btn btn--primary btn--sm">{{ t('cta.request') }}</a>
+          <RouterLink :to="{ hash: '#lead' }" class="btn btn--primary btn--sm">{{ t('cta.request') }}</RouterLink>
         </aside>
       </div>
     </section>
@@ -88,7 +88,7 @@ watch(() => props.slug, register)
     </section>
 
     <!-- ariza -->
-    <section id="promo-form" class="section">
+    <section id="lead" class="section">
       <div class="wrap formgrid">
         <div>
           <SectionHead :eyebrow="promo.code" :title="t('form.title')" :lead="data.offer" />

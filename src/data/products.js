@@ -209,8 +209,12 @@ export const PRODUCTS = [
     tracks:[
      { t:'Xavfsizlik uchun analitika',
        d:"Xavflarni muammoga aylanmasidan oldin «ko'ra» oladigan tizimlarni joriy etamiz: o'nlab toifadagi yuzlab hodisani qayta ishlovchi detektorlar ulanadi. Avtomatlashtirilgan videoanalitika baxtsiz hodisa va travmatizmning oldini oladi hamda jarima xavfini kamaytiradi. Monitoring xodimlarini analitikali kamera bilan almashtirish rutin ishdan xalos qiladi, inson omili ta'sirini va maxsus xodimlarga ketadigan xarajatni qisqartiradi.",
-       listTitle:"Detektorlarning to'liq bo'lmagan ro'yxati",
-       list:["Ishlab chiqarishda xavfsizlik texnikasi buzilishi — 10 dan ortiq turdagi SIZ mavjudligi","Xodimning xavfli yoki taqiqlangan hududga tushishi","Taqiqlangan chiziqni kesib o'tish (masalan, panjara orqali hududga kirish)","Yuz bo'yicha kirishni nazorat qilish, qo'shimcha tekshiruvlar (SIZ, jadval bo'yicha ish)","Yong'inni avtomatik aniqlash — tutun va olov belgilarini tanish","Avtotransport kirishi: raqam, marka, model, rang, kuzov turi, maxsus texnika","Qoldirilgan (egasiz) buyumlarni aniqlash va qo'riqchiga signal","Agressiv xatti-harakat va janjalni aniqlash, odamlarning ommaviy to'planishi","Hududdagi daydi hayvonlarni aniqlash","Hududda YHQ ga rioya qilish nazorati","Odamning yiqilishini aniqlash, jumladan xavfli hududlarda","Mo'ridan zararli chiqindilar va axlat to'planishini aniqlash","Multikamerali treking — odam marshrutini bir necha kamera bo'ylab tiklash"],
+       lists:[
+         { t:"Detektorlarning to'liq bo'lmagan ro'yxati",
+           items:["Ishlab chiqarishda xavfsizlik texnikasi buzilishi — 10 dan ortiq turdagi SIZ mavjudligi","Xodimning xavfli yoki taqiqlangan hududga tushishi","Taqiqlangan chiziqni kesib o'tish (masalan, panjara orqali hududga kirish)","Yuz bo'yicha kirishni nazorat qilish, qo'shimcha tekshiruvlar (SIZ, jadval bo'yicha ish)","Yong'inni avtomatik aniqlash — tutun va olov belgilarini tanish","Avtotransport kirishi: raqam, marka, model, rang, kuzov turi, maxsus texnika","Qoldirilgan (egasiz) buyumlarni aniqlash va qo'riqchiga signal","Agressiv xatti-harakat va janjalni aniqlash, odamlarning ommaviy to'planishi","Hududdagi daydi hayvonlarni aniqlash","Hududda YHQ ga rioya qilish nazorati","Odamning yiqilishini aniqlash, jumladan xavfli hududlarda","Mo'ridan zararli chiqindilar va axlat to'planishini aniqlash","Multikamerali treking — odam marshrutini bir necha kamera bo'ylab tiklash"] },
+         { t:'Keyingi rivojlanish',
+           items:["Xavfli hududlarda qoldirilgan buyumlarni topish","Hududda tezlik rejimiga rioya qilish nazorati","Mobil telefondan foydalanayotgan xodimni aniqlash","Unumdorlikni oshirish uchun xatti-harakat tahlili","Odamlar marshruti va kalit nuqtalarda o'tkazgan vaqti tahlili","Xodimlarning u yoki bu hududda o'tkazgan vaqtini hisoblash"] }
+       ],
        groupsTitle:'Yechim qanday muassasalarda joriy etiladi',
        groups:[
          { t:"Ta'lim muassasalari", items:["Talabalar faolligini tahlil qilish","Kechikkan va yo'q talabalarni aniqlash","Darsda telefondan foydalanayotganlarni aniqlash","Proktoring va masofaviy imtihon","O'qitish sifatini baholash"] },
@@ -254,14 +258,9 @@ export const PRODUCTS = [
               "Vaqtinchalik, bir martalik va doimiy ruxsatnomalar",
               "Hudud, hafta kuni va vaqt bo'yicha kirishni sozlash",
               "Avtomobilni aniq xodimga biriktirish, onlayn tablo va o'tishlar tarixi"] }
-       ] },
-     { t:'Tor ixtisoslashgan analitika',
-       d:"Luna Line — kompyuter ko'rish uchun innovatsion no-code platforma: foydalanuvchi ma'lumotni belgilaydi, tugmani bosadi va o'z ish vazifasi uchun mukammal o'qitilgan CV-model oladi. Interfeys har qanday foydalanuvchiga — fermer, prorab, marketolog, veterinarga — dasturchilarga murojaat qilmasdan modelni mustaqil o'qitish imkonini beradi. Qo'llash sohasi cheksiz: yo'ldagi o'ralarni topish, qoramol sog'lig'i holati, daraxtdagi mevalar pishganini baholash, konveyerdagi nuqsonlarni aniqlash.",
-       listTitle:'Luna Line hal qiladigan vazifalar',
-       list:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"],
-       note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." }
-    ],
-    tabs:[
+       ],
+       tabsTitle:'Tizimning boshqa quyi tizimlari',
+       tabs:[
       { t:'Kirish nazorati',
         d:"Turniketdan o'tishda xodim yuzi tanib olinadi va ruxsat tekshiriladi.",
         list:["Ruxsat etilgan xodimlar bazasi bilan solishtirish",
@@ -293,6 +292,12 @@ export const PRODUCTS = [
               "BI-platformalar bilan integratsiya va Excel'ga yuklash",
               "Moslashuvchan kirish huquqlari tizimi",
               "Hisobotni elektron pochtaga avtomatik yuborish"] }
+       ] },
+     { t:'Tor ixtisoslashgan analitika',
+       d:"Luna Line — kompyuter ko'rish uchun innovatsion no-code platforma: foydalanuvchi ma'lumotni belgilaydi, tugmani bosadi va o'z ish vazifasi uchun mukammal o'qitilgan CV-model oladi. Interfeys har qanday foydalanuvchiga — fermer, prorab, marketolog, veterinarga — dasturchilarga murojaat qilmasdan modelni mustaqil o'qitish imkonini beradi. Qo'llash sohasi cheksiz: yo'ldagi o'ralarni topish, qoramol sog'lig'i holati, daraxtdagi mevalar pishganini baholash, konveyerdagi nuqsonlarni aniqlash.",
+       lists:[{ t:'Luna Line hal qiladigan vazifalar',
+                items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] }],
+       note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." }
     ],
     cases:[{t:'Travmatizmning kamayishi',d:"Kaska yoki jilet yo'qligi, taqiqlangan hududga kirish bilan bog'liq baxtsiz hodisalarning oldi olinadi."},
            {t:'Xavfsizlik madaniyati',d:"Nazorat doimiy va xolis ekanini xodimlar biladi — beparvolik kamayadi."},
@@ -304,8 +309,6 @@ export const PRODUCTS = [
          {t:'Modulli tuzilma',d:"Faqat kerakli modullarni yoqasiz, tizim bosqichma-bosqich kengayadi."},
          {t:'Bir zumda reaksiya',d:"Signal darhol beriladi — xavf real vaqtda bartaraf etiladi."},
          {t:'Mavjud infratuzilma bilan integratsiya',d:"Turniket va shlagbaumlar, kadrlar hamda buxgalteriya tizimlari, BI-platformalar."}],
-    detectors:["Odam figurasini aniqlash va chegaralarini qurish","Himoya vositalari (kaska, jilet, ko'zoynak, qo'lqop, respirator)","Virtual chiziq va taqiqlangan hududga kirish","Tutun va ochiq alanga","Avtomobil raqami, markasi, modeli va rangi","Yuz bo'yicha identifikatsiya va kirish nazorati","Kamera tasviri sifatining buzilishi","Qiziqish hududlari bilan ishlash"],
-    roadmap:["Odamning yiqilishini aniqlash, jumladan xavfli hududlarda","Xavfli hududlarda qoldirilgan buyumlarni topish","Hududda YHQ va tezlik rejimiga rioya qilish nazorati","Odamlarning ommaviy to'planishi yoki janjalni aniqlash",'Daydi hayvonlarni aniqlash',"Mobil telefondan foydalanayotgan xodimni aniqlash","Unumdorlikni oshirish uchun xatti-harakat tahlili","Odamlar marshruti va kalit nuqtalarda o'tkazgan vaqti tahlili","Mo'ridan zararli chiqindilar va axlat to'planishini aniqlash"],
     delivery:["Korxona serverlarida (on-premise) — ma'lumotlar himoyalangan konturda qoladi","Markaziy ma'lumot markazida","Gibrid sxema (edge + markaz)"]
   },
   ru:{
@@ -321,8 +324,12 @@ export const PRODUCTS = [
     tracks:[
      { t:'Аналитика для безопасности',
        d:'Мы внедряем системы, которые могут «видеть» риски до того, как они станут проблемой. Мы подключаем детекторы, которые обрабатывают сотни событий из десятков категорий. Использование автоматизированных систем видеоаналитики позволяет избежать несчастных случаев и травматизма, снижает риск штрафов. Замена сотрудников мониторинга на камеру с аналитикой позволяет избавиться от рутинной работы, снизить воздействие человеческого фактора и сократить расходы на специализированный персонал.',
-       listTitle:'Неполный перечень детекторов',
-       list:['Нарушение техники безопасности на производстве — более 10 типов СИЗ','Попадание персонала в опасные или запретные зоны','Пересечение запретных линий (например, проникновение через забор)','Контроль доступа по лицу с дополнительными проверками (СИЗ, работа по расписанию)','Автоматическое выявление пожара — распознавание дыма и огня','Доступ автотранспорта: номер, марка, модель, цвет, тип кузова, спецтехника','Обнаружение оставленных (бесхозных) предметов и сигнализация охране','Обнаружение агрессивного поведения и драк, массового скопления людей','Выявление бродячих животных на территории','Контроль соблюдения ПДД на территории','Обнаружение падения людей, в том числе в опасных зонах','Обнаружение вредных выбросов из труб и скопления мусора','Мультикамерный трекинг — воспроизведение маршрута человека по нескольким камерам'],
+       lists:[
+         { t:'Неполный перечень детекторов',
+           items:['Нарушение техники безопасности на производстве — более 10 типов СИЗ','Попадание персонала в опасные или запретные зоны','Пересечение запретных линий (например, проникновение через забор)','Контроль доступа по лицу с дополнительными проверками (СИЗ, работа по расписанию)','Автоматическое выявление пожара — распознавание дыма и огня','Доступ автотранспорта: номер, марка, модель, цвет, тип кузова, спецтехника','Обнаружение оставленных (бесхозных) предметов и сигнализация охране','Обнаружение агрессивного поведения и драк, массового скопления людей','Выявление бродячих животных на территории','Контроль соблюдения ПДД на территории','Обнаружение падения людей, в том числе в опасных зонах','Обнаружение вредных выбросов из труб и скопления мусора','Мультикамерный трекинг — воспроизведение маршрута человека по нескольким камерам'] },
+         { t:'Дальнейшее развитие',
+           items:['Обнаружение оставленных предметов в опасных зонах','Контроль скоростного режима на территории','Обнаружение человека, использующего мобильный телефон','Анализ поведения сотрудников для повышения производительности','Анализ маршрутов людей и времени в ключевых точках','Подсчёт времени, проводимого сотрудниками в той или иной зоне'] }
+       ],
        groupsTitle:'Типы учреждений, где внедряется решение',
        groups:[
          { t:'Учебные заведения', items:['Анализ активности студентов на занятиях','Выявление опоздавших и отсутствующих','Обнаружение студентов с мобильным телефоном','Прокторинг и дистанционная экзаменация','Оценка качества преподавания'] },
@@ -366,14 +373,9 @@ export const PRODUCTS = [
               'Временные, разовые и постоянные пропуска',
               'Настройка доступа по зонам, дням недели и времени суток',
               'Привязка автомобиля к сотруднику, онлайн-табло и история проездов'] }
-       ] },
-     { t:'Узкоспециализированная аналитика',
-       d:'Luna Line — инновационная no-code-платформа для компьютерного зрения, которая позволяет пользователю разметить данные, нажать на кнопку и получить идеально обученную CV-модель под свои рабочие задачи. Интерфейс Luna Line позволяет любому пользователю — фермеру, прорабу, маркетологу, ветеринару — обучать модель самостоятельно, без обращения к программистам. Область применения безгранична: поиск ям на дорогах, состояние здоровья крупного рогатого скота, оценка спелости фруктов на дереве, выявление дефектов на конвейере.',
-       listTitle:'Задачи Luna Line',
-       list:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'],
-       note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' }
-    ],
-    tabs:[
+       ],
+       tabsTitle:'Другие подсистемы',
+       tabs:[
       { t:'Контроль доступа',
         d:'Лицо сотрудника распознаётся при проходе через турникет, доступ проверяется по базе.',
         list:['Проверка соответствия с базой допущенных сотрудников',
@@ -405,6 +407,12 @@ export const PRODUCTS = [
               'Интеграция с BI-платформами и выгрузка в Excel',
               'Гибкая система прав доступа',
               'Автоматическая отправка отчёта на электронную почту'] }
+       ] },
+     { t:'Узкоспециализированная аналитика',
+       d:'Luna Line — инновационная no-code-платформа для компьютерного зрения, которая позволяет пользователю разметить данные, нажать на кнопку и получить идеально обученную CV-модель под свои рабочие задачи. Интерфейс Luna Line позволяет любому пользователю — фермеру, прорабу, маркетологу, ветеринару — обучать модель самостоятельно, без обращения к программистам. Область применения безгранична: поиск ям на дорогах, состояние здоровья крупного рогатого скота, оценка спелости фруктов на дереве, выявление дефектов на конвейере.',
+       lists:[{ t:'Задачи Luna Line',
+                items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] }],
+       note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' }
     ],
     cases:[{t:'Снижение травматизма',d:'Предотвращаются несчастные случаи, связанные с отсутствием каски, жилета и пересечением запретных зон.'},
            {t:'Культура безопасности',d:'Сотрудники понимают, что контроль постоянен и объективен — халатности становится меньше.'},
@@ -416,8 +424,6 @@ export const PRODUCTS = [
          {t:'Модульная архитектура',d:'Включаете только нужные модули, система расширяется поэтапно.'},
          {t:'Мгновенная реакция',d:'Сигнал подаётся сразу — риск устраняется в реальном времени.'},
          {t:'Интеграция с инфраструктурой',d:'Турникеты и шлагбаумы, кадровая и бухгалтерская системы, BI-платформы.'}],
-    detectors:['Обнаружение фигуры человека и построение границ','Средства защиты: каска, жилет, очки, перчатки, респиратор','Пересечение виртуальной линии и вход в запретную зону','Дым и открытое пламя','Госномер, марка, модель и цвет автомобиля','Идентификация по лицу и контроль доступа','Ухудшение качества изображения с камеры','Работа с зонами интереса'],
-    roadmap:['Обнаружение падения людей, в том числе в опасных зонах','Обнаружение оставленных предметов в опасных зонах','Контроль соблюдения ПДД и скоростного режима на территории','Обнаружение массового скопления людей или драк','Обнаружение бродячих животных','Обнаружение человека, использующего мобильный телефон','Анализ поведения сотрудников для повышения производительности','Анализ маршрутов людей и времени в ключевых точках','Обнаружение вредных выбросов из труб и скопления мусора'],
     delivery:['Серверы предприятия (on-premise) — данные остаются в защищённом контуре','Центральный дата-центр','Гибридная схема (edge + центр)']
   },
   en:{
@@ -433,8 +439,12 @@ export const PRODUCTS = [
     tracks:[
      { t:'Analytics for safety',
        d:'We deploy systems that can “see” risks before they become problems, connecting detectors that process hundreds of events across dozens of categories. Automated video analytics helps avoid accidents and injuries and reduces the risk of fines. Replacing monitoring staff with a camera that analyses the scene removes routine work, lowers the impact of the human factor and cuts the cost of dedicated personnel.',
-       listTitle:'A partial list of detectors',
-       list:['Safety violations on site — more than 10 types of PPE','Staff entering hazardous or restricted zones','Crossing of restricted lines (for example, climbing a fence)','Face-based access control with extra checks (PPE, shift schedule)','Automatic fire detection — smoke and flame recognition','Vehicle access: plate, make, model, colour, body type, special machinery','Detection of objects left behind and an alert to security','Aggressive behaviour and fights, crowd formation','Stray animals on the territory','Traffic rule compliance on site','People falling, including in hazardous zones','Harmful stack emissions and waste build-up','Multi-camera tracking — reconstructing a person’s route across cameras'],
+       lists:[
+         { t:'A partial list of detectors',
+           items:['Safety violations on site — more than 10 types of PPE','Staff entering hazardous or restricted zones','Crossing of restricted lines (for example, climbing a fence)','Face-based access control with extra checks (PPE, shift schedule)','Automatic fire detection — smoke and flame recognition','Vehicle access: plate, make, model, colour, body type, special machinery','Detection of objects left behind and an alert to security','Aggressive behaviour and fights, crowd formation','Stray animals on the territory','Traffic rule compliance on site','People falling, including in hazardous zones','Harmful stack emissions and waste build-up','Multi-camera tracking — reconstructing a person’s route across cameras'] },
+         { t:'On the roadmap',
+           items:['Detection of objects left behind in hazardous zones','Speed limit compliance on site','Detection of a person using a mobile phone','Behaviour analysis to improve productivity','Analysis of movement routes and dwell time at key points','Measuring the time employees spend in a given zone'] }
+       ],
        groupsTitle:'Where the solution is deployed',
        groups:[
          { t:'Education', items:['Analysis of student activity in class','Detecting latecomers and absentees','Detecting students using a mobile phone','Proctoring and remote examination','Assessment of teaching quality'] },
@@ -478,14 +488,9 @@ export const PRODUCTS = [
               'Temporary, one-off and permanent passes',
               'Access rules by zone, weekday and time of day',
               'Vehicle linked to an employee, live board and travel history'] }
-       ] },
-     { t:'Specialised analytics',
-       d:'Luna Line is an innovative no-code computer vision platform: the user labels the data, presses a button and gets a perfectly trained CV model for their working task. Its interface lets any user — a farmer, a foreman, a marketer, a vet — train a model without involving developers. The field of application is unlimited: finding potholes, assessing cattle health, judging fruit ripeness on the tree, spotting defects on a conveyor.',
-       listTitle:'What Luna Line does',
-       list:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'],
-       note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' }
-    ],
-    tabs:[
+       ],
+       tabsTitle:'Other subsystems',
+       tabs:[
       { t:'Access control',
         d:'The employee’s face is recognised at the turnstile and access is verified against the database.',
         list:['Verification against the list of authorised employees',
@@ -517,6 +522,12 @@ export const PRODUCTS = [
               'BI platform integration and Excel export',
               'Granular access rights',
               'Automatic report delivery by email'] }
+       ] },
+     { t:'Specialised analytics',
+       d:'Luna Line is an innovative no-code computer vision platform: the user labels the data, presses a button and gets a perfectly trained CV model for their working task. Its interface lets any user — a farmer, a foreman, a marketer, a vet — train a model without involving developers. The field of application is unlimited: finding potholes, assessing cattle health, judging fruit ripeness on the tree, spotting defects on a conveyor.',
+       lists:[{ t:'What Luna Line does',
+                items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] }],
+       note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' }
     ],
     cases:[{t:'Fewer injuries',d:'Accidents linked to a missing helmet or vest and to restricted-zone crossings are prevented.'},
            {t:'Safety culture',d:'Staff know control is constant and objective — negligence drops.'},
@@ -528,8 +539,6 @@ export const PRODUCTS = [
          {t:'Modular architecture',d:'Enable only the modules you need; the system grows step by step.'},
          {t:'Instant response',d:'The alarm fires immediately — the risk is removed in real time.'},
          {t:'Fits existing infrastructure',d:'Turnstiles and barriers, HR and accounting systems, BI platforms.'}],
-    detectors:['Human figure detection and boundary construction','Protective equipment: helmet, vest, glasses, gloves, respirator','Virtual line crossing and restricted zone entry','Smoke and open flame','Licence plate, make, model and colour','Face identification and access control','Camera image quality degradation','Region-of-interest processing'],
-    roadmap:['Detection of people falling, including in hazardous zones','Detection of objects left behind in hazardous zones','Traffic rule and speed limit compliance on site','Detection of crowds or fights','Detection of stray animals','Detection of a person using a mobile phone','Behaviour analysis to improve productivity','Analysis of movement routes and dwell time at key points','Detection of harmful stack emissions and waste build-up'],
     delivery:['Plant servers (on-premise) — data stays in the protected perimeter','Central data centre','Hybrid setup (edge + centre)']
   }
 },
@@ -584,9 +593,9 @@ export const PRODUCTS = [
 { slug:'antifraud', code:'FRD', page:'antifraud.html',
   files:[{href:'assets/files/identity-antifraud.pdf'}],
   uz:{
-    name:'Antifrod (Fuzzy)',
+    name:'Antifrod-yechim',
     short:"Sessiya, tranzaksiya va ichki firibgarlikka qarshi uch qatlamli himoya.",
-    intro:"Fuzzy platformasi mijoz seansi, to'lov oqimi va xodimlar harakatlarini bir vaqtda kuzatadi: qoidalar, skoring modellari va xulq-atvor tahlili birgalikda ishlaydi.",
+    intro:"Antifrod platformasi mijoz seansi, to'lov oqimi va xodimlar harakatlarini bir vaqtda kuzatadi: qoidalar, skoring modellari va xulq-atvor tahlili birgalikda ishlaydi.",
     tasks:["Firibgarlik operatsiyasini amalga oshirilishidan oldin to'xtatish","Ijtimoiy muhandislik va hisob egallab olinishini aniqlash","Xodimlar tomonidan suiiste'molni fosh etish","Regulyator hisobotlari uchun dalillar bazasini yuritish"],
     tabs:[
       {t:'Sessiyaviy antifrod',d:"Mijozning ilova va internet-bankdagi xatti-harakatini kuzatadi.",list:["Qurilma barmoq izi va geolokatsiya","Klaviatura, sichqoncha va sensor xulqi","Masofaviy boshqaruv va emulyatorlarni aniqlash","Sessiya davomida uzluksiz autentifikatsiya"]},
@@ -601,9 +610,9 @@ export const PRODUCTS = [
     compliance:["To'lov tizimlari va regulyator talablari","PCI DSS bo'yicha ma'lumotlarni saqlash tamoyillari","Hodisalar bo'yicha to'liq audit izi","Rolga asoslangan kirish va ma'lumotlarni maskalash"]
   },
   ru:{
-    name:'Антифрод (Fuzzy)',
+    name:'Антифрод-решение',
     short:'Трёхслойная защита: сессионный, транзакционный и внутренний фрод.',
-    intro:'Платформа Fuzzy одновременно контролирует сессию клиента, платёжный поток и действия сотрудников: правила, скоринговые модели и поведенческий анализ работают вместе.',
+    intro:'Антифрод-платформа одновременно контролирует сессию клиента, платёжный поток и действия сотрудников: правила, скоринговые модели и поведенческий анализ работают вместе.',
     tasks:['Остановить мошенническую операцию до её исполнения','Выявлять социальную инженерию и захват учётных записей','Вскрывать злоупотребления со стороны сотрудников','Вести доказательную базу для отчётности регулятору'],
     tabs:[
       {t:'Сессионный антифрод',d:'Отслеживает поведение клиента в приложении и интернет-банке.',list:['Отпечаток устройства и геолокация','Поведение клавиатуры, мыши и сенсора','Выявление удалённого управления и эмуляторов','Непрерывная аутентификация в течение сессии']},
@@ -618,9 +627,9 @@ export const PRODUCTS = [
     compliance:['Требования платёжных систем и регулятора','Принципы хранения данных по PCI DSS','Полный аудиторский след по инцидентам','Ролевой доступ и маскирование данных']
   },
   en:{
-    name:'Antifraud (Fuzzy)',
+    name:'Antifraud solution',
     short:'Three layers of protection: session, transaction and internal fraud.',
-    intro:'The Fuzzy platform watches the customer session, the payment flow and employee actions at the same time: rules, scoring models and behavioural analysis work together.',
+    intro:'The antifraud platform watches the customer session, the payment flow and employee actions at the same time: rules, scoring models and behavioural analysis work together.',
     tasks:['Stopping a fraudulent operation before it is executed','Detecting social engineering and account takeover','Uncovering abuse by employees','Maintaining evidence for regulatory reporting'],
     tabs:[
       {t:'Session antifraud',d:'Tracks customer behaviour in the mobile app and internet bank.',list:['Device fingerprinting and geolocation','Keyboard, mouse and touch behaviour','Detection of remote control tools and emulators','Continuous authentication throughout the session']},

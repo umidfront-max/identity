@@ -33,7 +33,7 @@ onBeforeUnmount(() => clearInterval(timer))
           <span class="slide__badge">{{ s.badge }}</span>
           <h3>{{ s.title }}</h3>
           <p>{{ s.text }}</p>
-          <RouterLink to="/contacts" class="arrow-link">{{ t('cta.pilot') }} <i>&rarr;</i></RouterLink>
+          <RouterLink :to="{ path: '/contacts', hash: '#lead' }" class="arrow-link">{{ t('cta.pilot') }} <i>&rarr;</i></RouterLink>
         </article>
       </TransitionGroup>
     </div>

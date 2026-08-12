@@ -39,7 +39,7 @@ const why = computed(() => [1, 2, 3, 4].map(n => ({ t: t(`home.why${n}.t`), d: t
           <p class="hero__sub">{{ t('hero.sub') }}</p>
 
           <div class="hero__cta">
-            <RouterLink to="/contacts" class="btn btn--primary" v-magnet="0.18"
+            <RouterLink :to="{ path: '/contacts', hash: '#lead' }" class="btn btn--primary" v-magnet="0.18"
               @click="track('cta_click', { cta: 'hero-primary' })">
               {{ t('cta.discuss') }}
             </RouterLink>
@@ -82,8 +82,7 @@ const why = computed(() => [1, 2, 3, 4].map(n => ({ t: t(`home.why${n}.t`), d: t
       <div class="wrap">
         <SectionHead
           :eyebrow="t('home.products.eyebrow')"
-          :title="t('nav.products')"
-          :lead="t('tiles.lead')" />
+          :title="t('nav.products')" />
         <div class="tiles">
           <ProductTile v-for="(tile, i) in TILES" :key="tile.k" :tile="tile" :index="i" />
         </div>
@@ -229,6 +228,9 @@ const why = computed(() => [1, 2, 3, 4].map(n => ({ t: t(`home.why${n}.t`), d: t
 
 /* ---------- plitkalar ---------- */
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+/* 13 ta plitka hech qanday ustunlar soniga qoldiqsiz bo'linmaydi — oxirgisi
+   qatorni to'ldiradi, shunda oxirgi qatorda yolg'iz plitka qolmaydi */
+.tiles > :last-child{grid-column:1/-1}
 
 /* ---------- qatlamlar ---------- */
 .layers .wrap{position:relative}

@@ -256,6 +256,8 @@ h1 em,h2 em{font-style:normal;color:var(--azure-soft)}
 [data-reveal="right"]{transform:translateX(26px)}
 [data-reveal="scale"]{transform:scale(.95)}
 [data-reveal].is-in{opacity:1;transform:none}
+/* yuqoriga scroll qilinganda — animatsiyasiz, darhol o'z joyida */
+[data-reveal].is-instant{transition:none}
 
 /* ---------- prose (siyosat sahifasi) ---------- */
 .prose{max-width:820px}

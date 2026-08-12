@@ -1,0 +1,11 @@
+# Identity LLC — security contact
+# https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:info@frod.uz
+Contact: mailto:info@identity-uz.com
+Contact: https://identity-uz.com/#/contacts
+
+Expires: 2027-01-01T00:00:00.000Z
+
+Preferred-Languages: uz, ru, en
+Canonical: https://identity-uz.com/.well-known/security.txt

@@ -30,7 +30,7 @@ function toggle () {
         <a :href="c.telegram" target="_blank" rel="noopener" class="fab__row" @click="track('contact_click', { channel: 'telegram' })">
           <i>TG</i>Telegram
         </a>
-        <RouterLink to="/contacts" class="btn btn--primary btn--sm fab__cta" @click="open = false">
+        <RouterLink :to="{ path: '/contacts', hash: '#lead' }" class="btn btn--primary btn--sm fab__cta" @click="open = false">
           {{ t('cta.request') }}
         </RouterLink>
       </div>

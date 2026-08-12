@@ -5,16 +5,31 @@ const reduced = () =>
   window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 /* ---- v-reveal: ekranga kirganda ochilish (stagger uchun `:delay`) ---- */
+
+/* Scroll yo'nalishini kuzatamiz: yuqoriga qaytilganda pastdan ko'tarilib
+   chiqadigan animatsiya harakatga qarshi ketadi va "sakrash" hissini beradi. */
+let lastY = 0
+let scrollingUp = false
+if (typeof window !== 'undefined') {
+  lastY = window.scrollY
+  window.addEventListener('scroll', () => {
+    scrollingUp = window.scrollY < lastY
+    lastY = window.scrollY
+  }, { passive: true })
+}
+
 let observer = null
 function getObserver () {
   if (observer) return observer
   observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (!e.isIntersecting) return
-      /* Tez scroll qilinganda element allaqachon ekran tepasidan o'tib ketgan
-         bo'ladi — bunday holda stagger kechikishini bekor qilamiz, aks holda
-         bo'lim bir necha yuz millisekund bo'sh ko'rinib turadi. */
-      if (e.boundingClientRect.top < 0) e.target.style.setProperty('--d', '0ms')
+      /* Yuqoriga scroll qilinganda yoki element allaqachon ekran tepasidan
+         o'tib ketganda — animatsiyasiz, darhol ko'rsatamiz. */
+      if (scrollingUp || e.boundingClientRect.top < 0) {
+        e.target.style.setProperty('--d', '0ms')
+        e.target.classList.add('is-instant')
+      }
       e.target.classList.add('is-in')
       observer.unobserve(e.target)
     })

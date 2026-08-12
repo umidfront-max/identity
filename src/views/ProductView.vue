@@ -64,7 +64,7 @@ watch(() => props.slug, register)
       <div class="wrap intro">
         <p class="intro__lead" v-reveal>{{ data.intro }}</p>
         <div class="intro__act" v-reveal="80">
-          <RouterLink to="/contacts" class="btn btn--primary" v-magnet="0.15"
+          <RouterLink :to="{ hash: '#lead' }" class="btn btn--primary" v-magnet="0.15"
             @click="track('cta_click', { cta: 'product-pilot', product: props.slug })">
             {{ t('cta.pilot') }}
           </RouterLink>
@@ -150,7 +150,7 @@ watch(() => props.slug, register)
     </section>
 
     <!-- so'rov formasi -->
-    <section class="section section--surface">
+    <section id="lead" class="section section--surface">
       <div class="wrap formgrid">
         <div>
           <SectionHead :eyebrow="product.code" :title="t('form.title')" :lead="t('p.ctaText')" />

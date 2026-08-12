@@ -133,7 +133,7 @@ onBeforeUnmount(() => {
 
         <div class="hdr__side">
           <LangSwitch />
-          <RouterLink to="/contacts" class="btn btn--primary btn--sm hdr__cta" v-magnet="0.14">
+          <RouterLink :to="{ path: '/contacts', hash: '#lead' }" class="btn btn--primary btn--sm hdr__cta" v-magnet="0.14">
             <span>{{ t('cta.discuss') }}</span>
             <svg viewBox="0 0 14 10" aria-hidden="true">
               <path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -176,7 +176,7 @@ onBeforeUnmount(() => {
           </RouterLink>
         </div>
 
-        <RouterLink to="/contacts" class="btn btn--primary drawer__cta" :style="{ '--i': products.length + 5 }">
+        <RouterLink :to="{ path: '/contacts', hash: '#lead' }" class="btn btn--primary drawer__cta" :style="{ '--i': products.length + 5 }">
           {{ t('cta.discuss') }}
         </RouterLink>
       </div>

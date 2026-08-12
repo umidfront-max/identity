@@ -25,6 +25,9 @@ export const CONFIG = {
   contacts: {
     email: 'info@identity-uz.com',
     sales: 'info@identity-uz.com',
+    /* Yo'nalish bo'yicha alohida pochtalar — kontaktlar sahifasida ko'rsatiladi */
+    emailBio: 'info@face-id.uz',
+    emailSec: 'info@frod.uz',
     phone: '+998 (33) 500-60-77',
     phoneHref: '+998335006077',
     telegram: 'https://t.me/identity_uz',

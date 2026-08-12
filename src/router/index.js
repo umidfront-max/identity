@@ -17,7 +17,14 @@ export const router = createRouter({
   routes,
   scrollBehavior (to, from, saved) {
     if (saved) return saved
-    if (to.hash) return { el: to.hash, behavior: 'smooth', top: 92 }
+    if (to.hash) {
+      /* Boshqa sahifaga o'tilsa — sahifa o'tish animatsiyasi tugashini kutamiz,
+         aks holda anchor hali DOM'da bo'lmaydi va scroll ishlamaydi. */
+      const wait = to.path === from.path ? 0 : 420
+      return new Promise(resolve => {
+        setTimeout(() => resolve({ el: to.hash, behavior: 'smooth', top: 92 }), wait)
+      })
+    }
     return { top: 0 }
   }
 })

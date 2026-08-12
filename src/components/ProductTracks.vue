@@ -3,6 +3,7 @@
    Har bir yo'nalishda: tavsif, rasmli modullar, detektorlar ro'yxati va guruhlar. */
 import { ref } from 'vue'
 import ProductModules from '@/components/ProductModules.vue'
+import ProductTabs from '@/components/ProductTabs.vue'
 
 defineProps({ tracks: { type: Array, required: true } })
 const active = ref(0)
@@ -29,13 +30,18 @@ const active = ref(0)
           class="tracks__mods"
           :modules="tracks[active].modules" />
 
-        <div v-if="tracks[active].list" class="tracks__block">
-          <h3 v-if="tracks[active].listTitle">{{ tracks[active].listTitle }}</h3>
+        <div v-for="(blk, bi) in tracks[active].lists || []" :key="bi" class="tracks__block">
+          <h3 v-if="blk.t">{{ blk.t }}</h3>
           <ul class="tracks__list">
-            <li v-for="(item, i) in tracks[active].list" :key="i" :style="{ '--d': i * 45 + 'ms' }">
+            <li v-for="(item, i) in blk.items" :key="i" :style="{ '--d': i * 45 + 'ms' }">
               <span class="dot" aria-hidden="true"></span>{{ item }}
             </li>
           </ul>
+        </div>
+
+        <div v-if="tracks[active].tabs" class="tracks__block">
+          <h3 v-if="tracks[active].tabsTitle">{{ tracks[active].tabsTitle }}</h3>
+          <ProductTabs :tabs="tracks[active].tabs" />
         </div>
 
         <div v-if="tracks[active].groups" class="tracks__block">
