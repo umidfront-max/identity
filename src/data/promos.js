@@ -54,7 +54,7 @@ export const PROMOS = [
   }
 },
 
-{ slug:'luna-line', code:'AKS-02',
+{ slug:'luna-line', code:'AKS-02', cover:'luna-line',
   uz:{
     badge:'15 kun bepul',
     title:"Kompyuter ko'rishni o'z vazifangizda sinab ko'ring",
