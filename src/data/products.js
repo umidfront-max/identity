@@ -295,6 +295,18 @@ export const PRODUCTS = [
        ] },
      { t:'Tor ixtisoslashgan analitika',
        d:"Luna Line — kompyuter ko'rish uchun innovatsion no-code platforma: foydalanuvchi ma'lumotni belgilaydi, tugmani bosadi va o'z ish vazifasi uchun mukammal o'qitilgan CV-model oladi. Interfeys har qanday foydalanuvchiga — fermer, prorab, marketolog, veterinarga — dasturchilarga murojaat qilmasdan modelni mustaqil o'qitish imkonini beradi. Qo'llash sohasi cheksiz: yo'ldagi o'ralarni topish, qoramol sog'lig'i holati, daraxtdagi mevalar pishganini baholash, konveyerdagi nuqsonlarni aniqlash.",
+       carouselTitle:"Qo'llash misollari",
+       carousel:[
+         { img:'luna-v1',  t:'Transport va infratuzilma', d:"Yo'ldagi transport turlari hamda korxona binolari va inshootlarini aniqlash: Damas, Gentra, avtobus, traktor, kombayn, don saqlash siloslari." },
+         { img:'luna-v2',  t:'Dala monitoringi', d:"Hosil rejasi, suv sarfi va kasallik xavfi baholanadi; kadrdagi odam, sug'orish tizimi va texnika ajratiladi." },
+         { img:'luna-v3',  t:"Yo'l qoplamasi nuqsonlari", d:"O'ra va yoriqlar konturi ajratiladi, chuqurligi va shikast turi belgilanadi." },
+         { img:'luna-v5',  t:'Arxivdan matnli qidiruv', d:"«Milliy mahsulotlar» kabi matnli so'rov bo'yicha katta fotoarxivdan mos kadrlar topiladi." },
+         { img:'luna-v7',  t:'Mahsulotlarni klassifikatsiya qilish', d:"Qishloq xo'jaligi, hunarmandchilik, sanoat va transport toifalari bo'yicha avtomatik saralash." },
+         { img:'luna-v8',  t:'Chorva monitoringi', d:"Bosh sonini hisoblash, sog'lig'i bo'yicha holatini baholash va e'tibor talab qiladigan hayvonlarni ajratish." },
+         { img:'luna-v9',  t:"Kod yozmasdan model o'qitish", d:"Ma'lumot yuklash, tozalash, modelni o'qitish va sinash — hammasi vizual interfeys orqali." },
+         { img:'luna-v10', t:'Mevalar pishganini baholash', d:"Issiqxonada pomidorlarning pishganlik darajasi aniqlanadi va yig'im-terim rejalashtiriladi." },
+         { img:'luna-v11', t:'Konveyerdagi nuqsonlar', d:"Qadoq va shishalar holati tekshiriladi, nuqsonli mahsulot real vaqtda ajratiladi." }
+       ],
        lists:[{ t:'Luna Line hal qiladigan vazifalar',
                 items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] }],
        note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." }
@@ -410,6 +422,18 @@ export const PRODUCTS = [
        ] },
      { t:'Узкоспециализированная аналитика',
        d:'Luna Line — инновационная no-code-платформа для компьютерного зрения, которая позволяет пользователю разметить данные, нажать на кнопку и получить идеально обученную CV-модель под свои рабочие задачи. Интерфейс Luna Line позволяет любому пользователю — фермеру, прорабу, маркетологу, ветеринару — обучать модель самостоятельно, без обращения к программистам. Область применения безгранична: поиск ям на дорогах, состояние здоровья крупного рогатого скота, оценка спелости фруктов на дереве, выявление дефектов на конвейере.',
+       carouselTitle:'Примеры применения',
+       carousel:[
+         { img:'luna-v1',  t:'Транспорт и инфраструктура', d:'Распознавание типов транспорта на дороге и объектов предприятия: Damas, Gentra, автобус, трактор, комбайн, зерновые силосы.' },
+         { img:'luna-v2',  t:'Мониторинг полей', d:'Оценка плана урожая, расхода воды и риска заболеваний; в кадре выделяются люди, система полива и техника.' },
+         { img:'luna-v3',  t:'Дефекты дорожного покрытия', d:'Выделяется контур ям и трещин, определяется глубина и тип повреждения.' },
+         { img:'luna-v5',  t:'Поиск в архиве по тексту', d:'По текстовому запросу вроде «национальные товары» из большого фотоархива находятся подходящие кадры.' },
+         { img:'luna-v7',  t:'Классификация товаров', d:'Автоматическая сортировка по категориям: сельское хозяйство, ремёсла, промышленность, транспорт.' },
+         { img:'luna-v8',  t:'Мониторинг скота', d:'Подсчёт поголовья, оценка состояния здоровья и выделение животных, требующих внимания.' },
+         { img:'luna-v9',  t:'Обучение модели без кода', d:'Загрузка и очистка данных, обучение и проверка модели — всё через визуальный интерфейс.' },
+         { img:'luna-v10', t:'Оценка спелости плодов', d:'В теплице определяется степень зрелости томатов и планируется сбор урожая.' },
+         { img:'luna-v11', t:'Дефекты на конвейере', d:'Проверяется состояние упаковки и бутылок, брак отделяется в реальном времени.' }
+       ],
        lists:[{ t:'Задачи Luna Line',
                 items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] }],
        note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' }
@@ -525,6 +549,18 @@ export const PRODUCTS = [
        ] },
      { t:'Specialised analytics',
        d:'Luna Line is an innovative no-code computer vision platform: the user labels the data, presses a button and gets a perfectly trained CV model for their working task. Its interface lets any user — a farmer, a foreman, a marketer, a vet — train a model without involving developers. The field of application is unlimited: finding potholes, assessing cattle health, judging fruit ripeness on the tree, spotting defects on a conveyor.',
+       carouselTitle:'Application examples',
+       carousel:[
+         { img:'luna-v1',  t:'Transport and infrastructure', d:'Recognising vehicle types on the road and plant facilities: Damas, Gentra, bus, tractor, combine, grain silos.' },
+         { img:'luna-v2',  t:'Field monitoring', d:'Yield plan, water usage and disease risk are assessed; people, the irrigation system and machinery are detected in frame.' },
+         { img:'luna-v3',  t:'Road surface defects', d:'The contour of potholes and cracks is extracted, with depth and damage type identified.' },
+         { img:'luna-v5',  t:'Text search across the archive', d:'A text query such as “national products” retrieves matching frames from a large photo archive.' },
+         { img:'luna-v7',  t:'Product classification', d:'Automatic sorting by category: agriculture, crafts, industry, transport.' },
+         { img:'luna-v8',  t:'Livestock monitoring', d:'Counting the herd, assessing health status and flagging animals that need attention.' },
+         { img:'luna-v9',  t:'Training a model without code', d:'Uploading and cleaning data, training and testing the model — all through a visual interface.' },
+         { img:'luna-v10', t:'Fruit ripeness assessment', d:'Tomato ripeness is graded in the greenhouse and harvesting is planned accordingly.' },
+         { img:'luna-v11', t:'Conveyor defects', d:'Packaging and bottle condition is checked and rejects are separated in real time.' }
+       ],
        lists:[{ t:'What Luna Line does',
                 items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] }],
        note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' }

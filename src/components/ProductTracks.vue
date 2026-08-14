@@ -4,6 +4,7 @@
 import { ref } from 'vue'
 import ProductModules from '@/components/ProductModules.vue'
 import ProductTabs from '@/components/ProductTabs.vue'
+import MediaCarousel from '@/components/MediaCarousel.vue'
 
 defineProps({ tracks: { type: Array, required: true } })
 const active = ref(0)
@@ -24,6 +25,11 @@ const active = ref(0)
     <Transition name="track" mode="out-in">
       <div class="tracks__panel" :key="active" role="tabpanel">
         <p class="tracks__d">{{ tracks[active].d }}</p>
+
+        <div v-if="tracks[active].carousel" class="tracks__block">
+          <h3 v-if="tracks[active].carouselTitle">{{ tracks[active].carouselTitle }}</h3>
+          <MediaCarousel :slides="tracks[active].carousel" />
+        </div>
 
         <ProductModules
           v-if="tracks[active].modules"
