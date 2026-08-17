@@ -19,7 +19,10 @@ export const CONFIG = {
        'faceid': 'presentations/faceid.pdf'
      Slug ro'yxatda bo'lmasa — «Taqdimotni yuklab olish» tugmasi ko'rsatilmaydi
      (buzilgan havola paydo bo'lmasligi uchun). */
-  presentations: {},
+  presentations: {
+    'video-analytics': 'presentations/video-analytics.pptx',
+    'faceid': 'presentations/faceid.pptx'
+  },
 
   /* Aloqa ma'lumotlari (footer, kontaktlar sahifasi, mailto-fallback) */
   contacts: {

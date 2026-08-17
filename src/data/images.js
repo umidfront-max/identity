@@ -4,7 +4,7 @@ import deepfakeFake from '@/assets/img/promo/deepfake-fake.jpg'
 import blocked1 from '@/assets/img/promo/blocked-1.jpg'
 import blocked2 from '@/assets/img/promo/blocked-2.jpg'
 import blocked3 from '@/assets/img/promo/blocked-3.jpg'
-import lunaLine from '@/assets/img/promo/luna-line.jpg'
+import lunaLine from '@/assets/img/promo/luna-line.png'
 
 /* Luna Line qo'llanish misollari — mahsulot sahifasidagi karusel uchun */
 import lv1 from '@/assets/img/luna/v1.jpg'
