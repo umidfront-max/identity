@@ -222,6 +222,14 @@ export const PRODUCTS = [
          { t:'Ofislar', items:["Xodimlar xatti-harakatini tahlil qilib unumdorlikni oshirish","Xodimning ish o'rnida bo'lishini nazorat qilish","Kadrlar tizimi, buxgalteriya va ERP bilan oson integratsiya"] }
        ],
        note:"Bizda joriy etilishi mumkin bo'lgan yana yigirmadan ortiq detektor bor. Zarur bo'lsa, yangi funksionalni ishlab chiqish 1–3 oy vaqt oladi.",
+       carouselAt:'end',
+       carouselTitle:"Kadrlarda qanday ko'rinadi",
+       carousel:[
+         { img:'sec-h4', t:"Ta'lim muassasalari", d:"Talabalar faolligi baholanadi: darsga qatnashish, telefondan foydalanish va e'tibordan chetda qolgan holatlar ajratiladi." },
+         { img:'sec-h1', t:'Ishlab chiqarish va ombor', d:"Har bir xodim ajratiladi va SIZ mavjudligi tekshiriladi; xavfli hudud belgilanadi va unga kirgan odam darhol qizil signal bilan qayd etiladi." },
+         { img:'sec-h2', t:'Perimetr va kirish nazorati', d:"Tunda panjaradan oshib o'tish urinishi aniqlanadi, turniketdagi xodim esa yuzi bo'yicha tanib olinadi va kaskasi tekshiriladi." },
+         { img:'sec-h3', t:'Ommaviy joylar', d:"Tutun, egasiz qoldirilgan buyum va odamlarning ommaviy to'planishi bir vaqtda kuzatiladi." }
+       ],
        modules:[
       { img:'ppe', t:'SIZ mavjudligi nazorati',
         d:"Kadrdagi odam figurasi topiladi, chegaralari quriladi va himoya vositalari mavjudligi tekshiriladi.",
@@ -349,6 +357,14 @@ export const PRODUCTS = [
          { t:'Офисы', items:['Анализ поведения сотрудников для повышения производительности','Контроль присутствия сотрудника на рабочем месте','Простая интеграция с кадровой системой, бухгалтерией и ERP'] }
        ],
        note:'У нас есть ещё более двадцати детекторов, которые могут быть внедрены в ваш бизнес. При необходимости разработка нового функционала займёт 1–3 месяца.',
+       carouselAt:'end',
+       carouselTitle:'Как это выглядит в кадре',
+       carousel:[
+         { img:'sec-h4', t:'Учебные заведения', d:'Оценивается активность студентов: присутствие на занятии, использование телефона и потеря внимания.' },
+         { img:'sec-h1', t:'Производство и склад', d:'Каждый сотрудник выделяется и проверяется на наличие СИЗ; опасная зона размечена, и вошедший в неё человек сразу фиксируется красной тревогой.' },
+         { img:'sec-h2', t:'Периметр и контроль доступа', d:'Ночью фиксируется попытка перелезть через забор, а сотрудник на турникете распознаётся по лицу с проверкой каски.' },
+         { img:'sec-h3', t:'Общественные пространства', d:'Одновременно отслеживаются дым, оставленный без присмотра предмет и массовое скопление людей.' }
+       ],
        modules:[
       { img:'ppe', t:'Наличие СИЗ на рабочих',
         d:'Система находит фигуру человека в кадре, строит её границы и проверяет наличие средств защиты.',
@@ -476,6 +492,14 @@ export const PRODUCTS = [
          { t:'Offices', items:['Behaviour analysis to improve productivity','Monitoring presence at the workplace','Easy integration with HR, accounting and ERP'] }
        ],
        note:'We have more than twenty further detectors that can be deployed for your business. If required, building new functionality takes 1–3 months.',
+       carouselAt:'end',
+       carouselTitle:'How it looks in frame',
+       carousel:[
+         { img:'sec-h4', t:'Educational institutions', d:'Student activity is assessed: attendance, phone use and loss of attention are separated out.' },
+         { img:'sec-h1', t:'Manufacturing and warehouse', d:'Every worker is detected and checked for PPE; the hazardous zone is marked and anyone entering it is flagged instantly with a red alarm.' },
+         { img:'sec-h2', t:'Perimeter and access control', d:'At night an attempt to climb the fence is detected, while the employee at the turnstile is recognised by face with a helmet check.' },
+         { img:'sec-h3', t:'Public spaces', d:'Smoke, an unattended object and a gathering crowd are tracked at the same time.' }
+       ],
        modules:[
       { img:'ppe', t:'PPE compliance',
         d:'The system finds the human figure in frame, builds its boundaries and checks for protective equipment.',

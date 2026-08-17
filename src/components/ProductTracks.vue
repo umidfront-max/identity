@@ -26,7 +26,8 @@ const active = ref(0)
       <div class="tracks__panel" :key="active" role="tabpanel">
         <p class="tracks__d">{{ tracks[active].d }}</p>
 
-        <div v-if="tracks[active].carousel" class="tracks__block">
+        <!-- carouselAt:'end' bo'lsa karusel blok oxirida chiziladi -->
+        <div v-if="tracks[active].carousel && tracks[active].carouselAt !== 'end'" class="tracks__block">
           <h3 v-if="tracks[active].carouselTitle">{{ tracks[active].carouselTitle }}</h3>
           <MediaCarousel :slides="tracks[active].carousel" />
         </div>
@@ -65,6 +66,11 @@ const active = ref(0)
         </div>
 
         <p v-if="tracks[active].note" class="tracks__note">{{ tracks[active].note }}</p>
+
+        <div v-if="tracks[active].carousel && tracks[active].carouselAt === 'end'" class="tracks__block">
+          <h3 v-if="tracks[active].carouselTitle">{{ tracks[active].carouselTitle }}</h3>
+          <MediaCarousel :slides="tracks[active].carousel" />
+        </div>
       </div>
     </Transition>
   </div>

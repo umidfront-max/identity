@@ -17,6 +17,12 @@ import lv9 from '@/assets/img/luna/v9.jpg'
 import lv10 from '@/assets/img/luna/v10.jpg'
 import lv11 from '@/assets/img/luna/v11.jpg'
 
+/* Xavfsizlik analitikasi misollari */
+import sh1 from '@/assets/img/sec/h1.jpg'
+import sh2 from '@/assets/img/sec/h2.jpg'
+import sh3 from '@/assets/img/sec/h3.jpg'
+import sh4 from '@/assets/img/sec/h4.jpg'
+
 export const IMAGES = {
   'deepfake-fake': deepfakeFake,
   'luna-line': lunaLine,
@@ -31,5 +37,9 @@ export const IMAGES = {
   'luna-v8': lv8,
   'luna-v9': lv9,
   'luna-v10': lv10,
-  'luna-v11': lv11
+  'luna-v11': lv11,
+  'sec-h1': sh1,
+  'sec-h2': sh2,
+  'sec-h3': sh3,
+  'sec-h4': sh4
 }
