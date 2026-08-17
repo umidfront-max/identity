@@ -28,21 +28,24 @@ function getObserver () {
          o'tib ketganda — animatsiyasiz, darhol ko'rsatamiz. */
       if (scrollingUp || e.boundingClientRect.top < 0) {
         e.target.style.setProperty('--d', '0ms')
-        e.target.classList.add('is-instant')
+        e.target.setAttribute('data-reveal-instant', '')
       }
-      e.target.classList.add('is-in')
+      e.target.setAttribute('data-reveal-in', '')
       observer.unobserve(e.target)
     })
   }, { rootMargin: '0px 0px 14% 0px', threshold: 0 })
   return observer
 }
 
+/* Ko'rinish holati class emas, atribut orqali belgilanadi: element ustida
+   dinamik :class bo'lsa (masalan LayerStack'dagi is-active), Vue class
+   atributini butunlay qayta yozadi va qo'shilgan class yo'qolib ketadi. */
 export const reveal = {
   mounted (el, binding) {
     el.setAttribute('data-reveal', binding.arg || 'up')
     const d = binding.value
     if (d) el.style.setProperty('--d', (typeof d === 'number' ? d : 0) + 'ms')
-    if (reduced()) { el.classList.add('is-in'); return }
+    if (reduced()) { el.setAttribute('data-reveal-in', ''); return }
     getObserver().observe(el)
   },
   unmounted (el) {
