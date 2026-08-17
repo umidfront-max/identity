@@ -1,13 +1,21 @@
 <script setup>
+import { computed } from 'vue'
 import { useLang } from '@/composables/useLang.js'
+import { PARTNER_LOGOS } from '@/data/partnerLogos.js'
 
-defineProps({ partner: { type: Object, required: true }, index: { type: Number, default: 0 } })
+const props = defineProps({ partner: { type: Object, required: true }, index: { type: Number, default: 0 } })
 const { t } = useLang()
+
+/* Logotip bo'lmasa — monogramma (VL, PT...) ko'rsatiladi */
+const logo = computed(() => PARTNER_LOGOS[props.partner.logo] || null)
 </script>
 
 <template>
   <a :href="partner.url" target="_blank" rel="noopener" class="prt" v-reveal="index * 70">
-    <div class="prt__mark">{{ partner.mark }}</div>
+    <div v-if="logo" class="prt__logo">
+      <img :src="logo" :alt="partner.name" loading="lazy" decoding="async">
+    </div>
+    <div v-else class="prt__mark">{{ partner.mark }}</div>
     <div>
       <h3>{{ partner.name }}</h3>
       <p>
@@ -35,6 +43,14 @@ const { t } = useLang()
   transition:transform .4s var(--ease);
 }
 .prt:hover .prt__mark{transform:rotate(-6deg) scale(1.05)}
+
+/* logotiplarning nisbati har xil — balandligi bo'yicha tenglashtiramiz */
+.prt__logo{
+  flex:none;width:92px;height:54px;display:grid;place-items:center;
+  transition:transform .4s var(--ease);
+}
+.prt__logo img{max-width:100%;max-height:36px;width:auto;height:auto;object-fit:contain}
+.prt:hover .prt__logo{transform:scale(1.04)}
 .prt h3{font-size:18px;margin-bottom:6px}
 .prt p{color:var(--muted);font-size:15px;margin:0 0 10px}
 .prt__site{font-family:var(--font-mono);font-size:12px;color:var(--blue);letter-spacing:.02em}

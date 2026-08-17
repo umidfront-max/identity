@@ -43,9 +43,10 @@ export const LAYERS = [
 ]
 
 export const PARTNERS = [
-  { mark: 'VL', name: 'VisionLabs', k: 'partners.p1.d', site: 'visionlabs.ai', url: 'https://visionlabs.ai' },
-  { mark: 'FZ', name: 'Fuzzy Logic Labs', k: 'partners.p2.d', site: 'fzlabs.ru', url: 'https://fzlabs.ru', note: true },
-  { mark: 'SL', name: 'Solar', k: 'partners.p3.d', site: 'rt-solar.ru', url: 'https://rt-solar.ru' },
+  { mark: 'VL', logo: 'visionlabs', name: 'VisionLabs', k: 'partners.p1.d', site: 'visionlabs.ai', url: 'https://visionlabs.ai' },
+  { mark: 'FZ', logo: 'fzlabs', name: 'Fuzzy Logic Labs', k: 'partners.p2.d', site: 'fzlabs.ru', url: 'https://fzlabs.ru', note: true },
+  { mark: 'SL', logo: 'solar', name: 'Solar', k: 'partners.p3.d', site: 'rt-solar.ru', url: 'https://rt-solar.ru' },
+  /* PT logotipi hali yo'q — fayl qo'shilgach partnerLogos.js ga yozing */
   { mark: 'PT', name: 'Positive Technologies', k: 'partners.p4.d', site: 'ptsecurity.com', url: 'https://www.ptsecurity.com' }
 ]
 
