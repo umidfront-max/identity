@@ -58,6 +58,6 @@ export const HERO_STATS = ['hero.stat1', 'hero.stat2', 'hero.stat3', 'hero.stat4
 export const METRICS = [
   { key: 'about.m1', value: 99.8, suffix: '%', decimals: 1 },
   { key: 'about.m2', value: 20, suffix: '+ mln', decimals: 0 },
-  { key: 'about.m3', value: 400, suffix: '+', decimals: 0 },
+  { key: 'about.m3', value: 700, suffix: '+', decimals: 0 },
   { key: 'about.m4', value: 4, suffix: '+ mln', decimals: 0 }
 ]
