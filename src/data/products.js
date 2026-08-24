@@ -47,7 +47,7 @@ export const PRODUCTS = [
 },
 
 /* ---------------------------------------------------------------- 2 */
-{ slug:'faceid', code:'FACE', page:'faceid.html',
+{ slug:'faceid', code:'FACE', page:'faceid.html', tabsAs:'carousel', tabsKey:'p.platform',
   uz:{
     name:'FaceID — biometrik identifikatsiya',
     short:"Bank va moliya sektori uchun tez va xavfsiz biometrik identifikatsiya yechimi.",
@@ -62,7 +62,7 @@ export const PRODUCTS = [
            {t:'Emotsiyalarni baholash',d:"Tashrifchilar emotsiyasi bo'yicha qoniqish darajasini o'lchash."}],
     adv:[{t:'Ishonchli verifikatsiya',d:"Foydalanuvchi haqiqatan ham o'zi ekanligiga kafolat (1:1 solishtirish)."},
          {t:'Identifikatsiya (1:N)',d:"Mijoz bazasidan mos nomzodni topish va aniqlash."},
-         {t:"DeepFake'dan himoya",d:"Qidiruv natijalariga ko'ra — bugungi kunda Respublikada generatsiya qilingan tasvirlarga qarshi kurasha oladigan yagona yechim."},
+         {t:"DeepFake'dan himoya",d:"Ochiq ma'lumotlardan kelib chiqib — bugungi kunda Respublikada generatsiya qilingan tasvirlarga qarshi kurasha oladigan yagona yechim."},
          {t:'Soxta ishlashlar minimal',d:"Foydalanuvchi 100% ga yaqin ehtimollik bilan to'g'ri aniqlanadi."},
          {t:'Bitta fotosuratdan liveness',d:"Internet zaif bo'lgan joylarda ham ishlash imkonini beradi."},
          {t:'Chet elliklarni identifikatsiya qilish',d:"JShShIR olgan chet el fuqarolari ham tizimdan foydalana oladi."},
@@ -84,10 +84,9 @@ export const PRODUCTS = [
     attacks:["Fotosurat ko'rsatish urinishidan himoya","Video ko'rsatish urinishidan himoya","Qog'oz va silikon niqoblardan himoya"],
     gallery:{
       title:"DeepFake'dan himoya",
-      lead:"Zamonaviy neyron tarmoqlar haqiqiy kadrdan farq qilmaydigan yuzlarni yaratadi. Servis fotosuratni generatsiya artefaktlariga tekshiradi — o'tgan yil davomida 400 dan ortiq urinish bloklangan.",
+      lead:"Zamonaviy neyron tarmoqlar haqiqiy kadrdan farq qilmaydigan yuzlarni yaratadi. Servis fotosuratni generatsiya artefaktlariga tekshiradi — o'tgan yil davomida 700 dan ortiq urinish bloklangan. 700 dan ortiq mijoz shu himoya tufayli pulini yo'qotmadi.",
       flag:'Bloklandi',
       items:[
-        { img:'deepfake-fake', t:'Generatsiya qilingan yuz', flag:false, d:"Neyron tarmoq yaratgan portret: haqiqiy fotosuratdan ko'z bilan farqlab bo'lmaydi." },
         { img:'blocked-1', t:"Ekrandan ko'rsatish", d:"Boshqa odamning fotosuratini telefon ekranidan ko'rsatib tekshiruvdan o'tish urinishi." },
         { img:'blocked-2', t:'DeepFake', d:"Generatsiya qilingan tasvirni taqdim etish orqali identifikatsiyadan o'tish urinishi." },
         { img:'blocked-3', t:'DeepFake', d:"Generativ model yaratgan yuz bilan tekshiruvni chetlab o'tishga urinish." }
@@ -110,7 +109,7 @@ export const PRODUCTS = [
            {t:'Оценка эмоций',d:'Считывание эмоций посетителей и оценка удовлетворённости.'}],
     adv:[{t:'Надёжная верификация',d:'Гарантия, что пользователь действительно тот, за кого себя выдаёт (сравнение 1:1).'},
          {t:'Идентификация (1:N)',d:'Поиск совпадения в базе клиента и определение подходящего кандидата.'},
-         {t:'Защита от DeepFake',d:'По результатам поиска — на сегодняшний день единственное решение в Республике, которое может бороться со сгенерированными изображениями.'},
+         {t:'Защита от DeepFake',d:'Исходя из открытой информации — на сегодняшний день единственное решение в Республике, которое может бороться со сгенерированными изображениями.'},
          {t:'Минимум ложных срабатываний',d:'Пользователь правильно определяется с вероятностью, близкой к 100%.'},
          {t:'Liveness по одной фотографии',d:'Позволяет работать в местах со слабым интернетом.'},
          {t:'Идентификация иностранцев',d:'Система может использоваться иностранцами, получившими ПИНФЛ.'},
@@ -132,10 +131,9 @@ export const PRODUCTS = [
     attacks:['Защита от попытки предъявить фотографию','Защита от попытки предъявить видео','Защита от бумажных и силиконовых масок'],
     gallery:{
       title:'Защита от DeepFake',
-      lead:'Современные нейросети создают лица, не отличимые от реальных кадров. Сервис проверяет фотографию на артефакты генерации — за прошедший год заблокировано более 400 попыток.',
+      lead:'Современные нейросети создают лица, не отличимые от реальных кадров. Сервис проверяет фотографию на артефакты генерации — за прошедший год заблокировано более 700 попыток. Более 700 клиентов не потеряли свои деньги благодаря нашей защите.',
       flag:'Заблокировано',
       items:[
-        { img:'deepfake-fake', t:'Сгенерированное лицо', flag:false, d:'Портрет, созданный нейросетью: визуально неотличим от настоящей фотографии.' },
         { img:'blocked-1', t:'Демонстрация с экрана', d:'Попытка пройти проверку, показав фотографию другого человека с экрана телефона.' },
         { img:'blocked-2', t:'DeepFake', d:'Попытка пройти идентификацию, предъявив сгенерированное изображение.' },
         { img:'blocked-3', t:'DeepFake', d:'Попытка обойти проверку с помощью лица, созданного генеративной моделью.' }
@@ -158,7 +156,7 @@ export const PRODUCTS = [
            {t:'Emotion analysis',d:'Reading visitor emotions and measuring satisfaction.'}],
     adv:[{t:'Reliable verification',d:'Assurance that the user really is who they claim to be (1:1 matching).'},
          {t:'Identification (1:N)',d:'Finding a match in the customer database and returning the right candidate.'},
-         {t:'DeepFake protection',d:'Based on available research, currently the only solution in the country able to counter generated images.'},
+         {t:'DeepFake protection',d:'Based on publicly available information, currently the only solution in the country able to counter generated images.'},
          {t:'Minimal false positives',d:'The user is identified correctly with close to 100% probability.'},
          {t:'Liveness from a single photo',d:'Works in locations with a weak internet connection.'},
          {t:'Identification of foreign nationals',d:'Usable by foreign citizens who have been issued a PINFL.'},
@@ -180,10 +178,9 @@ export const PRODUCTS = [
     attacks:['Protection against presenting a photo','Protection against presenting a video','Protection against paper and silicone masks'],
     gallery:{
       title:'DeepFake protection',
-      lead:'Modern neural networks produce faces indistinguishable from real footage. The service checks a photo for generation artefacts — over the past year more than 400 attempts were blocked.',
+      lead:'Modern neural networks produce faces indistinguishable from real footage. The service checks a photo for generation artefacts — over the past year more than 700 attempts were blocked. More than 700 customers did not lose their money thanks to this protection.',
       flag:'Blocked',
       items:[
-        { img:'deepfake-fake', t:'Generated face', flag:false, d:'A portrait created by a neural network: visually indistinguishable from a real photo.' },
         { img:'blocked-1', t:'Screen replay', d:'An attempt to pass the check by showing another person’s photo from a phone screen.' },
         { img:'blocked-2', t:'DeepFake', d:'An attempt to pass identification by presenting a generated image.' },
         { img:'blocked-3', t:'DeepFake', d:'An attempt to bypass the check with a face produced by a generative model.' }
@@ -221,6 +218,13 @@ export const PRODUCTS = [
          { t:'Savdo', items:["Odamlar marshruti va kalit nuqtalardagi vaqt tahlili","Issiqlik xaritalarini qurish","Tashrifchilar demografik statistikasi","Qora ro'yxat va qo'riqchiga signal","Emotsiya va qoniqish darajasini o'lchash"] },
          { t:'Ofislar', items:["Xodimlar xatti-harakatini tahlil qilib unumdorlikni oshirish","Xodimning ish o'rnida bo'lishini nazorat qilish","Kadrlar tizimi, buxgalteriya va ERP bilan oson integratsiya"] }
        ],
+       casesTitle:'Hayotiy sikl',
+       cases:[{t:'Travmatizmning kamayishi',d:"Kaska yoki jilet yo'qligi, taqiqlangan hududga kirish bilan bog'liq baxtsiz hodisalarning oldi olinadi."},
+           {t:'Xavfsizlik madaniyati',d:"Nazorat doimiy va xolis ekanini xodimlar biladi — beparvolik kamayadi."},
+           {t:'Nazorat xarajatlari',d:"Qo'lda aylanib chiqish kamayadi, buzilish tez aniqlanadi, mehnat muhofazasi xizmati yuki yengillashadi."},
+           {t:'Jarimalar xavfi',d:"Nazorat tizimli olib borilayotgani hujjatli tasdiqlanadi — moliyaviy risk pasayadi."},
+           {t:'Shaffoflik',d:"Barcha hodisalar bazada; rahbariyat hisobot, statistika va videotasdiq oladi."},
+           {t:'Prognozlash',d:"To'plangan ma'lumotlar xavfli uchastkalar va pik vaqtlarni ko'rsatadi — reaksiyadan prognozga o'tiladi."}],
        note:"Bizda joriy etilishi mumkin bo'lgan yana yigirmadan ortiq detektor bor. Zarur bo'lsa, yangi funksionalni ishlab chiqish 1–3 oy vaqt oladi.",
        carouselAt:'end',
        carouselTitle:"Kadrlarda qanday ko'rinadi",
@@ -317,14 +321,14 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'Luna Line hal qiladigan vazifalar',
                 items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] }],
+       groupsTitle:'Buyurtmachi jamoasi nimalarni mustaqil qiladi',
+       groups:[
+         { t:"Savdo tarmog'i", items:["Merchandayzing nazorati: javondagi tovar joylashuvi bo'yicha o'z detektorini yig'ish"] },
+         { t:'Ishlab chiqarish', items:["Uchastkaga xos xavfsizlik qoidalari buzilishini aniqlashga model o'qitish"] },
+         { t:'Agrosanoat', items:["Texnika va chorva harakatini kuzatish uchun maxsus stsenariylar"] }
+       ],
        note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." }
     ],
-    cases:[{t:'Travmatizmning kamayishi',d:"Kaska yoki jilet yo'qligi, taqiqlangan hududga kirish bilan bog'liq baxtsiz hodisalarning oldi olinadi."},
-           {t:'Xavfsizlik madaniyati',d:"Nazorat doimiy va xolis ekanini xodimlar biladi — beparvolik kamayadi."},
-           {t:'Nazorat xarajatlari',d:"Qo'lda aylanib chiqish kamayadi, buzilish tez aniqlanadi, mehnat muhofazasi xizmati yuki yengillashadi."},
-           {t:'Jarimalar xavfi',d:"Nazorat tizimli olib borilayotgani hujjatli tasdiqlanadi — moliyaviy risk pasayadi."},
-           {t:'Shaffoflik',d:"Barcha hodisalar bazada; rahbariyat hisobot, statistika va videotasdiq oladi."},
-           {t:'Prognozlash',d:"To'plangan ma'lumotlar xavfli uchastkalar va pik vaqtlarni ko'rsatadi — reaksiyadan prognozga o'tiladi."}],
     adv:[{t:"Ma'lumotlar korxonadan chiqmaydi",d:"Tizim buyurtmachi serverlarida, himoyalangan kontur ichida ishlaydi."},
          {t:'Modulli tuzilma',d:"Faqat kerakli modullarni yoqasiz, tizim bosqichma-bosqich kengayadi."},
          {t:'Bir zumda reaksiya',d:"Signal darhol beriladi — xavf real vaqtda bartaraf etiladi."},
@@ -356,6 +360,13 @@ export const PRODUCTS = [
          { t:'Коммерция', items:['Анализ маршрутов и времени в ключевых точках','Построение тепловых карт','Демографическая статистика посетителей','Чёрные списки и сигнализация охране','Считывание эмоций и оценка удовлетворённости'] },
          { t:'Офисы', items:['Анализ поведения сотрудников для повышения производительности','Контроль присутствия сотрудника на рабочем месте','Простая интеграция с кадровой системой, бухгалтерией и ERP'] }
        ],
+       casesTitle:'Жизненный цикл',
+       cases:[{t:'Снижение травматизма',d:'Предотвращаются несчастные случаи, связанные с отсутствием каски, жилета и пересечением запретных зон.'},
+           {t:'Культура безопасности',d:'Сотрудники понимают, что контроль постоянен и объективен — халатности становится меньше.'},
+           {t:'Затраты на контроль',d:'Меньше ручных обходов, нарушения выявляются быстро, нагрузка на службу охраны труда падает.'},
+           {t:'Риск штрафов',d:'Документально подтверждается, что контроль ведётся системно — финансовые риски снижаются.'},
+           {t:'Прозрачность',d:'Все события в базе; руководство получает отчёты, статистику и видеоподтверждения.'},
+           {t:'Прогнозирование',d:'Накопленные данные показывают опасные участки и пиковые часы — переход от реакции к прогнозу.'}],
        note:'У нас есть ещё более двадцати детекторов, которые могут быть внедрены в ваш бизнес. При необходимости разработка нового функционала займёт 1–3 месяца.',
        carouselAt:'end',
        carouselTitle:'Как это выглядит в кадре',
@@ -452,14 +463,14 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'Задачи Luna Line',
                 items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] }],
+       groupsTitle:'Что команда заказчика делает самостоятельно',
+       groups:[
+         { t:'Розничная сеть', items:['Контроль мерчандайзинга: собственный детектор выкладки товара на полке'] },
+         { t:'Производство', items:['Обучение модели выявлению нарушений техники безопасности, специфичных для участка'] },
+         { t:'Агросектор', items:['Специальные сценарии наблюдения за движением техники и скота'] }
+       ],
        note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' }
     ],
-    cases:[{t:'Снижение травматизма',d:'Предотвращаются несчастные случаи, связанные с отсутствием каски, жилета и пересечением запретных зон.'},
-           {t:'Культура безопасности',d:'Сотрудники понимают, что контроль постоянен и объективен — халатности становится меньше.'},
-           {t:'Затраты на контроль',d:'Меньше ручных обходов, нарушения выявляются быстро, нагрузка на службу охраны труда падает.'},
-           {t:'Риск штрафов',d:'Документально подтверждается, что контроль ведётся системно — финансовые риски снижаются.'},
-           {t:'Прозрачность',d:'Все события в базе; руководство получает отчёты, статистику и видеоподтверждения.'},
-           {t:'Прогнозирование',d:'Накопленные данные показывают опасные участки и пиковые часы — переход от реакции к прогнозу.'}],
     adv:[{t:'Данные не покидают предприятие',d:'Система работает на серверах заказчика, внутри защищённого контура.'},
          {t:'Модульная архитектура',d:'Включаете только нужные модули, система расширяется поэтапно.'},
          {t:'Мгновенная реакция',d:'Сигнал подаётся сразу — риск устраняется в реальном времени.'},
@@ -491,6 +502,13 @@ export const PRODUCTS = [
          { t:'Retail', items:['Route analysis and dwell time at key points','Heat map generation','Visitor demographic statistics','Watch lists and alerts to security','Emotion reading and satisfaction scoring'] },
          { t:'Offices', items:['Behaviour analysis to improve productivity','Monitoring presence at the workplace','Easy integration with HR, accounting and ERP'] }
        ],
+       casesTitle:'Lifecycle',
+       cases:[{t:'Fewer injuries',d:'Accidents linked to a missing helmet or vest and to restricted-zone crossings are prevented.'},
+           {t:'Safety culture',d:'Staff know control is constant and objective — negligence drops.'},
+           {t:'Control costs',d:'Fewer manual walk-arounds, faster detection, lighter load on the safety team.'},
+           {t:'Fine exposure',d:'Documented proof that control is systematic — financial risk goes down.'},
+           {t:'Transparency',d:'Every event is stored; management gets reports, statistics and video evidence.'},
+           {t:'Forecasting',d:'Accumulated data reveals hazardous areas and peak hours — from reaction to prediction.'}],
        note:'We have more than twenty further detectors that can be deployed for your business. If required, building new functionality takes 1–3 months.',
        carouselAt:'end',
        carouselTitle:'How it looks in frame',
@@ -587,14 +605,14 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'What Luna Line does',
                 items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] }],
+       groupsTitle:'What the customer team does on its own',
+       groups:[
+         { t:'Retail chain', items:['Merchandising control: an in-house detector for shelf layout'] },
+         { t:'Manufacturing', items:['Training a model to spot site-specific safety violations'] },
+         { t:'Agriculture', items:['Custom scenarios for tracking machinery and livestock movement'] }
+       ],
        note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' }
     ],
-    cases:[{t:'Fewer injuries',d:'Accidents linked to a missing helmet or vest and to restricted-zone crossings are prevented.'},
-           {t:'Safety culture',d:'Staff know control is constant and objective — negligence drops.'},
-           {t:'Control costs',d:'Fewer manual walk-arounds, faster detection, lighter load on the safety team.'},
-           {t:'Fine exposure',d:'Documented proof that control is systematic — financial risk goes down.'},
-           {t:'Transparency',d:'Every event is stored; management gets reports, statistics and video evidence.'},
-           {t:'Forecasting',d:'Accumulated data reveals hazardous areas and peak hours — from reaction to prediction.'}],
     adv:[{t:'Data stays on site',d:'The system runs on the customer’s servers, inside the protected perimeter.'},
          {t:'Modular architecture',d:'Enable only the modules you need; the system grows step by step.'},
          {t:'Instant response',d:'The alarm fires immediately — the risk is removed in real time.'},
@@ -604,51 +622,6 @@ export const PRODUCTS = [
 },
 
 /* -------------------------------------------------------------- 3.5 */
-{ slug:'nocode-video', code:'NCV', page:'nocode-video.html', pilot:true,
-  uz:{
-    name:'No-code videoanalitika',
-    short:"Kompyuter ko'rish modellarini kod yozmasdan yaratish, o'qitish va ishga tushirish platformasi.",
-    intro:"Buyurtmachi jamoasi o'z vazifasi uchun detektorni mustaqil yig'adi: kadrlarni belgilaydi, modelni o'qitadi va mavjud kameralarda ishga tushiradi — dasturchi va vendorsiz.",
-    tasks:["O'z stsenariylari uchun detektorlarni mustaqil yaratish","Modelni o'z obyektidagi yozuvlarda o'qitish","Yangi vazifani kunlar ichida ishga tushirish","Vendorga bog'liqliksiz tajriba o'tkazish va takomillashtirish"],
-    cases:[{t:"Savdo tarmog'i",d:"Merchandayzing nazorati: javondagi tovar joylashuvi bo'yicha o'z detektorini yig'ish."},
-           {t:'Ishlab chiqarish',d:"Uchastkaga xos xavfsizlik qoidalari buzilishini aniqlashga model o'qitish."},
-           {t:'Agrosanoat',d:"Texnika va chorva harakatini kuzatish uchun maxsus stsenariylar."}],
-    adv:[{t:'Kod talab qilinmaydi',d:"Belgilashdan ishga tushirishgacha — vizual interfeys orqali."},
-         {t:"Ma'lumotlar o'zingizda qoladi",d:"O'qitish buyurtmachi konturida, yozuvlar tashqariga chiqmaydi."},
-         {t:"G'oyadan modelgacha — kunlar",d:"Tayyor arxitekturalar va avto-o'qitish jarayonni tezlashtiradi."},
-         {t:'Mavjud kameralar bilan',d:"IP-kameralar va VMS tizimlariga ulanadi, maxsus uskuna shart emas."}],
-    delivery:["Buyurtmachi serverlarida (on-premise)","Xususiy bulutda","Boshqariladigan xizmat sifatida"]
-  },
-  ru:{
-    name:'No-code видеоаналитика',
-    short:'Платформа для создания, обучения и запуска моделей компьютерного зрения без программирования.',
-    intro:'Команда заказчика самостоятельно собирает детектор под свою задачу: размечает кадры, обучает модель и запускает её на существующих камерах — без разработчиков и вендора.',
-    tasks:['Самостоятельно создавать детекторы под свои сценарии','Обучать модель на записях со своего объекта','Запускать новую задачу за считанные дни','Экспериментировать и улучшать без зависимости от вендора'],
-    cases:[{t:'Розничная сеть',d:'Контроль мерчандайзинга: собственный детектор выкладки товара на полке.'},
-           {t:'Производство',d:'Обучение модели выявлению нарушений техники безопасности, специфичных для участка.'},
-           {t:'Агросектор',d:'Специальные сценарии наблюдения за движением техники и скота.'}],
-    adv:[{t:'Код не требуется',d:'От разметки до запуска — через визуальный интерфейс.'},
-         {t:'Данные остаются у вас',d:'Обучение идёт в контуре заказчика, записи не покидают его.'},
-         {t:'От идеи до модели — дни',d:'Готовые архитектуры и автообучение ускоряют процесс.'},
-         {t:'Работает с текущими камерами',d:'Подключается к IP-камерам и VMS, специальное оборудование не нужно.'}],
-    delivery:['На серверах заказчика (on-premise)','В частном облаке','Как управляемый сервис']
-  },
-  en:{
-    name:'No-code video analytics',
-    short:'A platform for building, training and launching computer vision models without programming.',
-    intro:'The customer team assembles a detector for its own task: labels frames, trains the model and launches it on existing cameras — with no developers or vendor involved.',
-    tasks:['Building detectors for your own scenarios','Training models on footage from your own site','Launching a new task within days','Experimenting and improving without vendor lock-in'],
-    cases:[{t:'Retail chain',d:'Merchandising control: an in-house detector for shelf layout.'},
-           {t:'Manufacturing',d:'Training a model to spot site-specific safety violations.'},
-           {t:'Agriculture',d:'Custom scenarios for tracking machinery and livestock movement.'}],
-    adv:[{t:'No code required',d:'From labelling to launch through a visual interface.'},
-         {t:'Your data stays with you',d:'Training runs inside the customer perimeter; footage never leaves it.'},
-         {t:'Idea to model in days',d:'Ready-made architectures and auto-training speed things up.'},
-         {t:'Works with current cameras',d:'Connects to IP cameras and VMS; no special hardware needed.'}],
-    delivery:['On customer servers (on-premise)','In a private cloud','As a managed service']
-  }
-},
-
 /* ---------------------------------------------------------------- 4 */
 { slug:'antifraud', code:'FRD', page:'antifraud.html',
   files:[{href:'assets/files/identity-antifraud.pdf'}],
@@ -667,7 +640,7 @@ export const PRODUCTS = [
          {t:"Qoidalarni o'zingiz sozlaysiz",d:"Vendorga murojaat qilmasdan yangi qoida va limitlar qo'shiladi."},
          {t:'Yuqori yuklamaga chidamli',d:"Sekundiga minglab tranzaksiyani gorizontal masshtablash bilan."}],
     delivery:["On-premise — buyurtmachi infratuzilmasida","Xususiy bulutda","Boshqariladigan xizmat (bizning monitoringimiz bilan)"],
-    compliance:["To'lov tizimlari va regulyator talablari","PCI DSS bo'yicha ma'lumotlarni saqlash tamoyillari","Hodisalar bo'yicha to'liq audit izi","Rolga asoslangan kirish va ma'lumotlarni maskalash"]
+    compliance:["Markaziy bank talablari: operatsiyalar monitoringi va firibgarlik riskini boshqarish","Markaziy bank uchun hodisalar va bloklashlar bo'yicha hisobot shakllantirish","To'lov tizimlari va regulyator talablari","PCI DSS bo'yicha ma'lumotlarni saqlash tamoyillari","Hodisalar bo'yicha to'liq audit izi","Rolga asoslangan kirish va ma'lumotlarni maskalash"]
   },
   ru:{
     name:'Антифрод-решение',
@@ -684,7 +657,7 @@ export const PRODUCTS = [
          {t:'Правила настраиваете сами',d:'Новые правила и лимиты добавляются без обращения к вендору.'},
          {t:'Держит нагрузку',d:'Тысячи транзакций в секунду с горизонтальным масштабированием.'}],
     delivery:['On-premise — в инфраструктуре заказчика','В частном облаке','Управляемый сервис с нашим мониторингом'],
-    compliance:['Требования платёжных систем и регулятора','Принципы хранения данных по PCI DSS','Полный аудиторский след по инцидентам','Ролевой доступ и маскирование данных']
+    compliance:['Требования Центрального банка к мониторингу операций и управлению риском мошенничества','Формирование отчётности по инцидентам и блокировкам для Центрального банка','Требования платёжных систем и регулятора','Принципы хранения данных по PCI DSS','Полный аудиторский след по инцидентам','Ролевой доступ и маскирование данных']
   },
   en:{
     name:'Antifraud solution',
@@ -701,12 +674,12 @@ export const PRODUCTS = [
          {t:'You own the rules',d:'New rules and limits are added without contacting the vendor.'},
          {t:'Built for load',d:'Thousands of transactions per second with horizontal scaling.'}],
     delivery:['On-premise, in the customer infrastructure','In a private cloud','Managed service with our monitoring'],
-    compliance:['Payment system and regulator requirements','PCI DSS data storage principles','Full audit trail for incidents','Role-based access and data masking']
+    compliance:['Central Bank requirements for transaction monitoring and fraud risk management','Incident and blocking reports prepared for the Central Bank','Payment system and regulator requirements','PCI DSS data storage principles','Full audit trail for incidents','Role-based access and data masking']
   }
 },
 
 /* ---------------------------------------------------------------- 5 */
-{ slug:'edr', code:'EDR', page:'edr.html',
+{ slug:'edr', code:'EDR', page:'edr.html', casesKey:'p.casesMaybe',
   uz:{
     name:'EDR — ish stansiyalari himoyasi',
     short:"Xostlardagi hujumlarni aniqlash, tekshirish va to'xtatish.",
@@ -723,7 +696,8 @@ export const PRODUCTS = [
          {t:'Tez javob',d:"Bir tugma bilan izolyatsiya va zararli jarayonni to'xtatish."},
          {t:'SOC bilan ishlaydi',d:"Hodisalar SIEM va IRP jarayonlariga tushadi."},
          {t:'Kam resurs sarfi',d:"Agent foydalanuvchi ishiga sezilarli ta'sir qilmaydi."}],
-    delivery:["On-premise boshqaruv serveri","Boshqariladigan xizmat (bizning SOC)","Gibrid: siz — infratuzilma, biz — monitoring"]
+    delivery:["On-premise boshqaruv serveri","Boshqariladigan xizmat (bizning SOC)","Gibrid: siz — infratuzilma, biz — monitoring"],
+    compliance:["Markaziy bank talablari: hodisalarni aniqlash va ularga javob qaytarish","Jurnallarni belgilangan muddat davomida saqlash va audit izini yuritish","Hodisalar bo'yicha regulyatorga xabar berish tartibi qo'llab-quvvatlanadi","Ma'lumotlar O'zbekiston hududidagi konturda qayta ishlanadi"]
   },
   ru:{
     name:'EDR — защита рабочих станций',
@@ -741,7 +715,8 @@ export const PRODUCTS = [
          {t:'Быстрое реагирование',d:'Изоляция и остановка вредоносного процесса в один клик.'},
          {t:'Работает вместе с SOC',d:'Инциденты попадают в процессы SIEM и IRP.'},
          {t:'Экономный агент',d:'Не мешает работе пользователя.'}],
-    delivery:['Сервер управления on-premise','Управляемый сервис на базе нашего SOC','Гибрид: инфраструктура ваша, мониторинг наш']
+    delivery:['Сервер управления on-premise','Управляемый сервис на базе нашего SOC','Гибрид: инфраструктура ваша, мониторинг наш'],
+    compliance:['Требования Центрального банка к выявлению инцидентов и реагированию на них','Хранение журналов в течение установленного срока и ведение аудиторского следа','Поддерживается порядок уведомления регулятора об инцидентах','Данные обрабатываются в контуре на территории Узбекистана']
   },
   en:{
     name:'EDR — endpoint protection',
@@ -759,12 +734,13 @@ export const PRODUCTS = [
          {t:'Fast response',d:'One click to isolate a host and stop a malicious process.'},
          {t:'Works with your SOC',d:'Incidents flow into SIEM and IRP processes.'},
          {t:'Lightweight agent',d:'No noticeable impact on user work.'}],
-    delivery:['On-premise management server','Managed service run by our SOC','Hybrid: your infrastructure, our monitoring']
+    delivery:['On-premise management server','Managed service run by our SOC','Hybrid: your infrastructure, our monitoring'],
+    compliance:['Central Bank requirements for incident detection and response','Log retention for the mandated period with a full audit trail','Regulator incident notification workflow supported','Data processed inside a perimeter located in Uzbekistan']
   }
 },
 
 /* ---------------------------------------------------------------- 6 */
-{ slug:'dlp', code:'DLP', page:'dlp.html',
+{ slug:'dlp', code:'DLP', page:'dlp.html', casesKey:'p.casesMaybe',
   uz:{
     name:"DLP — ma'lumot chiqib ketishining oldini olish",
     short:"Maxfiy ma'lumotlarning kompaniyadan tashqariga chiqishini nazorat qilish.",
@@ -819,7 +795,7 @@ export const PRODUCTS = [
 },
 
 /* ---------------------------------------------------------------- 7 */
-{ slug:'ips-ids', code:'IDS', page:'ips-ids.html',
+{ slug:'ips-ids', code:'IDS', page:'ips-ids.html', casesKey:'p.casesMaybe',
   uz:{
     name:'IPS / IDS va tarmoq himoyasi',
     short:"Tarmoq trafigidagi hujumlarni aniqlash va to'sish.",
@@ -877,7 +853,7 @@ export const PRODUCTS = [
 },
 
 /* ---------------------------------------------------------------- 8 */
-{ slug:'waf-antiddos', code:'WAF', page:'waf-antiddos.html',
+{ slug:'waf-antiddos', code:'WAF', page:'waf-antiddos.html', casesKey:'p.casesMaybe',
   uz:{
     name:'WAF va AntiDDoS',
     short:"Veb-ilovalar va API larni hujumlar hamda DDoS dan himoya qilish.",

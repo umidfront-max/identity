@@ -44,6 +44,9 @@ const c = CONFIG.contacts
           <div class="cinfo__row is-static" v-reveal="245">
             <span>{{ t('contacts.hours') }}</span><b>{{ t('contacts.hoursVal') }}</b>
           </div>
+          <RouterLink to="/privacy" class="cinfo__row" v-reveal="280">
+            <span>{{ t('contacts.docs') }}</span><b>{{ t('footer.privacy') }}</b>
+          </RouterLink>
         </aside>
 
         <div id="lead" class="cform" v-reveal:right>

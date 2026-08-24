@@ -12,6 +12,7 @@ import ProductTabs from '@/components/ProductTabs.vue'
 import ProductModules from '@/components/ProductModules.vue'
 import ProductTracks from '@/components/ProductTracks.vue'
 import ProductGallery from '@/components/ProductGallery.vue'
+import ProductCarousel from '@/components/ProductCarousel.vue'
 
 const props = defineProps({ slug: String })
 const { t, p } = useLang()
@@ -115,18 +116,20 @@ watch(() => props.slug, register)
       </div>
     </section>
 
-    <!-- yo'nalishlar (tab) -->
+    <!-- tarkib: karusel yoki tab ko'rinishida -->
     <section v-if="data.tabs && data.tabs.length" class="section section--tight">
       <div class="wrap" v-reveal>
-        <ProductTabs :tabs="data.tabs" />
+        <SectionHead v-if="product.tabsKey" :title="t(product.tabsKey)" />
+        <ProductCarousel v-if="product.tabsAs === 'carousel'" :items="data.tabs" />
+        <ProductTabs v-else :tabs="data.tabs" />
       </div>
     </section>
 
     <!-- keyslar -->
     <section v-if="data.cases && data.cases.length" class="section">
       <div class="wrap">
-        <SectionHead :title="t('p.cases')" />
-        <div class="grid grid--3">
+        <SectionHead :title="t(product.casesKey || 'p.cases')" />
+        <div class="grid grid--3" :class="{ 'is-flow': product.casesFlow }">
           <article v-for="(c, i) in data.cases" :key="i" class="card casecard" v-reveal="i * 80">
             <span class="casecard__n">{{ String(i + 1).padStart(2, '0') }}</span>
             <h3>{{ c.t }}</h3>
@@ -194,6 +197,22 @@ watch(() => props.slug, register)
 }
 
 .casecard{position:relative;padding-top:36px}
+/* bosqichlar oqimi: kartochkalar orasida strelka */
+.is-flow{position:relative}
+.is-flow .casecard::after{
+  content:'';position:absolute;right:-20px;top:50%;width:14px;height:14px;margin-top:-7px;
+  border-top:2px solid var(--line-2);border-right:2px solid var(--line-2);
+  transform:rotate(45deg);pointer-events:none;
+}
+.is-flow .casecard:nth-child(3n)::after,
+.is-flow .casecard:last-child::after{display:none}
+@media(max-width:900px){
+  .is-flow .casecard::after{
+    right:auto;left:50%;top:auto;bottom:-20px;margin:0 0 0 -7px;transform:rotate(135deg);
+  }
+  .is-flow .casecard:nth-child(3n)::after{display:block}
+  .is-flow .casecard:last-child::after{display:none}
+}
 .casecard__n{
   position:absolute;top:22px;right:24px;font-family:var(--font-mono);font-size:12px;color:var(--line-2);
 }

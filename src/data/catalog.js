@@ -21,7 +21,8 @@ export const TILES = [
   { slug: 'faceid', k: 'tile.faceid', icon: 'faceid' },
   { slug: 'faceid', k: 'tile.deepfake', icon: 'deepfake' },
   { slug: 'video-analytics', k: 'tile.vision', icon: 'vision' },
-  { slug: 'nocode-video', k: 'tile.nocode', icon: 'nocode' },
+  /* No-code sahifasi Luna Line bilan birlashtirildi — videoanalitika sahifasiga olib boradi */
+  { slug: 'video-analytics', k: 'tile.nocode', icon: 'nocode' },
   { slug: 'antifraud', k: 'tile.fraud', icon: 'fraud' },
   { slug: 'sast-dast', k: 'tile.code', icon: 'code' },
   { slug: 'edr', k: 'tile.edr', icon: 'edr' },
@@ -35,7 +36,7 @@ export const TILES = [
 
 /* Himoya qatlamlari — tashqi perimetrdan kodgacha */
 export const LAYERS = [
-  { n: '01', k: 'layer1', c: '#E23B33', p: ['faceid', 'video-analytics', 'nocode-video'] },
+  { n: '01', k: 'layer1', c: '#E23B33', p: ['faceid', 'video-analytics'] },
   { n: '02', k: 'layer2', c: '#8E9BE4', p: ['antifraud'] },
   { n: '03', k: 'layer3', c: '#5B6FD6', p: ['antifraud'] },
   { n: '04', k: 'layer4', c: '#4155C0', p: ['edr', 'dlp', 'ips-ids', 'waf-antiddos'] },

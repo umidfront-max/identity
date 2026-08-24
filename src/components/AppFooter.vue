@@ -8,6 +8,8 @@ import logoLight from '@/assets/img/logo-white.png'
 const { t, p } = useLang()
 const c = CONFIG.contacts
 const year = new Date().getFullYear()
+/* NDA shabloni — config'da ko'rsatilgan bo'lsagina havola chiziladi */
+const nda = CONFIG.ndaFile || ''
 const products = computed(() => PRODUCTS.slice(0, 8).map(x => ({ slug: x.slug, name: p(x).name })))
 </script>
 
@@ -37,6 +39,7 @@ const products = computed(() => PRODUCTS.slice(0, 8).map(x => ({ slug: x.slug, n
           <li><RouterLink to="/promos">{{ t('nav.promos') }}</RouterLink></li>
           <li><RouterLink to="/contacts">{{ t('nav.contacts') }}</RouterLink></li>
           <li><RouterLink to="/privacy">{{ t('footer.privacy') }}</RouterLink></li>
+          <li v-if="nda"><a :href="nda" download>{{ t('p.nda') }}</a></li>
         </ul>
       </div>
 
