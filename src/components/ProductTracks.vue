@@ -1,5 +1,5 @@
 <script setup>
-/* Mahsulotning ikki yo'nalishi (masalan: xavfsizlik analitikasi va Luna Line).
+/* Mahsulotning yo'nalishlari (masalan: xavfsizlik analitikasi, Luna Line, no-code).
    Har bir yo'nalishda: tavsif, rasmli modullar, detektorlar ro'yxati va guruhlar. */
 import { ref } from 'vue'
 import ProductModules from '@/components/ProductModules.vue'

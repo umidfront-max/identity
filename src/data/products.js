@@ -321,13 +321,20 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'Luna Line hal qiladigan vazifalar',
                 items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] }],
-       groupsTitle:'Buyurtmachi jamoasi nimalarni mustaqil qiladi',
-       groups:[
-         { t:"Savdo tarmog'i", items:["Merchandayzing nazorati: javondagi tovar joylashuvi bo'yicha o'z detektorini yig'ish"] },
-         { t:'Ishlab chiqarish', items:["Uchastkaga xos xavfsizlik qoidalari buzilishini aniqlashga model o'qitish"] },
-         { t:'Agrosanoat', items:["Texnika va chorva harakatini kuzatish uchun maxsus stsenariylar"] }
+       note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." },
+     { t:'No-code videoanalitika',
+       d:"Buyurtmachi jamoasi o'z vazifasi uchun detektorni mustaqil yig'adi: kadrlarni belgilaydi, modelni o'qitadi va mavjud kameralarda ishga tushiradi — dasturchi va vendorsiz.",
+       lists:[
+         { t:'Nimalarni mustaqil qilish mumkin',
+           items:["O'z stsenariylari uchun detektorlarni mustaqil yaratish","Modelni o'z obyektidagi yozuvlarda o'qitish","Yangi vazifani kunlar ichida ishga tushirish","Vendorga bog'liqliksiz tajriba o'tkazish va takomillashtirish"] },
+         { t:'Afzalliklari',
+           items:["Kod talab qilinmaydi — belgilashdan ishga tushirishgacha vizual interfeys orqali","Ma'lumotlar o'zingizda qoladi: o'qitish buyurtmachi konturida ketadi","G'oyadan modelgacha — kunlar: tayyor arxitekturalar va avto-o'qitish","Mavjud IP-kameralar va VMS tizimlariga ulanadi, maxsus uskuna shart emas"] }
        ],
-       note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." }
+       casesTitle:"Qayerda qo'llaniladi",
+       cases:[{t:"Savdo tarmog'i",d:"Merchandayzing nazorati: javondagi tovar joylashuvi bo'yicha o'z detektorini yig'ish."},
+              {t:'Ishlab chiqarish',d:"Uchastkaga xos xavfsizlik qoidalari buzilishini aniqlashga model o'qitish."},
+              {t:'Agrosanoat',d:"Texnika va chorva harakatini kuzatish uchun maxsus stsenariylar."}],
+       note:"Yetkazib berish: buyurtmachi serverlarida (on-premise), xususiy bulutda yoki boshqariladigan xizmat sifatida." }
     ],
     adv:[{t:"Ma'lumotlar korxonadan chiqmaydi",d:"Tizim buyurtmachi serverlarida, himoyalangan kontur ichida ishlaydi."},
          {t:'Modulli tuzilma',d:"Faqat kerakli modullarni yoqasiz, tizim bosqichma-bosqich kengayadi."},
@@ -463,13 +470,20 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'Задачи Luna Line',
                 items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] }],
-       groupsTitle:'Что команда заказчика делает самостоятельно',
-       groups:[
-         { t:'Розничная сеть', items:['Контроль мерчандайзинга: собственный детектор выкладки товара на полке'] },
-         { t:'Производство', items:['Обучение модели выявлению нарушений техники безопасности, специфичных для участка'] },
-         { t:'Агросектор', items:['Специальные сценарии наблюдения за движением техники и скота'] }
+       note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' },
+     { t:'No-code видеоаналитика',
+       d:'Команда заказчика самостоятельно собирает детектор под свою задачу: размечает кадры, обучает модель и запускает её на существующих камерах — без разработчиков и вендора.',
+       lists:[
+         { t:'Что можно делать самостоятельно',
+           items:['Самостоятельно создавать детекторы под свои сценарии','Обучать модель на записях со своего объекта','Запускать новую задачу за считанные дни','Экспериментировать и улучшать без зависимости от вендора'] },
+         { t:'Преимущества',
+           items:['Код не требуется — от разметки до запуска через визуальный интерфейс','Данные остаются у вас: обучение идёт в контуре заказчика','От идеи до модели — дни: готовые архитектуры и автообучение','Подключается к существующим IP-камерам и VMS, спецоборудование не нужно'] }
        ],
-       note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' }
+       casesTitle:'Где применяется',
+       cases:[{t:'Розничная сеть',d:'Контроль мерчандайзинга: собственный детектор выкладки товара на полке.'},
+              {t:'Производство',d:'Обучение модели выявлению нарушений техники безопасности, специфичных для участка.'},
+              {t:'Агросектор',d:'Специальные сценарии наблюдения за движением техники и скота.'}],
+       note:'Поставка: на серверах заказчика (on-premise), в частном облаке или как управляемый сервис.' }
     ],
     adv:[{t:'Данные не покидают предприятие',d:'Система работает на серверах заказчика, внутри защищённого контура.'},
          {t:'Модульная архитектура',d:'Включаете только нужные модули, система расширяется поэтапно.'},
@@ -605,13 +619,20 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'What Luna Line does',
                 items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] }],
-       groupsTitle:'What the customer team does on its own',
-       groups:[
-         { t:'Retail chain', items:['Merchandising control: an in-house detector for shelf layout'] },
-         { t:'Manufacturing', items:['Training a model to spot site-specific safety violations'] },
-         { t:'Agriculture', items:['Custom scenarios for tracking machinery and livestock movement'] }
+       note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' },
+     { t:'No-code video analytics',
+       d:'The customer team assembles a detector for its own task: labels frames, trains the model and launches it on existing cameras — with no developers or vendor involved.',
+       lists:[
+         { t:'What you can do yourself',
+           items:['Building detectors for your own scenarios','Training models on footage from your own site','Launching a new task within days','Experimenting and improving without vendor lock-in'] },
+         { t:'Advantages',
+           items:['No code required — from labelling to launch through a visual interface','Your data stays with you: training runs inside the customer perimeter','Idea to model in days: ready-made architectures and auto-training','Connects to existing IP cameras and VMS; no special hardware needed'] }
        ],
-       note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' }
+       casesTitle:'Where it is used',
+       cases:[{t:'Retail chain',d:'Merchandising control: an in-house detector for shelf layout.'},
+              {t:'Manufacturing',d:'Training a model to spot site-specific safety violations.'},
+              {t:'Agriculture',d:'Custom scenarios for tracking machinery and livestock movement.'}],
+       note:'Delivery: on customer servers (on-premise), in a private cloud or as a managed service.' }
     ],
     adv:[{t:'Data stays on site',d:'The system runs on the customer’s servers, inside the protected perimeter.'},
          {t:'Modular architecture',d:'Enable only the modules you need; the system grows step by step.'},
