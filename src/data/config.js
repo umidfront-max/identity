@@ -36,8 +36,8 @@ export const CONFIG = {
     /* Yo'nalish bo'yicha alohida pochtalar — kontaktlar sahifasida ko'rsatiladi */
     emailBio: 'info@face-id.uz',
     emailSec: 'info@frod.uz',
-    phone: '+998 (33) 500-60-77',
-    phoneHref: '+998335006077',
+    phone: '+998 (78) 555-11-75',
+    phoneHref: '+998785551175',
     telegram: 'https://t.me/identity_uz',
     addressKey: 'contacts.address'
   }
