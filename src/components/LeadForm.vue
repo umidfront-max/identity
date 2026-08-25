@@ -17,6 +17,9 @@ const state = ref('idle') // idle | sending | ok | err
 const options = computed(() => PRODUCTS.map(x => ({ slug: x.slug, name: p(x).name })))
 const busy = computed(() => state.value === 'sending')
 
+/* Rozilik matnidagi {link} o'rniga maxfiylik siyosatiga havola qo'yiladi */
+const consentParts = computed(() => t('form.consent').split('{link}'))
+
 onMounted(() => {
   /* Qiziqish tarixi bo'yicha mahsulotni oldindan tanlaymiz */
   form.product = props.product || topInterest() || ''
@@ -102,7 +105,10 @@ async function submit () {
 
     <label class="consent field--full" :class="{ 'has-err': errors.consent }">
       <input type="checkbox" v-model="form.consent">
-      <span>{{ t('form.consent') }}</span>
+      <span>{{ consentParts[0]
+        }}<RouterLink
+          v-if="consentParts.length > 1" to="/privacy"
+          class="consent__link" @click.stop>{{ t('form.consentLink') }}</RouterLink>{{ consentParts[1] }}</span>
     </label>
 
     <p v-if="errors.phone" class="msg msg--err field--full">{{ t('form.reqErr') }}</p>
@@ -145,6 +151,12 @@ textarea{resize:vertical;min-height:110px}
   cursor:pointer;transition:border-color .3s;
 }
 .consent input{margin-top:3px;accent-color:var(--red);width:17px;height:17px}
+.consent__link{
+  color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;
+  text-underline-offset:3px;font-weight:700;
+  transition:color .25s,text-decoration-color .25s;
+}
+.consent__link:hover{color:var(--red);text-decoration-thickness:2px}
 .consent.has-err{border-color:var(--red)}
 
 .form__foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
