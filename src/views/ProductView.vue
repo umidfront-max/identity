@@ -129,7 +129,7 @@ watch(() => props.slug, register)
     <section v-if="data.cases && data.cases.length" class="section">
       <div class="wrap">
         <SectionHead :title="t(product.casesKey || 'p.cases')" />
-        <div class="grid grid--3" :class="{ 'is-flow': product.casesFlow }">
+        <div class="grid grid--3">
           <article v-for="(c, i) in data.cases" :key="i" class="card casecard" v-reveal="i * 80">
             <span class="casecard__n">{{ String(i + 1).padStart(2, '0') }}</span>
             <h3>{{ c.t }}</h3>
@@ -197,27 +197,6 @@ watch(() => props.slug, register)
 }
 
 .casecard{position:relative;padding-top:36px}
-/* bosqichlar oqimi: kartochkalar orasida strelka */
-.is-flow{position:relative}
-.is-flow .casecard::after{
-  content:'';position:absolute;right:-20px;top:50%;width:14px;height:14px;margin-top:-7px;
-  border-top:2px solid var(--line-2);border-right:2px solid var(--line-2);
-  transform:rotate(45deg);pointer-events:none;
-}
-.is-flow .casecard:nth-child(3n)::after,
-.is-flow .casecard:last-child::after{display:none}
-@media(max-width:900px){
-  .is-flow .casecard::after{
-    right:auto;left:50%;top:auto;bottom:-20px;margin:0 0 0 -7px;transform:rotate(135deg);
-  }
-  .is-flow .casecard:nth-child(3n)::after{display:block}
-  .is-flow .casecard:last-child::after{display:none}
-}
-.casecard__n{
-  position:absolute;top:22px;right:24px;font-family:var(--font-mono);font-size:12px;color:var(--line-2);
-}
-.casecard h3{font-size:17.5px}
-
 .advcard{
   padding:26px 28px;border-radius:var(--r-md);
   background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);

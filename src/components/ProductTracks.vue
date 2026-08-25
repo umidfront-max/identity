@@ -68,7 +68,7 @@ const active = ref(0)
         <div v-if="tracks[active].cases" class="tracks__block">
           <h3 v-if="tracks[active].casesTitle">{{ tracks[active].casesTitle }}</h3>
           <div class="tracks__cases">
-            <article v-for="(c, ci) in tracks[active].cases" :key="ci" class="card tcase">
+            <article v-for="(c, ci) in tracks[active].cases" :key="ci" class="tcase">
               <span class="tcase__n">{{ String(ci + 1).padStart(2, '0') }}</span>
               <h4>{{ c.t }}</h4>
               <p>{{ c.d }}</p>
@@ -126,7 +126,12 @@ const active = ref(0)
 }
 /* hayotiy sikl bosqichlari — orasida strelka */
 .tracks__cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.tcase{position:relative;padding-top:34px}
+.tcase{
+  position:relative;padding:34px 26px 26px;border-radius:var(--r-lg);
+  background:var(--paper);border:1px solid var(--line);box-shadow:var(--e1);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s;
+}
+.tcase:hover{transform:translateY(-4px);box-shadow:var(--e2);border-color:var(--line-2)}
 .tcase__n{
   position:absolute;top:20px;right:22px;font-family:var(--font-mono);font-size:12px;
   letter-spacing:.1em;color:var(--line-2);
@@ -134,7 +139,7 @@ const active = ref(0)
 .tcase h4{font-family:var(--font-display);font-size:17px;font-weight:600;margin:0 0 8px;letter-spacing:-.015em}
 .tcase p{margin:0;font-size:15px;color:var(--muted);line-height:1.55}
 .tracks__cases .tcase::after{
-  content:'';position:absolute;right:-20px;top:50%;width:13px;height:13px;margin-top:-7px;
+  content:'';position:absolute;right:-19px;top:50%;width:12px;height:12px;margin-top:-6px;
   border-top:2px solid var(--line-2);border-right:2px solid var(--line-2);
   transform:rotate(45deg);pointer-events:none;
 }
