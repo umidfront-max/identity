@@ -703,8 +703,8 @@ export const PRODUCTS = [
 { slug:'edr', code:'EDR', page:'edr.html', casesKey:'p.casesMaybe',
   uz:{
     name:'EDR — ish stansiyalari himoyasi',
-    short:"Xostlardagi hujumlarni aniqlash, tekshirish va to'xtatish.",
-    intro:"Biz EDR ni shunchaki sotmaymiz — uni qonun talab qiladi. Markaziy bank nizomining 11-bo'limi banklardan har bir serverda, kompyuterda, bankomat va infokioskda markazlashgan himoya bo'lishini, hujum urinishlari o'z vaqtida aniqlanib bartaraf etilishini hamda har bir amal elektron bayonnomada qolishini talab qiladi. Bajarilmasa — bank jami kapitalining 0,04–0,2 foizi miqdorida jarima. EDR shu talablarni bitta konturda yopadi: ko'radi, to'xtatadi, dalilini qoldiradi. (Nizom 11.3, 11.4, 11.7, 11.13 va 11.15-bandlari; lex.uz — QMMB 10/26/3492-1/0455-son, 05.05.2026)",
+    short:"Markaziy bank me'yorlariga to'liq muvofiq kiberhimoya.",
+    intro:"Markaziy bank nizomiga ko'ra, barcha server, kompyuter, bankomat va infokiosklar markazlashgan kiberhimoya bilan ta'minlanishi tavsiya etiladi. Aks holda, bank kapitalining 0,04% dan 0,2% gacha miqdorida jarima qo'llanilishi mumkin. Bizning EDR tizimimiz hujumlarni o'z vaqtida to'xtatadi, har bir amalning elektron bayonnomasini yuritadi va qonunchilik me'yorlarini (11.3, 11.4, 11.7, 11.13, 11.15-bandlar) to'liq yopadi. (Asos: lex.uz — 10/26/3492-1/0455-son)",
     tasks:["Ransomware va fayllsiz hujumlarni erta aniqlash","Hodisa zanjirini boshidan oxirigacha tiklash","Zararlangan hostni tarmoqdan ajratish","Threat hunting uchun telemetriya yig'ish"],
     tabs:[
       {t:'Solar EDR',d:"Xostlar telemetriyasi va hodisalarga javob berish platformasi.",list:["Jarayon, tarmoq va fayl hodisalari telemetriyasi","Indikatorlar va xulq qoidalari bo'yicha aniqlash","Masofaviy javob: izolyatsiya, jarayonni to'xtatish, karantin","SIEM va SOC jarayonlariga integratsiya"]},
@@ -722,8 +722,8 @@ export const PRODUCTS = [
   },
   ru:{
     name:'EDR — защита рабочих станций',
-    short:'Обнаружение, расследование и остановка атак на хостах.',
-    intro:'Мы не просто продаём EDR — этого требует закон. Раздел 11 положения Центрального банка обязывает банки иметь централизованную защиту на каждом сервере, компьютере, банкомате и инфокиоске, вовремя выявлять и устранять попытки атак, а каждое действие фиксировать в электронном протоколе. Не выполнили — штраф от 0,04 до 0,2 процента совокупного капитала банка. EDR закрывает эти требования в одном контуре: видит, останавливает, оставляет доказательство. (Пункты 11.3, 11.4, 11.7, 11.13 и 11.15 положения; lex.uz — НБДЗ 10/26/3492-1/0455-сон, 05.05.2026)',
+    short:'Киберзащита в полном соответствии с нормами Центрального банка.',
+    intro:'Согласно положению Центрального банка, все серверы, компьютеры, банкоматы и инфокиоски рекомендуется охватить централизованной киберзащитой. В противном случае может быть применён штраф в размере от 0,04% до 0,2% капитала банка. Наша система EDR вовремя останавливает атаки, ведёт электронный протокол каждого действия и полностью закрывает нормы законодательства (пункты 11.3, 11.4, 11.7, 11.13, 11.15). (Основание: lex.uz — 10/26/3492-1/0455-сон)',
     tasks:['Раннее обнаружение шифровальщиков и бесфайловых атак','Восстановление цепочки инцидента от начала до конца','Изоляция заражённого хоста от сети','Сбор телеметрии для threat hunting'],
     tabs:[
       {t:'Solar EDR',d:'Платформа телеметрии хостов и реагирования на инциденты.',list:['Телеметрия процессов, сети и файловых операций','Обнаружение по индикаторам и поведенческим правилам','Удалённое реагирование: изоляция, остановка процесса, карантин','Интеграция с SIEM и процессами SOC']},
@@ -741,8 +741,8 @@ export const PRODUCTS = [
   },
   en:{
     name:'EDR — endpoint protection',
-    short:'Detecting, investigating and stopping attacks on hosts.',
-    intro:'We do not simply sell EDR — the law requires it. Section 11 of the Central Bank regulation obliges banks to run centrally managed protection on every server, computer, ATM and kiosk, to detect and remediate attack attempts in time, and to record every action in an electronic log. Fail, and the fine runs from 0.04 to 0.2 per cent of total capital. EDR closes those requirements in a single loop: it sees, it stops, it leaves evidence. (Clauses 11.3, 11.4, 11.7, 11.13 and 11.15; lex.uz — national legislation database 10/26/3492-1/0455, 05.05.2026)',
+    short:'Cyber protection in full alignment with Central Bank requirements.',
+    intro:'Under the Central Bank regulation, every server, computer, ATM and kiosk is expected to be covered by centrally managed cyber protection. Otherwise a fine of 0.04% to 0.2% of the bank capital may be applied. Our EDR stops attacks in time, keeps an electronic log of every action and fully closes the regulatory clauses (11.3, 11.4, 11.7, 11.13, 11.15). (Source: lex.uz — 10/26/3492-1/0455)',
     tasks:['Early detection of ransomware and fileless attacks','Reconstructing the full incident chain','Isolating a compromised host from the network','Collecting telemetry for threat hunting'],
     tabs:[
       {t:'Solar EDR',d:'A host telemetry and incident response platform.',list:['Process, network and file operation telemetry','Detection by indicators and behavioural rules','Remote response: isolation, process termination, quarantine','Integration with SIEM and SOC processes']},

@@ -186,7 +186,7 @@ watch(() => props.slug, register)
 .intro{display:grid;grid-template-columns:1.4fr auto;gap:40px;align-items:center}
 .intro__act{display:flex;flex-wrap:wrap;gap:12px}
 .galnote{margin-top:26px;font-size:13.5px;color:var(--muted-2)}
-.intro__lead{font-size:clamp(17px,1.7vw,21px);color:var(--ink);margin:0;line-height:1.5;max-width:58ch}
+.intro__lead{font-size:clamp(15px,1.35vw,17.5px);color:var(--ink);margin:0;line-height:1.6;max-width:66ch}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
 .listgrid ul{display:grid;gap:14px}
