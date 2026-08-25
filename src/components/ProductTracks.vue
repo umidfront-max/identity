@@ -18,7 +18,7 @@ const active = ref(0)
         class="tracks__btn" :class="{ 'is-on': active === i }"
         role="tab" :aria-selected="active === i"
         @click="active = i">
-        <i>{{ String(i + 1).padStart(2, '0') }}</i>{{ tr.t }}
+        {{ tr.t }}
       </button>
     </div>
 
@@ -94,11 +94,10 @@ const active = ref(0)
   width:fit-content;max-width:100%;
 }
 .tracks__btn{
-  display:inline-flex;align-items:center;gap:10px;border:0;background:none;cursor:pointer;
+  border:0;background:none;cursor:pointer;
   padding:12px 24px;border-radius:999px;font-size:15px;font-weight:700;color:var(--muted);
   transition:color .3s,background .35s var(--ease);
 }
-.tracks__btn i{font-style:normal;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;opacity:.6}
 .tracks__btn.is-on{background:var(--ink);color:#fff}
 .tracks__btn:not(.is-on):hover{color:var(--ink)}
 
@@ -160,8 +159,7 @@ const active = ref(0)
 }
 @media(max-width:760px){
   .tracks__bar{border-radius:18px;width:100%}
-  .tracks__btn{flex:1;justify-content:center;padding:11px 14px;font-size:14px}
-  .tracks__btn i{display:none}
+  .tracks__btn{flex:1;padding:11px 14px;font-size:14px}
   .tracks__list,.tracks__grid,.tracks__cases{grid-template-columns:1fr}
   .tracks__cases .tcase::after{display:none}
   .tracks__d{font-size:16.5px}
