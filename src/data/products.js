@@ -195,7 +195,7 @@ export const PRODUCTS = [
 { slug:'video-analytics', code:'VIS', page:'video-analytics.html', pilot:true,
   uz:{
     name:'Videoanalitika',
-    short:"Xavflarni muammoga aylanmasdan oldin ko'ramiz: SIZ, taqiqlangan hududlar, yong'in va transport nazorati.",
+    short:"Xavflarni muammoga aylanmasdan oldin ko'ramiz: shaxsiy himoya vositalari, taqiqlangan hududlar, yong'in va transport nazorati.",
     intro:"«Provision» — korxona videokuzatuvini mehnat xavfsizligini boshqarish tizimiga aylantiradigan platforma. Tizim buyurtmachining o'z serverlarida joylashadi, ma'lumotlar himoyalangan konturdan chiqmaydi.",
     tasks:["Xavfsizlik texnikasi buzilishi: ishchilar kaska, jilet yoki maxsus kiyimni doim kiyavermaydi",
            "Xodimlarning xavfli va taqiqlangan hududlarga kirishi ustidan uzluksiz nazorat yo'q",
@@ -208,7 +208,7 @@ export const PRODUCTS = [
        d:"Xavflarni muammoga aylanmasidan oldin «ko'ra» oladigan tizimlarni joriy etamiz: o'nlab toifadagi yuzlab hodisani qayta ishlovchi detektorlar ulanadi. Avtomatlashtirilgan videoanalitika baxtsiz hodisa va travmatizmning oldini oladi hamda jarima xavfini kamaytiradi. Monitoring xodimlarini analitikali kamera bilan almashtirish rutin ishdan xalos qiladi, inson omili ta'sirini va maxsus xodimlarga ketadigan xarajatni qisqartiradi.",
        lists:[
          { t:"Detektorlarning to'liq bo'lmagan ro'yxati",
-           items:["Ishlab chiqarishda xavfsizlik texnikasi buzilishi — 10 dan ortiq turdagi SIZ mavjudligi","Xodimning xavfli yoki taqiqlangan hududga tushishi","Taqiqlangan chiziqni kesib o'tish (masalan, panjara orqali hududga kirish)","Yuz bo'yicha kirishni nazorat qilish, qo'shimcha tekshiruvlar (SIZ, jadval bo'yicha ish)","Yong'inni avtomatik aniqlash — tutun va olov belgilarini tanish","Avtotransport kirishi: raqam, marka, model, rang, kuzov turi, maxsus texnika","Qoldirilgan (egasiz) buyumlarni aniqlash va qo'riqchiga signal","Agressiv xatti-harakat va janjalni aniqlash, odamlarning ommaviy to'planishi","Hududdagi daydi hayvonlarni aniqlash","Hududda YHQ ga rioya qilish nazorati","Odamning yiqilishini aniqlash, jumladan xavfli hududlarda","Mo'ridan zararli chiqindilar va axlat to'planishini aniqlash","Multikamerali treking — odam marshrutini bir necha kamera bo'ylab tiklash"] },
+           items:["Ishlab chiqarishda xavfsizlik texnikasi buzilishi — 10 dan ortiq turdagi SHHV mavjudligi","Xodimning xavfli yoki taqiqlangan hududga tushishi","Taqiqlangan chiziqni kesib o'tish (masalan, panjara orqali hududga kirish)","Yuz bo'yicha kirishni nazorat qilish, qo'shimcha tekshiruvlar (SHHV, jadval bo'yicha ish)","Yong'inni avtomatik aniqlash — tutun va olov belgilarini tanish","Avtotransport kirishi: raqam, marka, model, rang, kuzov turi, maxsus texnika","Qoldirilgan (egasiz) buyumlarni aniqlash va qo'riqchiga signal","Agressiv xatti-harakat va janjalni aniqlash, odamlarning ommaviy to'planishi","Hududdagi daydi hayvonlarni aniqlash","Hududda YHQ ga rioya qilish nazorati","Odamning yiqilishini aniqlash, jumladan xavfli hududlarda","Mo'ridan zararli chiqindilar va axlat to'planishini aniqlash","Multikamerali treking — odam marshrutini bir necha kamera bo'ylab tiklash"] },
          { t:'Keyingi rivojlanish',
            items:["Xavfli hududlarda qoldirilgan buyumlarni topish","Hududda tezlik rejimiga rioya qilish nazorati","Mobil telefondan foydalanayotgan xodimni aniqlash","Unumdorlikni oshirish uchun xatti-harakat tahlili","Odamlar marshruti va kalit nuqtalarda o'tkazgan vaqti tahlili","Xodimlarning u yoki bu hududda o'tkazgan vaqtini hisoblash"] }
        ],
@@ -230,13 +230,13 @@ export const PRODUCTS = [
        carouselTitle:"Kadrlarda qanday ko'rinadi",
        carousel:[
          { img:'sec-h4', t:"Ta'lim muassasalari", d:"Talabalar faolligi baholanadi: darsga qatnashish, telefondan foydalanish va e'tibordan chetda qolgan holatlar ajratiladi." },
-         { img:'sec-h1', t:'Ishlab chiqarish va ombor', d:"Har bir xodim ajratiladi va SIZ mavjudligi tekshiriladi; xavfli hudud belgilanadi va unga kirgan odam darhol qizil signal bilan qayd etiladi." },
+         { img:'sec-h1', t:'Ishlab chiqarish va ombor', d:"Har bir xodim ajratiladi va SHHV mavjudligi tekshiriladi; xavfli hudud belgilanadi va unga kirgan odam darhol qizil signal bilan qayd etiladi." },
          { img:'sec-h2', t:'Perimetr va kirish nazorati', d:"Tunda panjaradan oshib o'tish urinishi aniqlanadi, turniketdagi xodim esa yuzi bo'yicha tanib olinadi va kaskasi tekshiriladi." },
          { img:'sec-h3', t:'Ommaviy joylar', d:"Tutun, egasiz qoldirilgan buyum va odamlarning ommaviy to'planishi bir vaqtda kuzatiladi." }
        ],
        modules:[
-      { img:'ppe', t:'SIZ mavjudligi nazorati',
-        d:"Kadrdagi odam figurasi topiladi, chegaralari quriladi va himoya vositalari mavjudligi tekshiriladi.",
+      { img:'ppe', t:'SHHV mavjudligi nazorati',
+        d:"Kadrdagi odam figurasi topiladi, chegaralari quriladi va shaxsiy himoya vositalari (SHHV) mavjudligi tekshiriladi.",
         list:["Kaska, jilet, himoya ko'zoynagi, qo'lqop, respirator",
               "Buzilishlar real vaqt rejimida aniqlanadi",
               "Aniq xodim identifikatsiya qilinadi — ACS va kadrlar tizimi bilan integratsiya",
