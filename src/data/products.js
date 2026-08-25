@@ -704,7 +704,7 @@ export const PRODUCTS = [
   uz:{
     name:'EDR — ish stansiyalari himoyasi',
     short:"Xostlardagi hujumlarni aniqlash, tekshirish va to'xtatish.",
-    intro:"EDR antivirus ko'rmaydigan hujumlarni ko'radi: jarayonlar zanjiri, anomal xulq va lateral harakatni qayd etadi hamda hostni masofadan izolyatsiya qilish imkonini beradi.",
+    intro:"Biz EDR ni shunchaki sotmaymiz — uni qonun talab qiladi. Markaziy bank nizomining 11-bo'limi banklardan har bir serverda, kompyuterda, bankomat va infokioskda markazlashgan himoya bo'lishini, hujum urinishlari o'z vaqtida aniqlanib bartaraf etilishini hamda har bir amal elektron bayonnomada qolishini talab qiladi. Bajarilmasa — bank jami kapitalining 0,04–0,2 foizi miqdorida jarima. EDR shu talablarni bitta konturda yopadi: ko'radi, to'xtatadi, dalilini qoldiradi. (Nizom 11.3, 11.4, 11.7, 11.13 va 11.15-bandlari; lex.uz — QMMB 10/26/3492-1/0455-son, 05.05.2026)",
     tasks:["Ransomware va fayllsiz hujumlarni erta aniqlash","Hodisa zanjirini boshidan oxirigacha tiklash","Zararlangan hostni tarmoqdan ajratish","Threat hunting uchun telemetriya yig'ish"],
     tabs:[
       {t:'Solar EDR',d:"Xostlar telemetriyasi va hodisalarga javob berish platformasi.",list:["Jarayon, tarmoq va fayl hodisalari telemetriyasi","Indikatorlar va xulq qoidalari bo'yicha aniqlash","Masofaviy javob: izolyatsiya, jarayonni to'xtatish, karantin","SIEM va SOC jarayonlariga integratsiya"]},
@@ -718,12 +718,12 @@ export const PRODUCTS = [
          {t:'SOC bilan ishlaydi',d:"Hodisalar SIEM va IRP jarayonlariga tushadi."},
          {t:'Kam resurs sarfi',d:"Agent foydalanuvchi ishiga sezilarli ta'sir qilmaydi."}],
     delivery:["On-premise boshqaruv serveri","Boshqariladigan xizmat (bizning SOC)","Gibrid: siz — infratuzilma, biz — monitoring"],
-    compliance:["Markaziy bank talablari: hodisalarni aniqlash va ularga javob qaytarish","Jurnallarni belgilangan muddat davomida saqlash va audit izini yuritish","Hodisalar bo'yicha regulyatorga xabar berish tartibi qo'llab-quvvatlanadi","Ma'lumotlar O'zbekiston hududidagi konturda qayta ishlanadi"]
+    compliance:["11.3 — dasturiy-texnik vositalar litsenziya va sertifikatga ega bo'lishi (0,04%)","11.4 — ruxsatsiz kirish, urinish va hodisalarni bartaraf etish hamda oldini olish (0,08%)","11.7 — foydalanuvchi amallari elektron bayonnomalarda qayd etib borilishi (0,2%)","11.13 — tarmoq obyektlarini markazlashgan boshqarish: Active Directory yoki muqobili (0,1%)","11.15 — antivirus himoyasi: markazlashgan boshqaruv, kunlik yangilanish, barcha server, kompyuter, bankomat va infokiosklarda o'rnatilishi, sozlamalarni o'zgartirish cheklanishi (0,04%)","Jarimalar bank jami kapitalidan hisoblanadi, jami aniqlangan holatlar uchun 10 mlrd. so'mdan oshmaydi"]
   },
   ru:{
     name:'EDR — защита рабочих станций',
     short:'Обнаружение, расследование и остановка атак на хостах.',
-    intro:'EDR видит то, что пропускает антивирус: цепочки процессов, аномальное поведение и горизонтальное перемещение, и позволяет изолировать хост удалённо.',
+    intro:'Мы не просто продаём EDR — этого требует закон. Раздел 11 положения Центрального банка обязывает банки иметь централизованную защиту на каждом сервере, компьютере, банкомате и инфокиоске, вовремя выявлять и устранять попытки атак, а каждое действие фиксировать в электронном протоколе. Не выполнили — штраф от 0,04 до 0,2 процента совокупного капитала банка. EDR закрывает эти требования в одном контуре: видит, останавливает, оставляет доказательство. (Пункты 11.3, 11.4, 11.7, 11.13 и 11.15 положения; lex.uz — НБДЗ 10/26/3492-1/0455-сон, 05.05.2026)',
     tasks:['Раннее обнаружение шифровальщиков и бесфайловых атак','Восстановление цепочки инцидента от начала до конца','Изоляция заражённого хоста от сети','Сбор телеметрии для threat hunting'],
     tabs:[
       {t:'Solar EDR',d:'Платформа телеметрии хостов и реагирования на инциденты.',list:['Телеметрия процессов, сети и файловых операций','Обнаружение по индикаторам и поведенческим правилам','Удалённое реагирование: изоляция, остановка процесса, карантин','Интеграция с SIEM и процессами SOC']},
@@ -737,12 +737,12 @@ export const PRODUCTS = [
          {t:'Работает вместе с SOC',d:'Инциденты попадают в процессы SIEM и IRP.'},
          {t:'Экономный агент',d:'Не мешает работе пользователя.'}],
     delivery:['Сервер управления on-premise','Управляемый сервис на базе нашего SOC','Гибрид: инфраструктура ваша, мониторинг наш'],
-    compliance:['Требования Центрального банка к выявлению инцидентов и реагированию на них','Хранение журналов в течение установленного срока и ведение аудиторского следа','Поддерживается порядок уведомления регулятора об инцидентах','Данные обрабатываются в контуре на территории Узбекистана']
+    compliance:['11.3 — программно-технические средства должны иметь лицензию и сертификат (0,04%)','11.4 — устранение и предотвращение несанкционированного доступа, попыток и инцидентов (0,08%)','11.7 — фиксация действий пользователя в электронных протоколах (0,2%)','11.13 — централизованное управление сетевыми объектами: Active Directory или аналог (0,1%)','11.15 — антивирусная защита: централизованное управление, ежедневное обновление, установка на все серверы, компьютеры, банкоматы и инфокиоски, запрет на изменение настроек (0,04%)','Штрафы считаются от совокупного капитала банка и в сумме не превышают 10 млрд сумов']
   },
   en:{
     name:'EDR — endpoint protection',
     short:'Detecting, investigating and stopping attacks on hosts.',
-    intro:'EDR sees what antivirus misses: process chains, anomalous behaviour and lateral movement, and lets you isolate a host remotely.',
+    intro:'We do not simply sell EDR — the law requires it. Section 11 of the Central Bank regulation obliges banks to run centrally managed protection on every server, computer, ATM and kiosk, to detect and remediate attack attempts in time, and to record every action in an electronic log. Fail, and the fine runs from 0.04 to 0.2 per cent of total capital. EDR closes those requirements in a single loop: it sees, it stops, it leaves evidence. (Clauses 11.3, 11.4, 11.7, 11.13 and 11.15; lex.uz — national legislation database 10/26/3492-1/0455, 05.05.2026)',
     tasks:['Early detection of ransomware and fileless attacks','Reconstructing the full incident chain','Isolating a compromised host from the network','Collecting telemetry for threat hunting'],
     tabs:[
       {t:'Solar EDR',d:'A host telemetry and incident response platform.',list:['Process, network and file operation telemetry','Detection by indicators and behavioural rules','Remote response: isolation, process termination, quarantine','Integration with SIEM and SOC processes']},
@@ -756,7 +756,7 @@ export const PRODUCTS = [
          {t:'Works with your SOC',d:'Incidents flow into SIEM and IRP processes.'},
          {t:'Lightweight agent',d:'No noticeable impact on user work.'}],
     delivery:['On-premise management server','Managed service run by our SOC','Hybrid: your infrastructure, our monitoring'],
-    compliance:['Central Bank requirements for incident detection and response','Log retention for the mandated period with a full audit trail','Regulator incident notification workflow supported','Data processed inside a perimeter located in Uzbekistan']
+    compliance:['11.3 — software and hardware must hold a licence and a certificate (0.04%)','11.4 — remediation and prevention of unauthorised access, attempts and incidents (0.08%)','11.7 — user actions recorded in electronic logs (0.2%)','11.13 — centralised management of network objects: Active Directory or equivalent (0.1%)','11.15 — antivirus protection: central management, daily updates, installed on every server, computer, ATM and kiosk, settings locked for users (0.04%)','Fines are calculated from total capital and do not exceed 10 billion soums in aggregate']
   }
 },
 
