@@ -63,7 +63,14 @@ watch(() => props.slug, register)
     <!-- kirish -->
     <section class="section section--tight">
       <div class="wrap intro">
-        <p class="intro__lead" v-reveal>{{ data.intro }}</p>
+        <div class="intro__txt">
+          <p class="intro__lead" v-reveal>{{ data.intro }}</p>
+          <p v-if="data.sourceLabel" class="intro__src" v-reveal="60">
+            <a :href="product.sourceUrl" target="_blank" rel="noopener">
+              {{ data.sourceLabel }} <i aria-hidden="true">&#8599;</i>
+            </a>
+          </p>
+        </div>
         <div class="intro__act" v-reveal="80">
           <RouterLink :to="{ hash: '#lead' }" class="btn btn--primary" v-magnet="0.15"
             @click="track('cta_click', { cta: 'product-pilot', product: props.slug })">
@@ -187,6 +194,16 @@ watch(() => props.slug, register)
 .intro__act{display:flex;flex-wrap:wrap;gap:12px}
 .galnote{margin-top:26px;font-size:13.5px;color:var(--muted-2)}
 .intro__lead{font-size:clamp(15px,1.35vw,17.5px);color:var(--ink);margin:0;line-height:1.6;max-width:66ch}
+/* qonun asosi — matndan alohida, havola bilan */
+.intro__src{margin:16px 0 0;font-size:13px;line-height:1.5}
+.intro__src a{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font-mono);letter-spacing:.02em;color:var(--blue);
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
+  transition:color .25s,text-decoration-thickness .25s;
+}
+.intro__src a:hover{color:var(--red);text-decoration-thickness:2px}
+.intro__src i{font-style:normal}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
 .listgrid ul{display:grid;gap:14px}
