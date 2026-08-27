@@ -83,7 +83,7 @@ watch(() => props.slug, register)
             <template v-for="(part, k) in parts(data.intro)" :key="k"
               ><a
                 v-if="part.l" class="intro__doc"
-                :href="product.sourceUrl" target="_blank" rel="noopener"
+                :href="product.docUrl" target="_blank" rel="noopener"
                 >{{ part.s }}</a
               ><strong v-else-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
             ></template>
@@ -95,10 +95,14 @@ watch(() => props.slug, register)
                 ><strong v-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
               ></template>
             </p>
-            <p v-if="data.sourceLabel" class="intro__src">{{ data.sourceLabel }}</p>
+            <a
+              v-if="data.sourceLabel" class="intro__src"
+              :href="product.sourceUrl" target="_blank" rel="noopener">{{ data.sourceLabel }}</a>
           </div>
 
-          <p v-else-if="data.sourceLabel" class="intro__src" v-reveal="60">{{ data.sourceLabel }}</p>
+          <p v-else-if="data.sourceLabel" v-reveal="60">
+            <a class="intro__src" :href="product.sourceUrl" target="_blank" rel="noopener">{{ data.sourceLabel }}</a>
+          </p>
         </div>
         <div class="intro__act" v-reveal="80">
           <RouterLink :to="{ hash: '#lead' }" class="btn btn--primary" v-magnet="0.15"
@@ -236,19 +240,20 @@ watch(() => props.slug, register)
 }
 .intro__doc:hover{color:var(--red);text-decoration-thickness:2px}
 
-/* ogohlantirish qutisi */
-.intro__alert{
-  margin-top:20px;padding:16px 20px;border-radius:var(--r-md);
-  background:rgba(226,59,51,.06);border:1px solid rgba(226,59,51,.22);
-  max-width:66ch;
+/* jarima haqidagi izoh — fon va ramkasiz, shrifti yuqoridagi matn bilan bir xil */
+.intro__alert{margin-top:14px;max-width:66ch}
+.intro__alert p{
+  margin:0;font-size:clamp(15px,1.35vw,17.5px);line-height:1.6;color:var(--ink);
 }
-.intro__alert p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
 .intro__alert strong{font-weight:700;color:var(--red)}
 
 .intro__src{
-  margin-top:10px;
-  font-family:var(--font-mono);font-size:12px;letter-spacing:.02em;color:var(--muted-2);
+  display:inline-block;margin-top:10px;
+  font-size:clamp(15px,1.35vw,17.5px);line-height:1.6;color:var(--muted);
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
+  transition:color .25s,text-decoration-thickness .25s;
 }
+.intro__src:hover{color:var(--red);text-decoration-thickness:2px}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
 .listgrid ul{display:grid;gap:14px}

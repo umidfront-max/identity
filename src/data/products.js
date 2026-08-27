@@ -689,13 +689,15 @@ export const PRODUCTS = [
 
 /* ---------------------------------------------------------------- 5 */
 { slug:'edr', code:'EDR', page:'edr.html', casesKey:'p.casesMaybe',
-  /* Markaziy bank nizomi, 3492-son (23.01.2024) — 11-bo'lim */
-  sourceUrl:'https://lex.uz/uz/docs/-6777448',
+  /* 3669-son — axborot xavfsizligi minimal talablari (EDR shu yerda) */
+  docUrl:'https://lex.uz/docs/-7689673',
+  /* 3492-1-son — jarimalar: choralar va sanksiyalar nizomiga o'zgartirish */
+  sourceUrl:'https://lex.uz/uz/docs/8175105',
   uz:{
     name:'EDR — ish stansiyalari himoyasi',
     short:"Markaziy bank me'yorlariga to'liq muvofiq kiberhimoya.",
     introBadge:"Bu — tavsiya emas, majburiy talab.",
-    intro:"Markaziy bankning [[3492-son]] qaroriga ko'ra, barcha bank va moliya tashkilotlari o'z serverlari, ishchi stansiyalari hamda o'z-o'ziga xizmat ko'rsatuvchi qurilmalarini (bankomat, infokiosk) **EDR tizimi bilan himoyalashi shart**.",
+    intro:"Markaziy bankning [[3669-son]] qaroriga ko'ra, barcha bank va moliya tashkilotlari o'z serverlari, ishchi stansiyalari hamda o'z-o'ziga xizmat ko'rsatuvchi qurilmalarini (bankomat, infokiosk) **EDR tizimi bilan himoyalashi shart**.",
     alert:"EDR joriy etilmagan bank uchun — jami kapitalning **0,2% miqdorida jarima**. Yirik bank uchun bu **milliardlab so'm** demakdir.",
     sourceLabel:"Asos: Markaziy bank qarori №3492-1-son",
     tasks:["Ransomware va fayllsiz hujumlarni erta aniqlash","Hodisa zanjirini boshidan oxirigacha tiklash","Zararlangan hostni tarmoqdan ajratish","Threat hunting uchun telemetriya yig'ish"],
@@ -716,7 +718,7 @@ export const PRODUCTS = [
     name:'EDR — защита рабочих станций',
     short:'Киберзащита в полном соответствии с нормами Центрального банка.',
     introBadge:'Это не рекомендация, а обязательное требование.',
-    intro:'Согласно постановлению Центрального банка [[№3492]], все банки и финансовые организации обязаны **защитить системой EDR** свои серверы, рабочие станции и устройства самообслуживания (банкоматы, инфокиоски).',
+    intro:'Согласно постановлению Центрального банка [[№3669]], все банки и финансовые организации обязаны **защитить системой EDR** свои серверы, рабочие станции и устройства самообслуживания (банкоматы, инфокиоски).',
     alert:'Для банка без внедрённого EDR — штраф в размере **0,2% совокупного капитала**. Для крупного банка это **миллиарды сумов**.',
     sourceLabel:'Основание: постановление Центрального банка №3492-1',
     tasks:['Раннее обнаружение шифровальщиков и бесфайловых атак','Восстановление цепочки инцидента от начала до конца','Изоляция заражённого хоста от сети','Сбор телеметрии для threat hunting'],
@@ -737,7 +739,7 @@ export const PRODUCTS = [
     name:'EDR — endpoint protection',
     short:'Cyber protection in full alignment with Central Bank requirements.',
     introBadge:'This is not a recommendation — it is a mandatory requirement.',
-    intro:'Under Central Bank resolution [[No. 3492]], every bank and financial institution must **protect its servers, workstations and self-service devices** (ATMs, kiosks) **with an EDR system**.',
+    intro:'Under Central Bank resolution [[No. 3669]], every bank and financial institution must **protect its servers, workstations and self-service devices** (ATMs, kiosks) **with an EDR system**.',
     alert:'A bank without EDR faces a fine of **0.2% of total capital**. For a large bank that means **billions of soums**.',
     sourceLabel:'Source: Central Bank resolution No. 3492-1',
     tasks:['Early detection of ransomware and fileless attacks','Reconstructing the full incident chain','Isolating a compromised host from the network','Collecting telemetry for threat hunting'],
