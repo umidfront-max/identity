@@ -25,9 +25,17 @@ const data = computed(() => (product.value ? p(product.value) : {}))
 /* Taqdimot fayli config'da ko'rsatilgan bo'lsagina tugma chiziladi */
 const presentation = computed(() => (CONFIG.presentations || {})[props.slug] || null)
 
-/* Matndagi **qalin** bo'laklarni ajratadi — v-html ishlatmaslik uchun */
-function bold (text) {
-  return String(text || '').split('**').map((s, i) => ({ s, b: i % 2 === 1 }))
+/* Matnni bo'laklarga ajratadi: **qalin** va [[havola]] — v-html ishlatmasdan.
+   [[...]] product.sourceUrl ga olib boradigan havola bo'lib chiziladi. */
+function parts (text) {
+  return String(text || '')
+    .split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/)
+    .filter(Boolean)
+    .map(s => {
+      if (s.startsWith('**')) return { s: s.slice(2, -2), b: true }
+      if (s.startsWith('[[')) return { s: s.slice(2, -2), l: true }
+      return { s }
+    })
 }
 
 const related = computed(() =>
@@ -72,36 +80,25 @@ watch(() => props.slug, register)
           <p v-if="data.introBadge" class="intro__badge" v-reveal>{{ data.introBadge }}</p>
 
           <p class="intro__lead" v-reveal="40">
-            <template v-for="(part, k) in bold(data.intro)" :key="k"
-              ><strong v-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
+            <template v-for="(part, k) in parts(data.intro)" :key="k"
+              ><a
+                v-if="part.l" class="intro__doc"
+                :href="product.sourceUrl" target="_blank" rel="noopener"
+                >{{ part.s }}</a
+              ><strong v-else-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
             ></template>
           </p>
 
           <div v-if="data.alert" class="intro__alert" v-reveal="80">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3.5 22 20H2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M12 10v4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
-              <circle cx="12" cy="17.4" r="1.05" fill="currentColor"/>
-            </svg>
-            <div>
-              <p>
-                <template v-for="(part, k) in bold(data.alert)" :key="k"
-                  ><strong v-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
-                ></template>
-              </p>
-              <a
-                v-if="data.sourceLabel" class="intro__src"
-                :href="product.sourceUrl" target="_blank" rel="noopener">
-                {{ data.sourceLabel }} <i aria-hidden="true">&#8599;</i>
-              </a>
-            </div>
+            <p>
+              <template v-for="(part, k) in parts(data.alert)" :key="k"
+                ><strong v-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
+              ></template>
+            </p>
+            <p v-if="data.sourceLabel" class="intro__src">{{ data.sourceLabel }}</p>
           </div>
 
-          <p v-else-if="data.sourceLabel" class="intro__srcline" v-reveal="60">
-            <a class="intro__src" :href="product.sourceUrl" target="_blank" rel="noopener">
-              {{ data.sourceLabel }} <i aria-hidden="true">&#8599;</i>
-            </a>
-          </p>
+          <p v-else-if="data.sourceLabel" class="intro__src" v-reveal="60">{{ data.sourceLabel }}</p>
         </div>
         <div class="intro__act" v-reveal="80">
           <RouterLink :to="{ hash: '#lead' }" class="btn btn--primary" v-magnet="0.15"
@@ -231,26 +228,27 @@ watch(() => props.slug, register)
 .intro__badge{
   margin:0 0 12px;font-size:15px;font-weight:700;color:var(--red);letter-spacing:-.01em;
 }
-/* ogohlantirish qutisi */
-.intro__alert{
-  display:flex;gap:14px;align-items:flex-start;margin-top:20px;
-  padding:16px 20px;border-radius:var(--r-md);
-  background:rgba(226,59,51,.06);border:1px solid rgba(226,59,51,.22);
-  max-width:66ch;
-}
-.intro__alert > svg{flex:none;width:22px;margin-top:1px;color:var(--red)}
-.intro__alert p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
-.intro__alert strong{font-weight:700;color:var(--red)}
-
-.intro__srcline{margin:16px 0 0}
-.intro__src{
-  display:inline-flex;align-items:center;gap:6px;margin-top:10px;
-  font-family:var(--font-mono);font-size:12px;letter-spacing:.02em;color:var(--muted-2);
+/* qaror raqami — hujjatga havola */
+.intro__doc{
+  color:var(--blue);font-weight:700;
   text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
   transition:color .25s,text-decoration-thickness .25s;
 }
-.intro__src:hover{color:var(--red);text-decoration-thickness:2px}
-.intro__src i{font-style:normal}
+.intro__doc:hover{color:var(--red);text-decoration-thickness:2px}
+
+/* ogohlantirish qutisi */
+.intro__alert{
+  margin-top:20px;padding:16px 20px;border-radius:var(--r-md);
+  background:rgba(226,59,51,.06);border:1px solid rgba(226,59,51,.22);
+  max-width:66ch;
+}
+.intro__alert p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.intro__alert strong{font-weight:700;color:var(--red)}
+
+.intro__src{
+  margin-top:10px;
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.02em;color:var(--muted-2);
+}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}
 .listgrid ul{display:grid;gap:14px}
