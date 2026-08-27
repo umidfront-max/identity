@@ -321,7 +321,7 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'Luna Line hal qiladigan vazifalar',
                 items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] },
-         { t:'Nimalarni mustaqil qilish mumkin',
+         { head:'No-code videoanalitika', t:'Nimalarni mustaqil qilish mumkin',
            items:["O'z stsenariylari uchun detektorlarni mustaqil yaratish","Modelni o'z obyektidagi yozuvlarda o'qitish","Yangi vazifani kunlar ichida ishga tushirish","Vendorga bog'liqliksiz tajriba o'tkazish va takomillashtirish"] },
          { t:'Afzalliklari',
            items:["Kod talab qilinmaydi — belgilashdan ishga tushirishgacha vizual interfeys orqali","Ma'lumotlar o'zingizda qoladi: o'qitish buyurtmachi konturida ketadi","G'oyadan modelgacha — kunlar: tayyor arxitekturalar va avto-o'qitish","Mavjud IP-kameralar va VMS tizimlariga ulanadi, maxsus uskuna shart emas"] }
@@ -466,7 +466,7 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'Задачи Luna Line',
                 items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] },
-         { t:'Что можно делать самостоятельно',
+         { head:'No-code видеоаналитика', t:'Что можно делать самостоятельно',
            items:['Самостоятельно создавать детекторы под свои сценарии','Обучать модель на записях со своего объекта','Запускать новую задачу за считанные дни','Экспериментировать и улучшать без зависимости от вендора'] },
          { t:'Преимущества',
            items:['Код не требуется — от разметки до запуска через визуальный интерфейс','Данные остаются у вас: обучение идёт в контуре заказчика','От идеи до модели — дни: готовые архитектуры и автообучение','Подключается к существующим IP-камерам и VMS, спецоборудование не нужно'] }
@@ -611,7 +611,7 @@ export const PRODUCTS = [
        ],
        lists:[{ t:'What Luna Line does',
                 items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] },
-         { t:'What you can do yourself',
+         { head:'No-code video analytics', t:'What you can do yourself',
            items:['Building detectors for your own scenarios','Training models on footage from your own site','Launching a new task within days','Experimenting and improving without vendor lock-in'] },
          { t:'Advantages',
            items:['No code required — from labelling to launch through a visual interface','Your data stays with you: training runs inside the customer perimeter','Idea to model in days: ready-made architectures and auto-training','Connects to existing IP cameras and VMS; no special hardware needed'] }

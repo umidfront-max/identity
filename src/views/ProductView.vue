@@ -230,7 +230,9 @@ watch(() => props.slug, register)
 .intro__lead strong{font-weight:700;color:var(--ink)}
 /* majburiy talab — diqqatni tortuvchi qator */
 .intro__badge{
-  margin:0 0 12px;font-size:15px;font-weight:700;color:var(--red);letter-spacing:-.01em;
+  margin:0 0 14px;font-family:var(--font-display);
+  font-size:clamp(19px,1.9vw,23px);font-weight:600;line-height:1.25;
+  color:var(--ink);letter-spacing:-.025em;
 }
 /* qaror raqami — hujjatga havola */
 .intro__doc{

@@ -37,14 +37,18 @@ const active = ref(0)
           class="tracks__mods"
           :modules="tracks[active].modules" />
 
-        <div v-for="(blk, bi) in tracks[active].lists || []" :key="bi" class="tracks__block">
-          <h3 v-if="blk.t">{{ blk.t }}</h3>
-          <ul class="tracks__list">
-            <li v-for="(item, i) in blk.items" :key="i" :style="{ '--d': i * 45 + 'ms' }">
-              <span class="dot" aria-hidden="true"></span>{{ item }}
-            </li>
-          </ul>
-        </div>
+        <template v-for="(blk, bi) in tracks[active].lists || []" :key="bi">
+          <!-- head — yo'nalish ichidagi alohida bo'limni ajratadi -->
+          <h3 v-if="blk.head" class="tracks__sub">{{ blk.head }}</h3>
+          <div class="tracks__block">
+            <h3 v-if="blk.t">{{ blk.t }}</h3>
+            <ul class="tracks__list">
+              <li v-for="(item, i) in blk.items" :key="i" :style="{ '--d': i * 45 + 'ms' }">
+                <span class="dot" aria-hidden="true"></span>{{ item }}
+              </li>
+            </ul>
+          </div>
+        </template>
 
         <div v-if="tracks[active].tabs" class="tracks__block">
           <h3 v-if="tracks[active].tabsTitle">{{ tracks[active].tabsTitle }}</h3>
@@ -107,6 +111,13 @@ const active = ref(0)
 .tracks__mods{margin-top:44px}
 .tracks__block{margin-top:52px}
 .tracks__block h3{font-size:clamp(19px,1.9vw,23px);margin-bottom:22px;letter-spacing:-.02em}
+
+/* yo'nalish ichidagi bo'lim sarlavhasi (masalan, No-code videoanalitika) */
+.tracks__sub{
+  margin:64px 0 0;padding-top:28px;border-top:1px solid var(--line);
+  font-size:clamp(22px,2.3vw,28px);letter-spacing:-.028em;
+}
+.tracks__sub + .tracks__block{margin-top:28px}
 
 .tracks__list{display:grid;grid-template-columns:1fr 1fr;gap:13px 40px}
 .tracks__list li{
