@@ -25,6 +25,11 @@ const data = computed(() => (product.value ? p(product.value) : {}))
 /* Taqdimot fayli config'da ko'rsatilgan bo'lsagina tugma chiziladi */
 const presentation = computed(() => (CONFIG.presentations || {})[props.slug] || null)
 
+/* Matndagi **qalin** bo'laklarni ajratadi — v-html ishlatmaslik uchun */
+function bold (text) {
+  return String(text || '').split('**').map((s, i) => ({ s, b: i % 2 === 1 }))
+}
+
 const related = computed(() =>
   PRODUCTS.filter(x => x.slug !== props.slug)
     .slice(0, 4)
@@ -64,9 +69,36 @@ watch(() => props.slug, register)
     <section class="section section--tight">
       <div class="wrap intro">
         <div class="intro__txt">
-          <p class="intro__lead" v-reveal>{{ data.intro }}</p>
-          <p v-if="data.sourceLabel" class="intro__src" v-reveal="60">
-            <a :href="product.sourceUrl" target="_blank" rel="noopener">
+          <p v-if="data.introBadge" class="intro__badge" v-reveal>{{ data.introBadge }}</p>
+
+          <p class="intro__lead" v-reveal="40">
+            <template v-for="(part, k) in bold(data.intro)" :key="k"
+              ><strong v-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
+            ></template>
+          </p>
+
+          <div v-if="data.alert" class="intro__alert" v-reveal="80">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3.5 22 20H2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M12 10v4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+              <circle cx="12" cy="17.4" r="1.05" fill="currentColor"/>
+            </svg>
+            <div>
+              <p>
+                <template v-for="(part, k) in bold(data.alert)" :key="k"
+                  ><strong v-if="part.b">{{ part.s }}</strong><template v-else>{{ part.s }}</template
+                ></template>
+              </p>
+              <a
+                v-if="data.sourceLabel" class="intro__src"
+                :href="product.sourceUrl" target="_blank" rel="noopener">
+                {{ data.sourceLabel }} <i aria-hidden="true">&#8599;</i>
+              </a>
+            </div>
+          </div>
+
+          <p v-else-if="data.sourceLabel" class="intro__srcline" v-reveal="60">
+            <a class="intro__src" :href="product.sourceUrl" target="_blank" rel="noopener">
               {{ data.sourceLabel }} <i aria-hidden="true">&#8599;</i>
             </a>
           </p>
@@ -194,15 +226,30 @@ watch(() => props.slug, register)
 .intro__act{display:flex;flex-wrap:wrap;gap:12px}
 .galnote{margin-top:26px;font-size:13.5px;color:var(--muted-2)}
 .intro__lead{font-size:clamp(15px,1.35vw,17.5px);color:var(--ink);margin:0;line-height:1.6;max-width:66ch}
-/* qonun asosi — matndan alohida, havola bilan */
-.intro__src{margin:16px 0 0;font-size:13px;line-height:1.5}
-.intro__src a{
-  display:inline-flex;align-items:center;gap:6px;
-  font-family:var(--font-mono);letter-spacing:.02em;color:var(--blue);
+.intro__lead strong{font-weight:700;color:var(--ink)}
+/* majburiy talab — diqqatni tortuvchi qator */
+.intro__badge{
+  margin:0 0 12px;font-size:15px;font-weight:700;color:var(--red);letter-spacing:-.01em;
+}
+/* ogohlantirish qutisi */
+.intro__alert{
+  display:flex;gap:14px;align-items:flex-start;margin-top:20px;
+  padding:16px 20px;border-radius:var(--r-md);
+  background:rgba(226,59,51,.06);border:1px solid rgba(226,59,51,.22);
+  max-width:66ch;
+}
+.intro__alert > svg{flex:none;width:22px;margin-top:1px;color:var(--red)}
+.intro__alert p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.intro__alert strong{font-weight:700;color:var(--red)}
+
+.intro__srcline{margin:16px 0 0}
+.intro__src{
+  display:inline-flex;align-items:center;gap:6px;margin-top:10px;
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.02em;color:var(--muted-2);
   text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
   transition:color .25s,text-decoration-thickness .25s;
 }
-.intro__src a:hover{color:var(--red);text-decoration-thickness:2px}
+.intro__src:hover{color:var(--red);text-decoration-thickness:2px}
 .intro__src i{font-style:normal}
 
 .listgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}

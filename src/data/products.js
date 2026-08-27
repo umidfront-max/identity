@@ -306,7 +306,7 @@ export const PRODUCTS = [
               "Hisobotni elektron pochtaga avtomatik yuborish"] }
        ] },
      { t:'Tor ixtisoslashgan analitika',
-       d:"Luna Line — kompyuter ko'rish uchun innovatsion no-code platforma: foydalanuvchi ma'lumotni belgilaydi, tugmani bosadi va o'z ish vazifasi uchun mukammal o'qitilgan CV-model oladi. Interfeys har qanday foydalanuvchiga — fermer, prorab, marketolog, veterinarga — dasturchilarga murojaat qilmasdan modelni mustaqil o'qitish imkonini beradi. Qo'llash sohasi cheksiz: yo'ldagi o'ralarni topish, qoramol sog'lig'i holati, daraxtdagi mevalar pishganini baholash, konveyerdagi nuqsonlarni aniqlash.",
+       d:"Luna Line — kompyuter ko'rish uchun innovatsion no-code platforma: foydalanuvchi ma'lumotni belgilaydi, tugmani bosadi va o'z ish vazifasi uchun mukammal o'qitilgan CV-model oladi. Interfeys har qanday foydalanuvchiga — fermer, prorab, marketolog, veterinarga — dasturchilarga murojaat qilmasdan modelni mustaqil o'qitish imkonini beradi. Qo'llash sohasi cheksiz: yo'ldagi o'ralarni topish, qoramol sog'lig'i holati, daraxtdagi mevalar pishganini baholash, konveyerdagi nuqsonlarni aniqlash. Buyurtmachi jamoasi o'z vazifasi uchun detektorni mustaqil yig'adi: kadrlarni belgilaydi, modelni o'qitadi va mavjud kameralarda ishga tushiradi — dasturchi va vendorsiz.",
        carouselTitle:"Qo'llash misollari",
        carousel:[
          { img:'luna-v1',  t:'Transport va infratuzilma', d:"Yo'ldagi transport turlari hamda korxona binolari va inshootlarini aniqlash: Damas, Gentra, avtobus, traktor, kombayn, don saqlash siloslari." },
@@ -320,11 +320,7 @@ export const PRODUCTS = [
          { img:'luna-v11', t:'Konveyerdagi nuqsonlar', d:"Qadoq va shishalar holati tekshiriladi, nuqsonli mahsulot real vaqtda ajratiladi." }
        ],
        lists:[{ t:'Luna Line hal qiladigan vazifalar',
-                items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] }],
-       note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." },
-     { t:'No-code videoanalitika',
-       d:"Buyurtmachi jamoasi o'z vazifasi uchun detektorni mustaqil yig'adi: kadrlarni belgilaydi, modelni o'qitadi va mavjud kameralarda ishga tushiradi — dasturchi va vendorsiz.",
-       lists:[
+                items:["Deteksiya — obyektlarni ajratib, ularning soni yoki joylashuvini aniqlash","Segmentatsiya — obyektning aniq konturini ajratish (masalan, yo'l qismidagi o'ra)","Klassifikatsiya — tasvir yoki uning qismini toifaga ajratish","Matnli so'rov bo'yicha tasvirlarni tahlil qilish (masalan: barcha daraxtli fotosuratlarni top)"] },
          { t:'Nimalarni mustaqil qilish mumkin',
            items:["O'z stsenariylari uchun detektorlarni mustaqil yaratish","Modelni o'z obyektidagi yozuvlarda o'qitish","Yangi vazifani kunlar ichida ishga tushirish","Vendorga bog'liqliksiz tajriba o'tkazish va takomillashtirish"] },
          { t:'Afzalliklari',
@@ -334,7 +330,7 @@ export const PRODUCTS = [
        cases:[{t:"Savdo tarmog'i",d:"Merchandayzing nazorati: javondagi tovar joylashuvi bo'yicha o'z detektorini yig'ish."},
               {t:'Ishlab chiqarish',d:"Uchastkaga xos xavfsizlik qoidalari buzilishini aniqlashga model o'qitish."},
               {t:'Agrosanoat',d:"Texnika va chorva harakatini kuzatish uchun maxsus stsenariylar."}],
-       note:"Yetkazib berish: buyurtmachi serverlarida (on-premise), xususiy bulutda yoki boshqariladigan xizmat sifatida." }
+       note:"Modelni o'qitish uchun 10–80 ta fotosuratdan iborat dataset kifoya. Luna Line Time-to-Market'ni odatdagi 4–6 oydan bir necha kun yoki soatgacha qisqartiradi." },
     ],
     adv:[{t:"Ma'lumotlar korxonadan chiqmaydi",d:"Tizim buyurtmachi serverlarida, himoyalangan kontur ichida ishlaydi."},
          {t:'Modulli tuzilma',d:"Faqat kerakli modullarni yoqasiz, tizim bosqichma-bosqich kengayadi."},
@@ -455,7 +451,7 @@ export const PRODUCTS = [
               'Автоматическая отправка отчёта на электронную почту'] }
        ] },
      { t:'Узкоспециализированная аналитика',
-       d:'Luna Line — инновационная no-code-платформа для компьютерного зрения, которая позволяет пользователю разметить данные, нажать на кнопку и получить идеально обученную CV-модель под свои рабочие задачи. Интерфейс Luna Line позволяет любому пользователю — фермеру, прорабу, маркетологу, ветеринару — обучать модель самостоятельно, без обращения к программистам. Область применения безгранична: поиск ям на дорогах, состояние здоровья крупного рогатого скота, оценка спелости фруктов на дереве, выявление дефектов на конвейере.',
+       d:'Luna Line — инновационная no-code-платформа для компьютерного зрения, которая позволяет пользователю разметить данные, нажать на кнопку и получить идеально обученную CV-модель под свои рабочие задачи. Интерфейс Luna Line позволяет любому пользователю — фермеру, прорабу, маркетологу, ветеринару — обучать модель самостоятельно, без обращения к программистам. Область применения безгранична: поиск ям на дорогах, состояние здоровья крупного рогатого скота, оценка спелости фруктов на дереве, выявление дефектов на конвейере. Команда заказчика самостоятельно собирает детектор под свою задачу: размечает кадры, обучает модель и запускает её на существующих камерах — без разработчиков и вендора.',
        carouselTitle:'Примеры применения',
        carousel:[
          { img:'luna-v1',  t:'Транспорт и инфраструктура', d:'Распознавание типов транспорта на дороге и объектов предприятия: Damas, Gentra, автобус, трактор, комбайн, зерновые силосы.' },
@@ -469,11 +465,7 @@ export const PRODUCTS = [
          { img:'luna-v11', t:'Дефекты на конвейере', d:'Проверяется состояние упаковки и бутылок, брак отделяется в реальном времени.' }
        ],
        lists:[{ t:'Задачи Luna Line',
-                items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] }],
-       note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' },
-     { t:'No-code видеоаналитика',
-       d:'Команда заказчика самостоятельно собирает детектор под свою задачу: размечает кадры, обучает модель и запускает её на существующих камерах — без разработчиков и вендора.',
-       lists:[
+                items:['Детекция — выделение объектов, чтобы определить их количество или местоположение','Сегментация — выделение точных контуров объекта (например, ямы на проезжей части)','Классификация — отнесение изображения или его части к определённой категории','Анализ изображений по текстовому запросу (например, найти все фотографии с деревьями)'] },
          { t:'Что можно делать самостоятельно',
            items:['Самостоятельно создавать детекторы под свои сценарии','Обучать модель на записях со своего объекта','Запускать новую задачу за считанные дни','Экспериментировать и улучшать без зависимости от вендора'] },
          { t:'Преимущества',
@@ -483,7 +475,7 @@ export const PRODUCTS = [
        cases:[{t:'Розничная сеть',d:'Контроль мерчандайзинга: собственный детектор выкладки товара на полке.'},
               {t:'Производство',d:'Обучение модели выявлению нарушений техники безопасности, специфичных для участка.'},
               {t:'Агросектор',d:'Специальные сценарии наблюдения за движением техники и скота.'}],
-       note:'Поставка: на серверах заказчика (on-premise), в частном облаке или как управляемый сервис.' }
+       note:'Для обучения моделей достаточно датасета из 10–80 фотографий. Luna Line сокращает Time-to-Market с привычных 4–6 месяцев до нескольких дней или часов.' },
     ],
     adv:[{t:'Данные не покидают предприятие',d:'Система работает на серверах заказчика, внутри защищённого контура.'},
          {t:'Модульная архитектура',d:'Включаете только нужные модули, система расширяется поэтапно.'},
@@ -604,7 +596,7 @@ export const PRODUCTS = [
               'Automatic report delivery by email'] }
        ] },
      { t:'Specialised analytics',
-       d:'Luna Line is an innovative no-code computer vision platform: the user labels the data, presses a button and gets a perfectly trained CV model for their working task. Its interface lets any user — a farmer, a foreman, a marketer, a vet — train a model without involving developers. The field of application is unlimited: finding potholes, assessing cattle health, judging fruit ripeness on the tree, spotting defects on a conveyor.',
+       d:'Luna Line is an innovative no-code computer vision platform: the user labels the data, presses a button and gets a perfectly trained CV model for their working task. Its interface lets any user — a farmer, a foreman, a marketer, a vet — train a model without involving developers. The field of application is unlimited: finding potholes, assessing cattle health, judging fruit ripeness on the tree, spotting defects on a conveyor. The customer team assembles a detector for its own task: labels frames, trains the model and launches it on existing cameras — with no developers or vendor involved.',
        carouselTitle:'Application examples',
        carousel:[
          { img:'luna-v1',  t:'Transport and infrastructure', d:'Recognising vehicle types on the road and plant facilities: Damas, Gentra, bus, tractor, combine, grain silos.' },
@@ -618,11 +610,7 @@ export const PRODUCTS = [
          { img:'luna-v11', t:'Conveyor defects', d:'Packaging and bottle condition is checked and rejects are separated in real time.' }
        ],
        lists:[{ t:'What Luna Line does',
-                items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] }],
-       note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' },
-     { t:'No-code video analytics',
-       d:'The customer team assembles a detector for its own task: labels frames, trains the model and launches it on existing cameras — with no developers or vendor involved.',
-       lists:[
+                items:['Detection — locating objects to count them or find their position','Segmentation — extracting the exact contour of an object (for example, a pothole)','Classification — assigning an image or part of it to a category','Image analysis from a text prompt (for example, find every photo with trees)'] },
          { t:'What you can do yourself',
            items:['Building detectors for your own scenarios','Training models on footage from your own site','Launching a new task within days','Experimenting and improving without vendor lock-in'] },
          { t:'Advantages',
@@ -632,7 +620,7 @@ export const PRODUCTS = [
        cases:[{t:'Retail chain',d:'Merchandising control: an in-house detector for shelf layout.'},
               {t:'Manufacturing',d:'Training a model to spot site-specific safety violations.'},
               {t:'Agriculture',d:'Custom scenarios for tracking machinery and livestock movement.'}],
-       note:'Delivery: on customer servers (on-premise), in a private cloud or as a managed service.' }
+       note:'A dataset of 10–80 photos is enough to train a model. Luna Line cuts time-to-market from the usual 4–6 months to a few days or hours.' },
     ],
     adv:[{t:'Data stays on site',d:'The system runs on the customer’s servers, inside the protected perimeter.'},
          {t:'Modular architecture',d:'Enable only the modules you need; the system grows step by step.'},
@@ -706,8 +694,10 @@ export const PRODUCTS = [
   uz:{
     name:'EDR — ish stansiyalari himoyasi',
     short:"Markaziy bank me'yorlariga to'liq muvofiq kiberhimoya.",
-    intro:"Markaziy bank nizomiga ko'ra, barcha server, kompyuter, bankomat va infokiosklar markazlashgan kiberhimoya bilan ta'minlanishi tavsiya etiladi. Aks holda, bank kapitalining 0,04% dan 0,2% gacha miqdorida jarima qo'llanilishi mumkin. Bizning EDR tizimimiz hujumlarni o'z vaqtida to'xtatadi, har bir amalning elektron bayonnomasini yuritadi va qonunchilik me'yorlarini (11.3, 11.4, 11.7, 11.13, 11.15-bandlar) to'liq yopadi.",
-    sourceLabel:"Asos: Markaziy bank nizomi, 3492-son (23.01.2024), 11-bo'lim — lex.uz",
+    introBadge:"Bu — tavsiya emas, majburiy talab.",
+    intro:"Markaziy bankning **3492-son** qaroriga ko'ra, barcha bank va moliya tashkilotlari o'z serverlari, ishchi stansiyalari hamda o'z-o'ziga xizmat ko'rsatuvchi qurilmalarini (bankomat, infokiosk) **EDR tizimi bilan himoyalashi shart**.",
+    alert:"EDR joriy etilmagan bank uchun — jami kapitalning **0,2% miqdorida jarima**. Yirik bank uchun bu **milliardlab so'm** demakdir.",
+    sourceLabel:"Asos: Markaziy bank qarori №3492-son (23.01.2024), 11-bo'lim — lex.uz",
     tasks:["Ransomware va fayllsiz hujumlarni erta aniqlash","Hodisa zanjirini boshidan oxirigacha tiklash","Zararlangan hostni tarmoqdan ajratish","Threat hunting uchun telemetriya yig'ish"],
     tabs:[
       {t:'Solar EDR',d:"Xostlar telemetriyasi va hodisalarga javob berish platformasi.",list:["Jarayon, tarmoq va fayl hodisalari telemetriyasi","Indikatorlar va xulq qoidalari bo'yicha aniqlash","Masofaviy javob: izolyatsiya, jarayonni to'xtatish, karantin","SIEM va SOC jarayonlariga integratsiya"]},
@@ -721,13 +711,14 @@ export const PRODUCTS = [
          {t:'SOC bilan ishlaydi',d:"Hodisalar SIEM va IRP jarayonlariga tushadi."},
          {t:'Kam resurs sarfi',d:"Agent foydalanuvchi ishiga sezilarli ta'sir qilmaydi."}],
     delivery:["On-premise boshqaruv serveri","Boshqariladigan xizmat (bizning SOC)","Gibrid: siz — infratuzilma, biz — monitoring"],
-    compliance:["11.3 — dasturiy-texnik vositalar litsenziya va sertifikatga ega bo'lishi (0,04%)","11.4 — ruxsatsiz kirish, urinish va hodisalarni bartaraf etish hamda oldini olish (0,08%)","11.7 — foydalanuvchi amallari elektron bayonnomalarda qayd etib borilishi (0,2%)","11.13 — tarmoq obyektlarini markazlashgan boshqarish: Active Directory yoki muqobili (0,1%)","11.15 — antivirus himoyasi: markazlashgan boshqaruv, kunlik yangilanish, barcha server, kompyuter, bankomat va infokiosklarda o'rnatilishi, sozlamalarni o'zgartirish cheklanishi (0,04%)","Jarimalar bank jami kapitalidan hisoblanadi, jami aniqlangan holatlar uchun 10 mlrd. so'mdan oshmaydi"]
   },
   ru:{
     name:'EDR — защита рабочих станций',
     short:'Киберзащита в полном соответствии с нормами Центрального банка.',
-    intro:'Согласно положению Центрального банка, все серверы, компьютеры, банкоматы и инфокиоски рекомендуется охватить централизованной киберзащитой. В противном случае может быть применён штраф в размере от 0,04% до 0,2% капитала банка. Наша система EDR вовремя останавливает атаки, ведёт электронный протокол каждого действия и полностью закрывает нормы законодательства (пункты 11.3, 11.4, 11.7, 11.13, 11.15).',
-    sourceLabel:'Основание: положение Центрального банка, № 3492 (23.01.2024), раздел 11 — lex.uz',
+    introBadge:'Это не рекомендация, а обязательное требование.',
+    intro:'Согласно постановлению Центрального банка **№3492**, все банки и финансовые организации обязаны **защитить системой EDR** свои серверы, рабочие станции и устройства самообслуживания (банкоматы, инфокиоски).',
+    alert:'Для банка без внедрённого EDR — штраф в размере **0,2% совокупного капитала**. Для крупного банка это **миллиарды сумов**.',
+    sourceLabel:'Основание: постановление Центрального банка №3492 (23.01.2024), раздел 11 — lex.uz',
     tasks:['Раннее обнаружение шифровальщиков и бесфайловых атак','Восстановление цепочки инцидента от начала до конца','Изоляция заражённого хоста от сети','Сбор телеметрии для threat hunting'],
     tabs:[
       {t:'Solar EDR',d:'Платформа телеметрии хостов и реагирования на инциденты.',list:['Телеметрия процессов, сети и файловых операций','Обнаружение по индикаторам и поведенческим правилам','Удалённое реагирование: изоляция, остановка процесса, карантин','Интеграция с SIEM и процессами SOC']},
@@ -741,13 +732,14 @@ export const PRODUCTS = [
          {t:'Работает вместе с SOC',d:'Инциденты попадают в процессы SIEM и IRP.'},
          {t:'Экономный агент',d:'Не мешает работе пользователя.'}],
     delivery:['Сервер управления on-premise','Управляемый сервис на базе нашего SOC','Гибрид: инфраструктура ваша, мониторинг наш'],
-    compliance:['11.3 — программно-технические средства должны иметь лицензию и сертификат (0,04%)','11.4 — устранение и предотвращение несанкционированного доступа, попыток и инцидентов (0,08%)','11.7 — фиксация действий пользователя в электронных протоколах (0,2%)','11.13 — централизованное управление сетевыми объектами: Active Directory или аналог (0,1%)','11.15 — антивирусная защита: централизованное управление, ежедневное обновление, установка на все серверы, компьютеры, банкоматы и инфокиоски, запрет на изменение настроек (0,04%)','Штрафы считаются от совокупного капитала банка и в сумме не превышают 10 млрд сумов']
   },
   en:{
     name:'EDR — endpoint protection',
     short:'Cyber protection in full alignment with Central Bank requirements.',
-    intro:'Under the Central Bank regulation, every server, computer, ATM and kiosk is expected to be covered by centrally managed cyber protection. Otherwise a fine of 0.04% to 0.2% of the bank capital may be applied. Our EDR stops attacks in time, keeps an electronic log of every action and fully closes the regulatory clauses (11.3, 11.4, 11.7, 11.13, 11.15).',
-    sourceLabel:'Source: Central Bank regulation No. 3492 (23.01.2024), section 11 — lex.uz',
+    introBadge:'This is not a recommendation — it is a mandatory requirement.',
+    intro:'Under Central Bank resolution **No. 3492**, every bank and financial institution must **protect its servers, workstations and self-service devices** (ATMs, kiosks) **with an EDR system**.',
+    alert:'A bank without EDR faces a fine of **0.2% of total capital**. For a large bank that means **billions of soums**.',
+    sourceLabel:'Source: Central Bank resolution No. 3492 (23.01.2024), section 11 — lex.uz',
     tasks:['Early detection of ransomware and fileless attacks','Reconstructing the full incident chain','Isolating a compromised host from the network','Collecting telemetry for threat hunting'],
     tabs:[
       {t:'Solar EDR',d:'A host telemetry and incident response platform.',list:['Process, network and file operation telemetry','Detection by indicators and behavioural rules','Remote response: isolation, process termination, quarantine','Integration with SIEM and SOC processes']},
@@ -761,7 +753,6 @@ export const PRODUCTS = [
          {t:'Works with your SOC',d:'Incidents flow into SIEM and IRP processes.'},
          {t:'Lightweight agent',d:'No noticeable impact on user work.'}],
     delivery:['On-premise management server','Managed service run by our SOC','Hybrid: your infrastructure, our monitoring'],
-    compliance:['11.3 — software and hardware must hold a licence and a certificate (0.04%)','11.4 — remediation and prevention of unauthorised access, attempts and incidents (0.08%)','11.7 — user actions recorded in electronic logs (0.2%)','11.13 — centralised management of network objects: Active Directory or equivalent (0.1%)','11.15 — antivirus protection: central management, daily updates, installed on every server, computer, ATM and kiosk, settings locked for users (0.04%)','Fines are calculated from total capital and do not exceed 10 billion soums in aggregate']
   }
 },
 
