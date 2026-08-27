@@ -249,7 +249,7 @@ watch(() => props.slug, register)
 
 .intro__src{
   display:inline-block;margin-top:10px;
-  font-size:clamp(15px,1.35vw,17.5px);line-height:1.6;color:var(--muted);
+  font-size:clamp(15px,1.35vw,17.5px);line-height:1.6;color:var(--blue);font-weight:600;
   text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
   transition:color .25s,text-decoration-thickness .25s;
 }
