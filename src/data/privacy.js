@@ -1,307 +1,339 @@
+/* Maxfiylik siyosati — manba: "polise.docx" (Versiya 1.0).
+   O'zbekcha matn hujjatdan olingan, ruscha va inglizcha tarjimalar shundan. */
+
 export const PRIVACY = {
 
 meta: {
   version: '1.0',
-  date: '04.08.2026'
+  effective: '27.08.2027',
+  updated: '27.08.2026'
 },
 
 uz: {
   title: 'Maxfiylik siyosati',
-  updated: 'Amal qilish sanasi: 04.08.2026 · Versiya 1.0',
+  updated: 'Amal qilish sanasi: 2027-yil 27-avgust · Oxirgi yangilanish: 2026-yil 27-avgust · Versiya 1.0',
   html: `
+<p><b>IDENTITY platformasi maxfiylik siyosati va shaxsga doir ma'lumotlarni qayta ishlash tartibi.</b></p>
+<p>Operator ushbu Maxfiylik siyosatiga Foydalanuvchining roziligisiz o'zgartirishlar kiritish huquqiga ega. Yangi siyosat, agar Siyosatning yangi tahririda boshqacha qoida nazarda tutilmagan bo'lsa, Saytda joylashtirilgan paytdan e'tiboran kuchga kiradi.</p>
+
 <h2>1. Umumiy qoidalar</h2>
-<p>1.1. Ushbu Maxfiylik siyosatida (keyingi o'rinlarda — Siyosat) quyidagi atamalar ishlatiladi:</p>
+<p>1.1. Ushbu Shaxsga doir ma'lumotlarni qayta ishlash va maxfiylik siyosati (keyingi o'rinlarda — «Siyosat») «Identity» MChJ (keyingi o'rinlarda — «Kompaniya») tomonidan ishlab chiqilgan va e'lon qilingan.</p>
+<p>1.2. Kompaniya quyidagi raqamli resurslar, platformalar va xizmatlarning operatori va axborot tizimining mulkdori hisoblanadi:</p>
 <ul>
-<li><b>Operator</b> — [«IDENTITY» MChJ, STIR: _________, manzil: _________], identity.uz sayti egasi hamda shaxsga doir ma'lumotlar bazasining mulkdori va operatori;</li>
-<li><b>Sayt</b> — identity.uz domenida joylashgan internet-resurs;</li>
-<li><b>Foydalanuvchi</b> — Saytga tashrif buyurgan yoki aloqa formasi orqali ma'lumot yuborgan jismoniy shaxs;</li>
-<li><b>Mijoz</b> — Operator bilan shartnoma munosabatlarida bo'lgan yuridik shaxs;</li>
-<li><b>Shaxsga doir ma'lumotlar</b> — muayyan jismoniy shaxsga tegishli bo'lgan yoki uni identifikatsiya qilish imkonini beradigan, elektron, qog'oz va (yoki) boshqa moddiy jismda qayd etilgan axborot.</li>
+<li>https://identity-uz.com veb-manzili va uning barcha quyi domenlari;</li>
+<li>Operatorga tegishli qo'shimcha domenlar (masalan, face-id.uz);</li>
+<li>IDENTITY biometrik va raqamli verifikatsiya platformasi;</li>
+<li>Identifikatsiya, autentifikatsiya va Liveness/Anti-spoofing xizmatlari;</li>
+<li>API va backend integratsiya modullari;</li>
+<li>Sun'iy intellekt (AI) va mashinali o'qitish (ML) texnologiyalariga asoslangan qayta ishlash xizmatlari;</li>
+<li>Mobil ilovalar va texnik qo'llab-quvvatlash kanallari.</li>
 </ul>
-<p>1.2. Siyosat quyidagi normativ-huquqiy hujjatlar talablariga muvofiq ishlab chiqilgan:</p>
+<p>1.3. Ushbu Siyosat O'zbekiston Respublikasining amaldagi qonunchiligi va xalqaro axborot xavfsizligi standartlariga muvofiq qo'llaniladi.</p>
+<p>1.4. Kompaniya o'z faoliyatida quyidagi normativ-huquqiy hujjatlar talablariga qat'iy rioya etadi:</p>
 <ul>
-<li>O'zbekiston Respublikasining 2019-yil 2-iyuldagi O'RQ-547-son <b>«Shaxsga doir ma'lumotlar to'g'risida»</b>gi Qonuni (Qonunchilik palatasi tomonidan 2019-yil 16-aprelda qabul qilingan, Senat tomonidan 2019-yil 21-iyunda ma'qullangan, 2019-yil 1-oktabrdan kuchga kirgan) — 2021-yil 14-yanvardagi O'RQ-666-son, 2023-yil 28-noyabrdagi O'RQ-880-son va 2026-yil 26-martdagi O'RQ-1125-son (2026-yil 27-martdan kuchda) Qonunlar bilan kiritilgan o'zgartirish va qo'shimchalar bilan;</li>
-<li>Vazirlar Mahkamasining 2020-yil 8-fevraldagi 71-son «Shaxsga doir ma'lumotlar bazalarining Davlat reyestri to'g'risidagi nizomni tasdiqlash haqida»gi qarori;</li>
-<li>Vazirlar Mahkamasining 2022-yil 5-oktabrdagi 570-son «Shaxsga doir ma'lumotlarga ishlov berish sohasidagi ayrim normativ-huquqiy hujjatlarni tasdiqlash to'g'risida»gi qarori;</li>
-<li>O'zbekiston Respublikasining boshqa amaldagi qonun hujjatlari.</li>
+<li>O'zbekiston Respublikasining 2019-yil 2-iyuldagi O'RQ-547-son <b>«Shaxsga doir ma'lumotlar to'g'risida»</b>gi Qonuni;</li>
+<li>O'zbekiston Respublikasining 2026-yil 26-martdagi O'RQ-1125-son Qonuni (shaxsga doir, biometrik va genetik ma'lumotlarni O'zbekiston Respublikasi hududida saqlash hamda transchegaraviy uzatish bo'yicha kuchaytirilgan talablar);</li>
+<li>O'zbekiston Respublikasi Vazirlar Mahkamasining 2026-yil 29-iyuldagi 415-son qarori (shaxsga doir ma'lumotlarning bir xil darajada himoya qilinishini ta'minlovchi chet davlatlar ro'yxati bo'yicha);</li>
+<li>O'zbekiston Respublikasining <b>«Kiberxavfsizlik to'g'risida»</b>gi Qonuni;</li>
+<li>O'zbekiston Respublikasi Fuqarolik kodeksi hamda elektron hujjat va elektron tijoratga oid qonunlar.</li>
 </ul>
-<p>1.3. Siyosat Saytda joylashtirilgan barcha ma'lumotlarga, Foydalanuvchilar tomonidan Sayt orqali kiritilgan ma'lumotlarga nisbatan qo'llaniladi. Siyosat Saytdan havola qilingan uchinchi shaxslarning saytlari va xizmatlariga nisbatan qo'llanilmaydi.</p>
-<p>1.4. Saytdan foydalanish Foydalanuvchining ushbu Siyosat shartlariga so'zsiz roziligini anglatadi. Foydalanuvchi shartlarga rozi bo'lmasa, Saytdan foydalanishni to'xtatishi lozim.</p>
 
-<h2>2. Yig'iladigan shaxsga doir ma'lumotlar</h2>
-<p>2.1. Sayt ishlashi davomida avtomatik yig'iladigan ma'lumotlar:</p>
+<h2>2. Operator haqida ma'lumot</h2>
+<table>
+<tr><td>To'liq yuridik nomi</td><td>«Identity» MChJ</td></tr>
+<tr><td>STIR (INN)</td><td>310328044</td></tr>
+<tr><td>Yuridik manzil</td><td>O'zbekiston Respublikasi, Toshkent shahri, Shayxontohur tumani, Jangoh MFY, Jangoh mavzesi, 37-uy</td></tr>
+<tr><td>Rasmiy veb-sayt</td><td>https://identity-uz.com</td></tr>
+<tr><td>Maxfiylik bo'yicha e-mail</td><td>info@identity-uz.com</td></tr>
+<tr><td>Qo'llab-quvvatlash liniyasi</td><td>+998 (78) 555-11-75</td></tr>
+<tr><td>DPO (mas'ul shaxs)</td><td>Texnik direktor</td></tr>
+</table>
+
+<h2>3. Qayta ishlanadigan ma'lumotlar toifasi</h2>
+<p>IDENTITY platformasi xizmat ko'rsatish davomida quyidagi ma'lumotlar toifalarini qayta ishlashi mumkin:</p>
 <ul>
-<li>Foydalanuvchi qurilmasi (kompyuter, mobil telefon) va brauzeri haqidagi ma'lumotlar, shu jumladan IP-manzil va qurilmaning taxminiy joylashuvi;</li>
-<li>cookie-fayllar haqidagi ma'lumotlar;</li>
-<li>Foydalanuvchining Saytdagi harakatlari (ko'rilgan sahifalar, o'tishlar) to'g'risidagi ma'lumotlar;</li>
-<li>Saytga kirish sanasi va vaqti, o'tish manbai (referrer).</li>
+<li><b>Identifikatsiya ma'lumotlari:</b> F.I.Sh., JShShIR (PINFL), pasport/ID-karta seriyasi va raqami, tug'ilgan sana.</li>
+<li><b>Aloqa ma'lumotlari:</b> telefon raqami, elektron pochta manzili.</li>
+<li><b>Biometrik ma'lumotlar:</b> yuz tasviri (Face ID foto va video stream), biometrik deskriptorlar (vektor shablonlari), liveness/anti-spoofing tekshiruvi natijalari va biometrik verifikatsiya statistikasi.</li>
+<li><b>Qurilma va texnik loglar:</b> IP-manzil, qurilma identifikatori, operatsion tizim, brauzer turi, sessiya identifikatorlari va kiberxavfsizlik monitoring loglari, cookie fayllari ma'lumotlari.</li>
+<li>Foydalanuvchi saytdagi qayta aloqa formasi orqali yuboradigan ma'lumotlar: telefon raqami va murojaat matni.</li>
+<li>Foydalanuvchining roziligi bilan vakolatli davlat organlarining axborot tizimlariga so'rov yuborish yo'li bilan avtomatik tarzda olinadigan ma'lumotlar.</li>
 </ul>
-<p>2.2. Foydalanuvchi aloqa formasi orqali ixtiyoriy taqdim etadigan ma'lumotlar: ism, kompaniya nomi, elektron pochta manzili, telefon raqami, qiziqtirgan yo'nalish va xabar matni.</p>
-<p>2.3. <b>Sayt orqali biometrik va genetik ma'lumotlar yig'ilmaydi.</b> Operatorning biometrik identifikatsiya (FaceID) va videoanalitika mahsulotlari doirasida bunday ma'lumotlarga ishlov berish faqat Mijozlar bilan tuzilgan alohida shartnomalar asosida hamda O'RQ-547-son Qonunning 27¹-moddasi (O'RQ-1125-son Qonun tahririda) talablariga muvofiq — O'zbekiston Respublikasi hududida joylashgan texnik vositalarda saqlash sharti bilan amalga oshiriladi.</p>
-<p>2.4. Operator Foydalanuvchi taqdim etgan ma'lumotlarning to'g'riligini tekshirmaydi. Noto'g'ri ma'lumot taqdim etilishi uchun javobgarlik ma'lumotni taqdim etgan Foydalanuvchi zimmasida bo'ladi.</p>
 
-<h2>3. Ishlov berish asoslari va maqsadlari</h2>
-<p>3.1. Operator shaxsga doir ma'lumotlarga quyidagi asoslarda ishlov beradi:</p>
+<h2>4. Biometrik ma'lumotlar va O'zbekiston hududida saqlash (lokalizatsiya)</h2>
+<p>4.1. <b>Lokalizatsiya majburiyati:</b> 2026-yilgi O'RQ-1125-son Qonun talablariga ko'ra, O'zbekiston Respublikasi fuqarolarining biometrik ma'lumotlari va birlamchi bazalari faqat O'zbekiston Respublikasi hududida joylashgan va belgilangan xavfsizlik darajasiga ega server hamda ma'lumotlar markazlarida saqlanadi.</p>
+<p>4.2. <b>Chet el infratuzilmasiga uzatmaslik:</b> Foydalanuvchilarning biometrik ma'lumotlari (yuz shablonlari, fotofiksatsiyalar) xorijiy bulutli serverlarga, xorijiy uchinchi tomon AI modellariga yoki xalqaro analitika platformalariga uzatilmaydi va saqlanmaydi.</p>
+<p>4.3. <b>AI va ML obyektlari:</b> Biometrik ma'lumotlar uchinchi tomon sun'iy intellekt modellarini o'qitish uchun foydalanuvchining alohida, aniq bildirilgan yozma yoki elektron roziligisiz ishlatilmaydi.</p>
+
+<h2>5. Ma'lumotlarni qayta ishlash maqsadlari va huquqiy asoslari</h2>
+<p>5.1. <b>Maqsadlar:</b></p>
 <ul>
-<li>Foydalanuvchining roziligi — aloqa formasini to'ldirish va yuborish rozilik bildirish harakati hisoblanadi;</li>
-<li>Foydalanuvchi tashabbusi bilan shartnoma tuzish yoki uni ijro etish zarurati;</li>
-<li>qonun hujjatlarida belgilangan majburiyatlarni bajarish.</li>
+<li>Foydalanuvchi shaxsini masofadan haqiqiy vaqt rejimida (real-time) identifikatsiya va verifikatsiya qilish;</li>
+<li>Firibgarlik (deepfake, injection attacks, spoofing) holatlarining oldini olish;</li>
+<li>IDENTITY platformasi API xizmatlarini hamkorlar va mijozlarga xavfsiz taqdim etish;</li>
+<li>Qonunchilik va sud/huquqni muhofaza qiluvchi organlarning qonuniy talablarini bajarish.</li>
 </ul>
-<p>3.2. Ishlov berish maqsadlari:</p>
+<p>5.2. <b>Huquqiy asoslar:</b></p>
 <ul>
-<li>Foydalanuvchi so'roviga javob berish va aloqaga chiqish;</li>
-<li>Operator mahsulot va xizmatlari bo'yicha ma'lumot taqdim etish, pilot loyihalar shartlarini kelishish;</li>
-<li>Sayt sifatini va foydalanish qulayligini oshirish;</li>
-<li>anonimlashtirilgan statistik tadqiqotlar o'tkazish;</li>
-<li>Sayt xavfsizligini ta'minlash.</li>
+<li>Foydalanuvchining axborot tizimi orqali bergan roziligi;</li>
+<li>Foydalanuvchi bilan tuzilgan ommaviy oferta yoki xizmat ko'rsatish shartnomasi;</li>
+<li>Operatorga O'zbekiston Respublikasi qonunlari bilan yuklatilgan huquqiy majburiyatlar.</li>
 </ul>
-<p>3.3. Statistika uchun Google Analytics xizmatidan foydalaniladi; unga faqat shaxsni bevosita identifikatsiya qilmaydigan texnik ma'lumotlar uzatiladi. Foydalanuvchi brauzer sozlamalarida cookie-fayllarni o'chirib qo'yishi mumkin.</p>
+<p>5.3. Operatorning Servislaridan (Sayt, Dasturiy ta'minot) foydalanish Foydalanuvchining ushbu Siyosatga va unda ko'rsatilgan barcha shartlarga so'zsiz roziligini anglatadi. Agar Foydalanuvchi ushbu shartlarga rozi bo'lmasa, u Servislardan foydalanishdan o'zini tiyishi lozim.</p>
+<p>5.4. Operator olingan axborotning ishonchliligini tekshirmaydi va uning to'g'riligi ustidan nazorat qilmaydi. Ishonchsiz axborot taqdim etish bilan bog'liq tavakkalchilikni uni taqdim etgan foydalanuvchi hamda vakolatli davlat organi o'z zimmasiga oladi.</p>
 
-<h2>4. Saqlash muddati va himoya choralari</h2>
-<p>4.1. Aloqa formasi orqali olingan shaxsga doir ma'lumotlar O'zbekiston Respublikasi hududida joylashgan serverlarda saqlanadi.</p>
-<p>4.2. Ma'lumotlar so'nggi o'zaro aloqadan keyin <b>3 (uch) yil</b> davomida yoki Foydalanuvchi ularni o'chirishni talab qilgunga qadar saqlanadi, agar qonun hujjatlarida boshqa muddat belgilanmagan bo'lsa.</p>
-<p>4.3. Operator Vazirlar Mahkamasining 2022-yil 5-oktabrdagi 570-son qarori talablarini hisobga olgan holda huquqiy, tashkiliy va texnik himoya choralarini ko'radi: ma'lumotlarga kirish faqat vakolatli xodimlarga beriladi, uzatish shifrlangan kanallar orqali amalga oshiriladi, ruxsatsiz kirishning oldini olish choralari qo'llaniladi.</p>
+<h2>6. Transchegaraviy uzatish tartibi</h2>
+<p>6.1. Shaxsga doir ma'lumotlarni transchegaraviy (O'zbekistondan tashqariga) uzatish Vazirlar Mahkamasining 2026-yil 29-iyuldagi 415-son qarorida belgilangan, ma'lumotlarni yetarli darajada himoya qilishni ta'minlaydigan chet davlatlar ro'yxati va talablariga rioya qilingan holda amalga oshiriladi.</p>
+<p>6.2. Yetarli himoya darajasini ta'minlamaydigan davlatlarga ma'lumot uzatish faqat foydalanuvchining maxsus roziligi yoki qonunda belgilangan boshqa alohida istisnolar mavjud bo'lganda yo'l qo'yiladi.</p>
 
-<h2>5. Uchinchi shaxslarga taqdim etish</h2>
-<p>5.1. Shaxsga doir ma'lumotlar uchinchi shaxslarga quyidagi hollarda taqdim etilishi mumkin:</p>
+<h2>7. Saqlash muddati va o'chirish (delete right)</h2>
+<p>7.1. Shaxsga doir ma'lumotlar faqat qayta ishlash maqsadi uchun zarur bo'lgan muddatda saqlanadi.</p>
+<p>7.2. Foydalanuvchi qonunchilikda belgilangan tartibda o'z ma'lumotlarini o'chirish, tuzatish yoki rozilikni qaytarib olish to'g'risida <b>info@identity-uz.com</b> manziliga ariza yuborish huquqiga ega.</p>
+<p>7.3. Qonunchilik (buxgalteriya, kiberxavfsizlik loglari yoki sud so'rovlari) bo'yicha saqlanishi majburiy bo'lgan ma'lumotlar tegishli majburiy saqlash muddati tugagunga qadar o'chirilmaydi va xavfsiz arxivlanadi.</p>
+
+<h2>8. Axborot xavfsizligi choralari</h2>
+<p>Kompaniya ma'lumotlarning buzilishi, yo'qolishi yoki ruxsatsiz kirilishidan himoya qilish uchun quyidagi kiberxavfsizlik standartlarini qo'llaydi:</p>
 <ul>
-<li>Foydalanuvchi bunga rozilik bildirgan bo'lsa;</li>
-<li>taqdim etish Foydalanuvchi so'ragan xizmatni ko'rsatish uchun zarur bo'lsa;</li>
-<li>taqdim etish qonun hujjatlarida belgilangan tartibda vakolatli davlat organlarining talabiga asosan amalga oshirilsa;</li>
-<li>Foydalanuvchilarning yoki uchinchi shaxslarning huquqlarini himoya qilish zarur bo'lganda, qonunda yo'l qo'yilgan doirada.</li>
+<li>Barcha ma'lumotlar uzatish kanallarida TLS 1.3 / HTTPS shifrlash bayonnomalari;</li>
+<li>Saqlanayotgan biometrik shablonlarni end-to-end shifrlash;</li>
+<li>Davlat reyestri va sertifikatlangan kiberxavfsizlik vositalaridan foydalanish.</li>
 </ul>
-<p>5.2. Aloqa formasi orqali olingan shaxsga doir ma'lumotlarning transchegaraviy uzatilishi amalga oshirilmaydi. Biometrik va genetik ma'lumotlar O'RQ-547-son Qonunning 27¹-moddasiga muvofiq faqat O'zbekiston Respublikasi hududida saqlanadi.</p>
 
-<h2>6. Foydalanuvchi huquqlari</h2>
-<p>6.1. Foydalanuvchi quyidagi huquqlarga ega:</p>
+<h2>9. Foydalanuvchining huquqlari</h2>
+<p>Foydalanuvchi quyidagi huquqlarga ega:</p>
 <ul>
-<li>o'ziga oid ma'lumotlarga ishlov berilishi haqida axborot olish;</li>
-<li>noto'g'ri yoki eskirgan ma'lumotlarni tuzatishni talab qilish;</li>
-<li>rozilikni chaqirib olish va ma'lumotlarni o'chirishni talab qilish;</li>
-<li>vakolatli davlat organiga yoki sudga murojaat qilish.</li>
+<li>O'z ma'lumotlari qayta ishlanayotganligi va ularning manbasi haqida axborot olish;</li>
+<li>Noto'g'ri yoki to'liq bo'lmagan ma'lumotlarni o'zgartirish va to'ldirishni talab qilish;</li>
+<li>Ma'lumotlarni qayta ishlashga berilgan rozilikni qaytarib olish. Operator Foydalanuvchining yozma asoslantirilgan so'rovini olgan kundan e'tiboran 14 (o'n to'rt) kun ichida uning shaxsga doir axborotini o'chiradi. Bunda Operator jo'natuvchining haqiqiyligini qo'shimcha tekshirish huquqiga ega;</li>
+<li>O'z huquqlari buzilgan taqdirda Vakolatli organga (O'zR IIV huzuridagi Departamenti) yoki sudga murojaat qilish.</li>
 </ul>
-<p>6.2. So'rovlar [privacy@identity.uz] elektron pochtasiga yuboriladi. Operator asoslantirilgan yozma so'rov olingan kundan boshlab <b>14 (o'n to'rt) kun</b> ichida ma'lumotlarni o'chiradi yoki tuzatadi. Operator so'rov yuborgan shaxsning shaxsini tasdiqlashni so'rash huquqiga ega.</p>
 
-<h2>7. Cookie-fayllar</h2>
-<p>7.1. Cookie — Sayt Foydalanuvchi qurilmasida saqlaydigan kichik matnli fayl. Ular Sayt sozlamalarini (masalan, tanlangan tilni) eslab qolish va anonim statistika yuritish uchun ishlatiladi.</p>
-<p>7.2. Foydalanuvchi brauzer sozlamalari orqali cookie-fayllarni o'chirib qo'yishi yoki tozalashi mumkin; bunda Saytning ayrim funksiyalari cheklangan holda ishlashi mumkin.</p>
-
-<h2>8. Fors-major</h2>
-<p>8.1. Operator o'ziga bog'liq bo'lmagan, oldindan ko'rib bo'lmaydigan va bartaraf etib bo'lmaydigan yengib bo'lmas kuch holatlari oqibatida Siyosat bo'yicha majburiyatlarning bajarilmagani yoki lozim darajada bajarilmagani uchun javobgar bo'lmaydi. Bunday holatlarga xususan quyidagilar kiradi:</p>
+<h2>10. Aloqa va murojaatlar</h2>
+<p>Shaxsga doir ma'lumotlarni qayta ishlash va maxfiylik masalalari bo'yicha so'rov va e'tirozlaringizni quyidagi aloqa kanallari orqali yuborishingiz mumkin:</p>
 <ul>
-<li>tabiiy ofatlar (zilzila, suv toshqini, yong'in va boshqalar);</li>
-<li>harbiy harakatlar, ommaviy tartibsizliklar, terrorchilik xurujlari;</li>
-<li>davlat organlarining Siyosat ijrosini imkonsiz qiladigan hujjatlari va harakatlari;</li>
-<li>elektr ta'minoti va telekommunikatsiya tarmoqlaridagi uzilishlar, internet-provayderlar va хosting-provayderlarning nosozliklari;</li>
-<li>DDoS-hujumlar va uchinchi shaxslarning axborot tizimlariga boshqa noqonuniy aralashuvlari.</li>
+<li><b>E-mail:</b> info@identity-uz.com</li>
+<li><b>Pochta manzili:</b> Toshkent shahri, «Identity» MChJ bosh ofisi, Shayxontohur tumani, Jangoh MFY, Jangoh mavzesi, 37-uy.</li>
 </ul>
-<p>8.2. Yengib bo'lmas kuch holati yuzaga kelganda Operator imkon qadar qisqa muddatda, biroq holat aniqlangan kundan boshlab <b>10 (o'n) ish kunidan</b> kechiktirmay, bu haqda Saytda xabar joylashtiradi.</p>
-<p>8.3. Fors-major davrida majburiyatlarning bajarilish muddati mazkur holatlar amal qilgan vaqtga mutanosib ravishda uzaytiriladi. Holat barham topgach, majburiyatlar bajarilishi tiklanadi.</p>
-
-<h2>9. Yakuniy qoidalar</h2>
-<p>9.1. Operator Siyosatga bir tomonlama o'zgartirishlar kiritish huquqiga ega. Yangi tahrir, unda boshqacha qoida nazarda tutilmagan bo'lsa, Saytda e'lon qilingan paytdan kuchga kiradi. Foydalanuvchining Saytdan foydalanishni davom ettirishi yangi tahrirga rozilik hisoblanadi.</p>
-<p>9.2. Siyosatning amaldagi tahriri doimiy ravishda identity.uz saytida joylashtiriladi.</p>
-<p>9.3. Siyosat yuzasidan savollar [privacy@identity.uz] manziliga yuborilishi mumkin.</p>
+<p>Murojaatda ko'rsatilishi lozim: F.I.Sh., JShShIR yoki aloqa ma'lumotlari, murojaatning aniq mazmuni.</p>
 `
 },
 
 ru: {
   title: 'Политика конфиденциальности',
-  updated: 'Дата вступления в силу: 04.08.2026 · Версия 1.0',
+  updated: 'Дата вступления в силу: 27 августа 2027 г. · Последнее обновление: 27 августа 2026 г. · Версия 1.0',
   html: `
+<p><b>Политика конфиденциальности платформы IDENTITY и порядок обработки персональных данных.</b></p>
+<p>Оператор вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя. Новая политика вступает в силу с момента её размещения на Сайте, если иное не предусмотрено новой редакцией Политики.</p>
+
 <h2>1. Общие положения</h2>
-<p>1.1. В настоящей Политике конфиденциальности (далее — Политика) используются следующие термины:</p>
+<p>1.1. Настоящая политика обработки персональных данных и конфиденциальности (далее — «Политика») разработана и опубликована ООО «Identity» (далее — «Компания»).</p>
+<p>1.2. Компания является оператором и владельцем информационной системы следующих цифровых ресурсов, платформ и сервисов:</p>
 <ul>
-<li><b>Оператор</b> — [ООО «IDENTITY», ИНН: _________, адрес: _________], владелец сайта identity.uz, собственник и оператор базы персональных данных;</li>
-<li><b>Сайт</b> — интернет-ресурс, размещённый на домене identity.uz;</li>
-<li><b>Пользователь</b> — физическое лицо, посетившее Сайт или направившее сведения через форму обратной связи;</li>
-<li><b>Клиент</b> — юридическое лицо, состоящее с Оператором в договорных отношениях;</li>
-<li><b>Персональные данные</b> — зафиксированная на электронном, бумажном и (или) ином материальном носителе информация, относящаяся к определённому физическому лицу или дающая возможность его идентификации.</li>
+<li>веб-адрес https://identity-uz.com и все его поддомены;</li>
+<li>дополнительные домены, принадлежащие Оператору (например, face-id.uz);</li>
+<li>платформа биометрической и цифровой верификации IDENTITY;</li>
+<li>сервисы идентификации, аутентификации и Liveness/Anti-spoofing;</li>
+<li>API и модули backend-интеграции;</li>
+<li>сервисы обработки на основе технологий искусственного интеллекта (AI) и машинного обучения (ML);</li>
+<li>мобильные приложения и каналы технической поддержки.</li>
 </ul>
-<p>1.2. Политика разработана в соответствии с требованиями следующих нормативно-правовых актов:</p>
+<p>1.3. Настоящая Политика применяется в соответствии с действующим законодательством Республики Узбекистан и международными стандартами информационной безопасности.</p>
+<p>1.4. В своей деятельности Компания строго соблюдает требования следующих нормативно-правовых актов:</p>
 <ul>
-<li>Закон Республики Узбекистан от 2 июля 2019 года № ЗРУ-547 <b>«О персональных данных»</b> (принят Законодательной палатой 16 апреля 2019 года, одобрен Сенатом 21 июня 2019 года, вступил в силу 1 октября 2019 года) — с изменениями и дополнениями, внесёнными Законами от 14 января 2021 года № ЗРУ-666, от 28 ноября 2023 года № ЗРУ-880 и от 26 марта 2026 года № ЗРУ-1125 (в силе с 27 марта 2026 года);</li>
-<li>Постановление Кабинета Министров Республики Узбекистан от 8 февраля 2020 года № 71 «Об утверждении Положения о Государственном реестре баз персональных данных»;</li>
-<li>Постановление Кабинета Министров Республики Узбекистан от 5 октября 2022 года № 570 «Об утверждении некоторых нормативно-правовых актов в области обработки персональных данных»;</li>
-<li>иные действующие акты законодательства Республики Узбекистан.</li>
+<li>Закон Республики Узбекистан от 2 июля 2019 года № ЗРУ-547 <b>«О персональных данных»</b>;</li>
+<li>Закон Республики Узбекистан от 26 марта 2026 года № ЗРУ-1125 (усиленные требования к хранению персональных, биометрических и генетических данных на территории Республики Узбекистан и к их трансграничной передаче);</li>
+<li>постановление Кабинета Министров Республики Узбекистан от 29 июля 2026 года № 415 (о перечне иностранных государств, обеспечивающих равнозначную защиту персональных данных);</li>
+<li>Закон Республики Узбекистан <b>«О кибербезопасности»</b>;</li>
+<li>Гражданский кодекс Республики Узбекистан, а также законы об электронном документе и электронной коммерции.</li>
 </ul>
-<p>1.3. Политика применяется ко всей информации, размещённой на Сайте, и к сведениям, вводимым Пользователями через Сайт. Политика не распространяется на сайты и сервисы третьих лиц, на которые ведут ссылки с Сайта.</p>
-<p>1.4. Использование Сайта означает безоговорочное согласие Пользователя с условиями настоящей Политики. В случае несогласия с условиями Пользователь должен прекратить использование Сайта.</p>
 
-<h2>2. Собираемые персональные данные</h2>
-<p>2.1. Данные, собираемые автоматически в процессе работы Сайта:</p>
+<h2>2. Сведения об Операторе</h2>
+<table>
+<tr><td>Полное юридическое наименование</td><td>ООО «Identity»</td></tr>
+<tr><td>ИНН</td><td>310328044</td></tr>
+<tr><td>Юридический адрес</td><td>Республика Узбекистан, г. Ташкент, Шайхантахурский район, МФЙ Жангох, массив Жангох, дом 37</td></tr>
+<tr><td>Официальный сайт</td><td>https://identity-uz.com</td></tr>
+<tr><td>E-mail по вопросам конфиденциальности</td><td>info@identity-uz.com</td></tr>
+<tr><td>Линия поддержки</td><td>+998 (78) 555-11-75</td></tr>
+<tr><td>DPO (ответственное лицо)</td><td>Технический директор</td></tr>
+</table>
+
+<h2>3. Категории обрабатываемых данных</h2>
+<p>В ходе оказания услуг платформа IDENTITY может обрабатывать следующие категории данных:</p>
 <ul>
-<li>сведения об устройстве (компьютер, мобильный телефон) и браузере Пользователя, включая IP-адрес и приблизительное местоположение устройства;</li>
-<li>сведения о файлах cookie;</li>
-<li>сведения о действиях Пользователя на Сайте (просмотренные страницы, переходы);</li>
-<li>дата и время доступа, источник перехода (referrer).</li>
+<li><b>Идентификационные данные:</b> Ф.И.О., ПИНФЛ, серия и номер паспорта/ID-карты, дата рождения.</li>
+<li><b>Контактные данные:</b> номер телефона, адрес электронной почты.</li>
+<li><b>Биометрические данные:</b> изображение лица (фото и видеопоток Face ID), биометрические дескрипторы (векторные шаблоны), результаты проверки liveness/anti-spoofing и статистика биометрической верификации.</li>
+<li><b>Устройство и технические логи:</b> IP-адрес, идентификатор устройства, операционная система, тип браузера, идентификаторы сессий и логи мониторинга кибербезопасности, данные файлов cookie.</li>
+<li>Данные, отправляемые Пользователем через форму обратной связи на сайте: номер телефона и текст обращения.</li>
+<li>Данные, получаемые автоматически путём запроса в информационные системы уполномоченных государственных органов с согласия Пользователя.</li>
 </ul>
-<p>2.2. Данные, добровольно предоставляемые Пользователем через форму обратной связи: имя, название компании, адрес электронной почты, номер телефона, интересующее направление и текст сообщения.</p>
-<p>2.3. <b>Биометрические и генетические данные через Сайт не собираются.</b> Обработка таких данных в рамках продуктов Оператора по биометрической идентификации (FaceID) и видеоаналитике осуществляется исключительно на основании отдельных договоров с Клиентами и в соответствии с требованиями статьи 27¹ Закона № ЗРУ-547 (в редакции Закона № ЗРУ-1125) — с хранением на технических средствах, размещённых на территории Республики Узбекистан.</p>
-<p>2.4. Оператор не проверяет достоверность предоставленных Пользователем сведений. Ответственность за предоставление недостоверной информации несёт предоставивший её Пользователь.</p>
 
-<h2>3. Основания и цели обработки</h2>
-<p>3.1. Оператор обрабатывает персональные данные на следующих основаниях:</p>
+<h2>4. Биометрические данные и хранение на территории Узбекистана (локализация)</h2>
+<p>4.1. <b>Обязательство локализации:</b> согласно требованиям Закона № ЗРУ-1125 от 2026 года, биометрические данные граждан Республики Узбекистан и их первичные базы хранятся исключительно на серверах и в центрах обработки данных, расположенных на территории Республики Узбекистан и имеющих установленный уровень защиты.</p>
+<p>4.2. <b>Запрет передачи в зарубежную инфраструктуру:</b> биометрические данные Пользователей (шаблоны лица, фотофиксации) не передаются и не хранятся на зарубежных облачных серверах, в зарубежных сторонних AI-моделях или на международных аналитических платформах.</p>
+<p>4.3. <b>Объекты AI и ML:</b> биометрические данные не используются для обучения сторонних моделей искусственного интеллекта без отдельного, явно выраженного письменного или электронного согласия Пользователя.</p>
+
+<h2>5. Цели и правовые основания обработки данных</h2>
+<p>5.1. <b>Цели:</b></p>
 <ul>
-<li>согласие Пользователя — заполнение и отправка формы обратной связи является действием, выражающим согласие;</li>
-<li>необходимость заключения либо исполнения договора по инициативе Пользователя;</li>
-<li>исполнение обязанностей, установленных законодательством.</li>
+<li>удалённая идентификация и верификация личности Пользователя в режиме реального времени;</li>
+<li>предотвращение случаев мошенничества (deepfake, injection attacks, spoofing);</li>
+<li>безопасное предоставление API-сервисов платформы IDENTITY партнёрам и клиентам;</li>
+<li>исполнение законных требований законодательства и судебных/правоохранительных органов.</li>
 </ul>
-<p>3.2. Цели обработки:</p>
+<p>5.2. <b>Правовые основания:</b></p>
 <ul>
-<li>ответ на запрос Пользователя и установление контакта;</li>
-<li>предоставление информации о продуктах и услугах Оператора, согласование условий пилотных проектов;</li>
-<li>повышение качества и удобства использования Сайта;</li>
-<li>проведение обезличенных статистических исследований;</li>
-<li>обеспечение безопасности Сайта.</li>
+<li>согласие Пользователя, данное через информационную систему;</li>
+<li>публичная оферта или договор об оказании услуг, заключённый с Пользователем;</li>
+<li>правовые обязанности, возложенные на Оператора законами Республики Узбекистан.</li>
 </ul>
-<p>3.3. Для статистики используется сервис Google Analytics; ему передаются только технические данные, не позволяющие напрямую идентифицировать личность. Пользователь может отключить cookie в настройках браузера.</p>
+<p>5.3. Использование Сервисов Оператора (Сайт, Программное обеспечение) означает безоговорочное согласие Пользователя с настоящей Политикой и всеми указанными в ней условиями. Если Пользователь не согласен с этими условиями, он должен воздержаться от использования Сервисов.</p>
+<p>5.4. Оператор не проверяет достоверность полученной информации и не контролирует её правильность. Риск, связанный с предоставлением недостоверной информации, несёт предоставивший её пользователь, а также уполномоченный государственный орган.</p>
 
-<h2>4. Сроки хранения и меры защиты</h2>
-<p>4.1. Персональные данные, полученные через форму обратной связи, хранятся на серверах, расположенных на территории Республики Узбекистан.</p>
-<p>4.2. Данные хранятся в течение <b>3 (трёх) лет</b> с момента последнего взаимодействия либо до требования Пользователя об их удалении, если законодательством не установлен иной срок.</p>
-<p>4.3. Оператор принимает правовые, организационные и технические меры защиты с учётом требований Постановления Кабинета Министров от 5 октября 2022 года № 570: доступ к данным предоставляется только уполномоченным сотрудникам, передача осуществляется по защищённым каналам, применяются меры предотвращения несанкционированного доступа.</p>
+<h2>6. Порядок трансграничной передачи</h2>
+<p>6.1. Трансграничная передача персональных данных (за пределы Узбекистана) осуществляется с соблюдением перечня иностранных государств и требований, установленных постановлением Кабинета Министров от 29 июля 2026 года № 415 и обеспечивающих достаточный уровень защиты данных.</p>
+<p>6.2. Передача данных в государства, не обеспечивающие достаточный уровень защиты, допускается только при наличии специального согласия пользователя или иных отдельных исключений, установленных законом.</p>
 
-<h2>5. Передача третьим лицам</h2>
-<p>5.1. Персональные данные могут быть переданы третьим лицам в следующих случаях:</p>
+<h2>7. Срок хранения и удаление (delete right)</h2>
+<p>7.1. Персональные данные хранятся только в течение срока, необходимого для цели обработки.</p>
+<p>7.2. Пользователь вправе в установленном законодательством порядке направить заявление об удалении, исправлении своих данных или отзыве согласия на адрес <b>info@identity-uz.com</b>.</p>
+<p>7.3. Данные, хранение которых обязательно по законодательству (бухгалтерия, логи кибербезопасности или судебные запросы), не удаляются до истечения соответствующего обязательного срока хранения и безопасно архивируются.</p>
+
+<h2>8. Меры информационной безопасности</h2>
+<p>Для защиты данных от повреждения, утраты или несанкционированного доступа Компания применяет следующие стандарты кибербезопасности:</p>
 <ul>
-<li>Пользователь выразил согласие на такие действия;</li>
-<li>передача необходима для оказания запрошенной Пользователем услуги;</li>
-<li>передача осуществляется по требованию уполномоченных государственных органов в порядке, установленном законодательством;</li>
-<li>в целях защиты прав Пользователей или третьих лиц в допускаемых законом пределах.</li>
+<li>протоколы шифрования TLS 1.3 / HTTPS на всех каналах передачи данных;</li>
+<li>сквозное (end-to-end) шифрование хранимых биометрических шаблонов;</li>
+<li>использование средств кибербезопасности из государственного реестра и сертифицированных средств.</li>
 </ul>
-<p>5.2. Трансграничная передача персональных данных, полученных через форму обратной связи, не осуществляется. Биометрические и генетические данные в соответствии со статьёй 27¹ Закона № ЗРУ-547 хранятся исключительно на территории Республики Узбекистан.</p>
 
-<h2>6. Права Пользователя</h2>
-<p>6.1. Пользователь имеет право:</p>
+<h2>9. Права Пользователя</h2>
+<p>Пользователь имеет следующие права:</p>
 <ul>
-<li>получать информацию об обработке своих персональных данных;</li>
-<li>требовать исправления неточных или устаревших данных;</li>
-<li>отозвать согласие и требовать удаления данных;</li>
-<li>обратиться в уполномоченный государственный орган или в суд.</li>
+<li>получать информацию об обработке своих данных и об их источнике;</li>
+<li>требовать изменения и дополнения неверных или неполных данных;</li>
+<li>отозвать согласие на обработку данных. Оператор удаляет персональную информацию Пользователя в течение 14 (четырнадцати) дней со дня получения его письменного мотивированного запроса. При этом Оператор вправе дополнительно проверить подлинность отправителя;</li>
+<li>обратиться в Уполномоченный орган (Департамент при МВД Республики Узбекистан) или в суд в случае нарушения своих прав.</li>
 </ul>
-<p>6.2. Запросы направляются на электронную почту [privacy@identity.uz]. Оператор удаляет или исправляет данные в течение <b>14 (четырнадцати) дней</b> со дня получения мотивированного письменного запроса. Оператор вправе запросить подтверждение личности заявителя.</p>
 
-<h2>7. Файлы cookie</h2>
-<p>7.1. Cookie — небольшой текстовый файл, который Сайт сохраняет на устройстве Пользователя. Cookie используются для запоминания настроек Сайта (например, выбранного языка) и ведения анонимной статистики.</p>
-<p>7.2. Пользователь может отключить или удалить cookie в настройках браузера; при этом отдельные функции Сайта могут работать с ограничениями.</p>
-
-<h2>8. Форс-мажор</h2>
-<p>8.1. Оператор освобождается от ответственности за неисполнение или ненадлежащее исполнение обязательств по Политике, если оно вызвано обстоятельствами непреодолимой силы — чрезвычайными, непредвиденными и непредотвратимыми обстоятельствами, не зависящими от Оператора. К таким обстоятельствам, в частности, относятся:</p>
+<h2>10. Связь и обращения</h2>
+<p>Запросы и возражения по вопросам обработки персональных данных и конфиденциальности вы можете направить по следующим каналам связи:</p>
 <ul>
-<li>стихийные бедствия (землетрясение, наводнение, пожар и иные);</li>
-<li>военные действия, массовые беспорядки, террористические акты;</li>
-<li>акты и действия государственных органов, делающие исполнение Политики невозможным;</li>
-<li>перебои в электроснабжении и телекоммуникационных сетях, сбои интернет-провайдеров и хостинг-провайдеров;</li>
-<li>DDoS-атаки и иные противоправные вмешательства третьих лиц в информационные системы.</li>
+<li><b>E-mail:</b> info@identity-uz.com</li>
+<li><b>Почтовый адрес:</b> г. Ташкент, головной офис ООО «Identity», Шайхантахурский район, МФЙ Жангох, массив Жангох, дом 37.</li>
 </ul>
-<p>8.2. При наступлении обстоятельств непреодолимой силы Оператор в возможно короткий срок, но не позднее <b>10 (десяти) рабочих дней</b> со дня их выявления, размещает соответствующее уведомление на Сайте.</p>
-<p>8.3. На период действия форс-мажора срок исполнения обязательств продлевается соразмерно времени действия таких обстоятельств. После их прекращения исполнение обязательств возобновляется.</p>
-
-<h2>9. Заключительные положения</h2>
-<p>9.1. Оператор вправе вносить изменения в Политику в одностороннем порядке. Новая редакция вступает в силу с момента её размещения на Сайте, если иное не предусмотрено новой редакцией. Продолжение использования Сайта означает согласие Пользователя с новой редакцией.</p>
-<p>9.2. Действующая редакция Политики постоянно размещена на сайте identity.uz.</p>
-<p>9.3. Вопросы по Политике направляются на адрес [privacy@identity.uz].</p>
+<p>В обращении необходимо указать: Ф.И.О., ПИНФЛ или контактные данные, конкретное содержание обращения.</p>
 `
 },
 
 en: {
   title: 'Privacy Policy',
-  updated: 'Effective date: 04.08.2026 · Version 1.0',
+  updated: 'Effective date: 27 August 2027 · Last updated: 27 August 2026 · Version 1.0',
   html: `
+<p><b>Privacy policy of the IDENTITY platform and procedure for processing personal data.</b></p>
+<p>The Operator is entitled to amend this Privacy Policy without the User's consent. The new policy enters into force from the moment it is published on the Site, unless the new version of the Policy provides otherwise.</p>
+
 <h2>1. General provisions</h2>
-<p>1.1. The following terms are used in this Privacy Policy (the "Policy"):</p>
+<p>1.1. This personal data processing and privacy policy (hereinafter — the "Policy") has been developed and published by Identity LLC (hereinafter — the "Company").</p>
+<p>1.2. The Company is the operator and the owner of the information system of the following digital resources, platforms and services:</p>
 <ul>
-<li><b>Operator</b> — [IDENTITY LLC, TIN: _________, address: _________], owner of the identity.uz website and the owner and operator of the personal data database;</li>
-<li><b>Website</b> — the internet resource located at the identity.uz domain;</li>
-<li><b>User</b> — an individual who visits the Website or submits information through the contact form;</li>
-<li><b>Client</b> — a legal entity in a contractual relationship with the Operator;</li>
-<li><b>Personal data</b> — information recorded on an electronic, paper and (or) other tangible medium that relates to an identified individual or makes it possible to identify them.</li>
+<li>the web address https://identity-uz.com and all its subdomains;</li>
+<li>additional domains belonging to the Operator (for example, face-id.uz);</li>
+<li>the IDENTITY biometric and digital verification platform;</li>
+<li>identification, authentication and Liveness/Anti-spoofing services;</li>
+<li>API and backend integration modules;</li>
+<li>processing services based on artificial intelligence (AI) and machine learning (ML) technologies;</li>
+<li>mobile applications and technical support channels.</li>
 </ul>
-<p>1.2. The Policy is drawn up in accordance with the following legal acts:</p>
+<p>1.3. This Policy applies in accordance with the current legislation of the Republic of Uzbekistan and international information security standards.</p>
+<p>1.4. In its activities the Company strictly complies with the requirements of the following legal acts:</p>
 <ul>
-<li>Law of the Republic of Uzbekistan No. ZRU-547 of 2 July 2019 <b>"On Personal Data"</b> (adopted by the Legislative Chamber on 16 April 2019, approved by the Senate on 21 June 2019, in force since 1 October 2019) — as amended by Laws No. ZRU-666 of 14 January 2021, No. ZRU-880 of 28 November 2023 and No. ZRU-1125 of 26 March 2026 (in force since 27 March 2026);</li>
-<li>Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 71 of 8 February 2020 "On Approval of the Regulation on the State Register of Personal Data Databases";</li>
-<li>Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 570 of 5 October 2022 "On Approval of Certain Regulatory Legal Acts in the Field of Personal Data Processing";</li>
-<li>other applicable legislation of the Republic of Uzbekistan.</li>
+<li>Law of the Republic of Uzbekistan No. ZRU-547 of 2 July 2019 <b>"On Personal Data"</b>;</li>
+<li>Law of the Republic of Uzbekistan No. ZRU-1125 of 26 March 2026 (enhanced requirements for storing personal, biometric and genetic data within the Republic of Uzbekistan and for cross-border transfer);</li>
+<li>Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 415 of 29 July 2026 (on the list of foreign states ensuring an equivalent level of personal data protection);</li>
+<li>Law of the Republic of Uzbekistan <b>"On Cybersecurity"</b>;</li>
+<li>the Civil Code of the Republic of Uzbekistan and the laws on electronic documents and electronic commerce.</li>
 </ul>
-<p>1.3. The Policy applies to all information published on the Website and to information entered by Users through the Website. The Policy does not extend to third-party websites and services linked from the Website.</p>
-<p>1.4. Use of the Website constitutes the User's unconditional acceptance of this Policy. If the User does not agree with its terms, they must stop using the Website.</p>
 
-<h2>2. Personal data collected</h2>
-<p>2.1. Data collected automatically while the Website operates:</p>
+<h2>2. Operator details</h2>
+<table>
+<tr><td>Full legal name</td><td>Identity LLC</td></tr>
+<tr><td>Taxpayer ID (INN)</td><td>310328044</td></tr>
+<tr><td>Legal address</td><td>Republic of Uzbekistan, Tashkent, Shaykhantakhur district, Jangoh neighbourhood, Jangoh massif, house 37</td></tr>
+<tr><td>Official website</td><td>https://identity-uz.com</td></tr>
+<tr><td>Privacy e-mail</td><td>info@identity-uz.com</td></tr>
+<tr><td>Support line</td><td>+998 (78) 555-11-75</td></tr>
+<tr><td>DPO (responsible person)</td><td>Chief Technology Officer</td></tr>
+</table>
+
+<h2>3. Categories of data processed</h2>
+<p>While providing its services, the IDENTITY platform may process the following categories of data:</p>
 <ul>
-<li>information about the User's device (computer, mobile phone) and browser, including the IP address and the approximate location of the device;</li>
-<li>cookie data;</li>
-<li>information about the User's actions on the Website (pages viewed, navigation);</li>
-<li>date and time of access, referral source (referrer).</li>
+<li><b>Identification data:</b> full name, PINFL, passport/ID card series and number, date of birth.</li>
+<li><b>Contact data:</b> phone number, e-mail address.</li>
+<li><b>Biometric data:</b> facial image (Face ID photo and video stream), biometric descriptors (vector templates), liveness/anti-spoofing check results and biometric verification statistics.</li>
+<li><b>Device and technical logs:</b> IP address, device identifier, operating system, browser type, session identifiers and cybersecurity monitoring logs, cookie file data.</li>
+<li>Data submitted by the User through the feedback form on the site: phone number and the text of the enquiry.</li>
+<li>Data obtained automatically by querying the information systems of authorised state bodies with the User's consent.</li>
 </ul>
-<p>2.2. Data voluntarily provided by the User through the contact form: name, company name, email address, phone number, direction of interest and message text.</p>
-<p>2.3. <b>No biometric or genetic data is collected through the Website.</b> Processing of such data within the Operator's biometric identification (FaceID) and video analytics products is carried out solely under separate contracts with Clients and in accordance with Article 27¹ of Law No. ZRU-547 (as amended by Law No. ZRU-1125) — with storage on technical facilities located in the territory of the Republic of Uzbekistan.</p>
-<p>2.4. The Operator does not verify the accuracy of the information provided by the User. The User who provided inaccurate information bears responsibility for it.</p>
 
-<h2>3. Grounds and purposes of processing</h2>
-<p>3.1. The Operator processes personal data on the following grounds:</p>
+<h2>4. Biometric data and storage within Uzbekistan (localisation)</h2>
+<p>4.1. <b>Localisation obligation:</b> under the requirements of Law No. ZRU-1125 of 2026, the biometric data of citizens of the Republic of Uzbekistan and the primary databases thereof are stored solely on servers and in data centres located within the Republic of Uzbekistan and having the prescribed level of security.</p>
+<p>4.2. <b>No transfer to foreign infrastructure:</b> Users' biometric data (face templates, photo records) are not transferred to or stored on foreign cloud servers, in foreign third-party AI models or on international analytics platforms.</p>
+<p>4.3. <b>AI and ML objects:</b> biometric data are not used to train third-party artificial intelligence models without the User's separate, explicitly expressed written or electronic consent.</p>
+
+<h2>5. Purposes and legal grounds for processing</h2>
+<p>5.1. <b>Purposes:</b></p>
 <ul>
-<li>the User's consent — completing and submitting the contact form is an action expressing consent;</li>
-<li>the need to conclude or perform a contract at the User's initiative;</li>
-<li>performance of obligations established by law.</li>
+<li>remote real-time identification and verification of the User's identity;</li>
+<li>prevention of fraud (deepfake, injection attacks, spoofing);</li>
+<li>secure provision of the IDENTITY platform's API services to partners and customers;</li>
+<li>compliance with the lawful requirements of legislation and of judicial/law enforcement bodies.</li>
 </ul>
-<p>3.2. Purposes of processing:</p>
+<p>5.2. <b>Legal grounds:</b></p>
 <ul>
-<li>responding to the User's request and establishing contact;</li>
-<li>providing information about the Operator's products and services and agreeing pilot project terms;</li>
-<li>improving the quality and usability of the Website;</li>
-<li>conducting depersonalised statistical research;</li>
-<li>ensuring the security of the Website.</li>
+<li>the User's consent given through the information system;</li>
+<li>a public offer or service agreement concluded with the User;</li>
+<li>legal obligations imposed on the Operator by the laws of the Republic of Uzbekistan.</li>
 </ul>
-<p>3.3. Google Analytics is used for statistics; only technical data that does not directly identify an individual is transferred to it. The User may disable cookies in their browser settings.</p>
+<p>5.3. Use of the Operator's Services (the Site, the Software) means the User's unconditional consent to this Policy and to all conditions set out in it. If the User does not agree with these conditions, they must refrain from using the Services.</p>
+<p>5.4. The Operator does not verify the reliability of the information received and does not control its accuracy. The risk associated with providing unreliable information is borne by the user who provided it and by the authorised state body.</p>
 
-<h2>4. Retention periods and protection measures</h2>
-<p>4.1. Personal data received through the contact form is stored on servers located in the territory of the Republic of Uzbekistan.</p>
-<p>4.2. Data is retained for <b>3 (three) years</b> from the last interaction or until the User requests its deletion, unless a different period is established by law.</p>
-<p>4.3. The Operator takes legal, organisational and technical protection measures taking into account the requirements of Resolution of the Cabinet of Ministers No. 570 of 5 October 2022: access to data is granted only to authorised employees, transfers are made over secure channels, and measures are applied to prevent unauthorised access.</p>
+<h2>6. Cross-border transfer procedure</h2>
+<p>6.1. Cross-border transfer of personal data (outside Uzbekistan) is carried out in compliance with the list of foreign states and the requirements established by Resolution of the Cabinet of Ministers No. 415 of 29 July 2026, which ensure an adequate level of data protection.</p>
+<p>6.2. Transfer of data to states that do not ensure an adequate level of protection is permitted only with the user's special consent or where other specific exceptions established by law apply.</p>
 
-<h2>5. Disclosure to third parties</h2>
-<p>5.1. Personal data may be disclosed to third parties in the following cases:</p>
+<h2>7. Retention period and deletion (delete right)</h2>
+<p>7.1. Personal data are stored only for the period necessary for the purpose of processing.</p>
+<p>7.2. The User is entitled, in the manner established by legislation, to send an application for deletion or correction of their data or withdrawal of consent to <b>info@identity-uz.com</b>.</p>
+<p>7.3. Data whose retention is mandatory under legislation (accounting, cybersecurity logs or court requests) are not deleted until the relevant mandatory retention period expires and are archived securely.</p>
+
+<h2>8. Information security measures</h2>
+<p>To protect data against corruption, loss or unauthorised access, the Company applies the following cybersecurity standards:</p>
 <ul>
-<li>the User has consented to such actions;</li>
-<li>the disclosure is necessary to provide a service requested by the User;</li>
-<li>the disclosure is made at the request of authorised state bodies in the manner prescribed by law;</li>
-<li>to protect the rights of Users or third parties within the limits permitted by law.</li>
+<li>TLS 1.3 / HTTPS encryption protocols on all data transmission channels;</li>
+<li>end-to-end encryption of stored biometric templates;</li>
+<li>use of cybersecurity tools from the state register and certified tools.</li>
 </ul>
-<p>5.2. No cross-border transfer of personal data received through the contact form is carried out. In accordance with Article 27¹ of Law No. ZRU-547, biometric and genetic data is stored exclusively in the territory of the Republic of Uzbekistan.</p>
 
-<h2>6. User rights</h2>
-<p>6.1. The User has the right to:</p>
+<h2>9. User rights</h2>
+<p>The User has the following rights:</p>
 <ul>
-<li>receive information about the processing of their personal data;</li>
-<li>demand correction of inaccurate or outdated data;</li>
-<li>withdraw consent and demand deletion of data;</li>
-<li>apply to the authorised state body or to court.</li>
+<li>to receive information about the processing of their data and its source;</li>
+<li>to demand correction and completion of incorrect or incomplete data;</li>
+<li>to withdraw consent to the processing of data. The Operator deletes the User's personal information within 14 (fourteen) days from the date of receipt of the User's written substantiated request. The Operator is entitled to additionally verify the authenticity of the sender;</li>
+<li>to apply to the Authorised body (the Department under the Ministry of Internal Affairs of the Republic of Uzbekistan) or to a court in the event of a violation of their rights.</li>
 </ul>
-<p>6.2. Requests are sent to [privacy@identity.uz]. The Operator deletes or corrects the data within <b>14 (fourteen) days</b> from receipt of a reasoned written request. The Operator may ask the applicant to confirm their identity.</p>
 
-<h2>7. Cookies</h2>
-<p>7.1. A cookie is a small text file that the Website stores on the User's device. Cookies are used to remember Website settings (for example, the selected language) and to keep anonymous statistics.</p>
-<p>7.2. The User may disable or delete cookies in their browser settings; in this case certain functions of the Website may operate with limitations.</p>
-
-<h2>8. Force majeure</h2>
-<p>8.1. The Operator is released from liability for non-performance or improper performance of obligations under the Policy if caused by force majeure — extraordinary, unforeseeable and unavoidable circumstances beyond the Operator's control. Such circumstances include, in particular:</p>
+<h2>10. Contact and enquiries</h2>
+<p>You may send enquiries and objections regarding the processing of personal data and privacy through the following channels:</p>
 <ul>
-<li>natural disasters (earthquake, flood, fire and others);</li>
-<li>military actions, mass riots, acts of terrorism;</li>
-<li>acts and actions of state bodies that make performance of the Policy impossible;</li>
-<li>interruptions in power supply and telecommunication networks, failures of internet providers and hosting providers;</li>
-<li>DDoS attacks and other unlawful interference by third parties in information systems.</li>
+<li><b>E-mail:</b> info@identity-uz.com</li>
+<li><b>Postal address:</b> Tashkent, head office of Identity LLC, Shaykhantakhur district, Jangoh neighbourhood, Jangoh massif, house 37.</li>
 </ul>
-<p>8.2. Upon the occurrence of force majeure, the Operator shall publish a notice on the Website as soon as possible, but no later than <b>10 (ten) business days</b> from the day such circumstances are identified.</p>
-<p>8.3. For the duration of force majeure, the period for performing obligations is extended in proportion to the duration of such circumstances. Once they cease, performance of obligations resumes.</p>
-
-<h2>9. Final provisions</h2>
-<p>9.1. The Operator may amend the Policy unilaterally. The new version takes effect from the moment it is published on the Website, unless the new version provides otherwise. Continued use of the Website constitutes the User's acceptance of the new version.</p>
-<p>9.2. The current version of the Policy is permanently available at identity.uz.</p>
-<p>9.3. Questions regarding the Policy may be sent to [privacy@identity.uz].</p>
+<p>The enquiry must state: full name, PINFL or contact details, and the specific subject of the enquiry.</p>
 `
 }
-};
+
+}
