@@ -5,11 +5,11 @@ import { CONFIG } from '@/data/config.js'
 import { PRODUCTS } from '@/data/products.js'
 import logoLight from '@/assets/img/logo-white.png'
 
-const { t, p } = useLang()
+const { t, p, lang } = useLang()
 const c = CONFIG.contacts
 const year = new Date().getFullYear()
-/* NDA shabloni — config'da ko'rsatilgan bo'lsagina havola chiziladi */
-const nda = CONFIG.ndaFile || ''
+/* NDA shabloni — joriy sayt tiliga mos fayl; bo'lmasa havola chizilmaydi */
+const nda = computed(() => (CONFIG.ndaFiles || {})[lang.value] || '')
 const products = computed(() => PRODUCTS.slice(0, 8).map(x => ({ slug: x.slug, name: p(x).name })))
 </script>
 

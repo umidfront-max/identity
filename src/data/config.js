@@ -24,10 +24,13 @@ export const CONFIG = {
     'faceid': 'presentations/faceid.pptx'
   },
 
-  /* NDA shabloni. Faylni public/docs/ ichiga qo'ying va manzilini shu yerga
-     yozing, masalan: 'docs/identity-nda.docx'. Bo'sh bo'lsa footerdagi
-     havola umuman chizilmaydi (buzilgan havola paydo bo'lmasligi uchun). */
-  ndaFile: 'docs/identity-nda.docx',
+  /* NDA shabloni — sayt tiliga qarab beriladi. Fayllar public/docs/ da.
+     Til uchun fayl ko'rsatilmagan bo'lsa, footerdagi havola chizilmaydi. */
+  ndaFiles: {
+    uz: 'docs/nda-uz.docx',
+    ru: 'docs/nda-ru.docx',
+    en: 'docs/nda-en.docx'
+  },
 
   /* Aloqa ma'lumotlari (footer, kontaktlar sahifasi, mailto-fallback) */
   contacts: {
