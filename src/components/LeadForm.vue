@@ -13,7 +13,6 @@ const { track } = useAnalytics()
 const form = reactive({ name: '', phone: '', email: '', product: '', message: '', consent: true })
 const errors = reactive({ phone: false, consent: false })
 const state = ref('idle') // idle | sending | ok | err
-const errText = ref('')   // backend qaytargan validatsiya xabari
 
 const options = computed(() => PRODUCTS.map(x => ({ slug: x.slug, name: p(x).name })))
 const busy = computed(() => state.value === 'sending')
@@ -78,7 +77,6 @@ async function submit () {
   if (!validate()) return
 
   state.value = 'sending'
-  errText.value = ''
   const payload = leadPayload()
 
   track('generate_lead', {
@@ -108,8 +106,10 @@ async function submit () {
       return
     }
     if (res.status === 400) {
+      /* Bu yerga tushmasligi kerak - maydonlarni yuborishdan oldin
+         API qoidalari bo'yicha tekshiramiz. Tushsa, sababi konsolda. */
       const err = await res.json().catch(() => ({}))
-      errText.value = err.message || ''
+      console.warn('lead 400:', err.message || res.statusText)
     }
     state.value = 'err'
   } catch (e) {
@@ -167,7 +167,7 @@ async function submit () {
         <p v-if="state === 'ok'" class="msg msg--ok">{{ CONFIG.formEndpoint ? t('form.ok') : t('form.mailto') }}</p>
       </Transition>
       <Transition name="pop">
-        <p v-if="state === 'err'" class="msg msg--err">{{ errText || t('form.err') }}</p>
+        <p v-if="state === 'err'" class="msg msg--err">{{ t('form.err') }}</p>
       </Transition>
     </div>
   </form>

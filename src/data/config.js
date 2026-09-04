@@ -12,7 +12,7 @@ export const CONFIG = {
   /* Lead API — forma shu manzilga POST qiladi, backend esa zayavkani
      Telegram botga yuboradi. Spetsifikatsiya: lead-api-doc.html
      Muvaffaqiyat = 202 Accepted. Bo'sh bo'lsa forma mailto ga qaytadi. */
-  formEndpoint: 'https://api.identity-uz.com/api/call/lead',
+  formEndpoint: 'https://face-id.uz/api/call/lead',
 
   /* Mahsulot taqdimotlari. Kalit — mahsulot slug'i, qiymat — fayl manzili.
      Faylni public/presentations/ ichiga qo'ying va shu yerga yozing, masalan:
