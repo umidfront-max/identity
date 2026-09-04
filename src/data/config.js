@@ -9,10 +9,10 @@ export const CONFIG = {
   /* Google Tag Manager konteyner ID (ixtiyoriy): 'GTM-XXXXXXX' */
   gtmId: '',
 
-  /* Forma qayerga yuboriladi. POST JSON qabul qiluvchi manzil:
-     o'z backendingiz, Formspree, Google Apps Script va h.k.
-     Bo'sh bo'lsa — forma mailto orqali yuboriladi. */
-  formEndpoint: '',
+  /* Lead API — forma shu manzilga POST qiladi, backend esa zayavkani
+     Telegram botga yuboradi. Spetsifikatsiya: lead-api-doc.html
+     Muvaffaqiyat = 202 Accepted. Bo'sh bo'lsa forma mailto ga qaytadi. */
+  formEndpoint: 'https://api.identity-uz.com/api/call/lead',
 
   /* Mahsulot taqdimotlari. Kalit — mahsulot slug'i, qiymat — fayl manzili.
      Faylni public/presentations/ ichiga qo'ying va shu yerga yozing, masalan:

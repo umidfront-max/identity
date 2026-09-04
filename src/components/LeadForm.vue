@@ -13,6 +13,7 @@ const { track } = useAnalytics()
 const form = reactive({ name: '', phone: '', email: '', product: '', message: '', consent: true })
 const errors = reactive({ phone: false, consent: false })
 const state = ref('idle') // idle | sending | ok | err
+const errText = ref('')   // backend qaytargan validatsiya xabari
 
 const options = computed(() => PRODUCTS.map(x => ({ slug: x.slug, name: p(x).name })))
 const busy = computed(() => state.value === 'sending')
@@ -20,15 +21,56 @@ const busy = computed(() => state.value === 'sending')
 /* Rozilik matnidagi {link} o'rniga maxfiylik siyosatiga havola qo'yiladi */
 const consentParts = computed(() => t('form.consent').split('{link}'))
 
+/* Mahsulot slug'i -> Lead API ning direction enum'i (lead-api-doc.html, 1.1) */
+const DIRECTION = {
+  'custom-development': 'CUSTOM_DEV',
+  'faceid':             'FACE_ID',
+  'video-analytics':    'VIDEO_ANALYTICS',
+  'antifraud':          'ANTIFRAUD',
+  'edr':                'EDR',
+  'dlp':                'DLP',
+  'ips-ids':            'IPS_IDS',
+  'waf-antiddos':       'WAF_DDOS',
+  'sast-dast':          'SAST_DAST'
+}
+
+/* API cheklovlari: phone majburiy, qolganlari ixtiyoriy va uzunligi chegaralangan */
+const PHONE_RE = /^\+?[0-9()\-\s]{7,20}$/
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 onMounted(() => {
   /* Qiziqish tarixi bo'yicha mahsulotni oldindan tanlaymiz */
   form.product = props.product || topInterest() || ''
 })
 
 function validate () {
-  errors.phone = form.phone.trim().length < 6
+  errors.phone = !PHONE_RE.test(form.phone.trim())
   errors.consent = !form.consent
   return !errors.phone && !errors.consent
+}
+
+/* Menejer zayavka qaysi sahifadan kelganini ko'rishi uchun (max 200 belgi) */
+function sourceLine () {
+  const prod = PRODUCTS.find(x => x.slug === form.product)
+  const page = prod ? p(prod).name : document.title
+  /* Hujjatdagi standart ko'rinish: identity-uz.com — страница «Название» */
+  return `${location.hostname} — страница «${page}»`.slice(0, 200)
+}
+
+/* Lead API kutadigan payload; bo'sh ixtiyoriy maydonlar umuman yuborilmaydi */
+function leadPayload () {
+  const out = {
+    direction: DIRECTION[form.product] || 'GENERAL',
+    phone: form.phone.trim(),
+    source: sourceLine()
+  }
+  const name = form.name.trim()
+  const email = form.email.trim()
+  const task = form.message.trim()
+  if (name) out.name = name.slice(0, 100)
+  if (email && EMAIL_RE.test(email)) out.email = email
+  if (task) out.task = task.slice(0, 2000)
+  return out
 }
 
 async function submit () {
@@ -36,17 +78,12 @@ async function submit () {
   if (!validate()) return
 
   state.value = 'sending'
-  const payload = {
-    ...form,
-    language: lang.value,
-    interest: topInterest() || '',
-    page: location.href,
-    ts: new Date().toISOString()
-  }
+  errText.value = ''
+  const payload = leadPayload()
 
   track('generate_lead', {
     product: form.product || 'any',
-    interest: payload.interest,
+    interest: topInterest() || '',
     language: lang.value
   })
 
@@ -64,9 +101,17 @@ async function submit () {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
-    if (!res.ok) throw new Error('bad status')
-    state.value = 'ok'
-    Object.assign(form, { name: '', phone: '', email: '', message: '', consent: true })
+    /* 202 Accepted — zayavka qabul qilindi va Telegram botga yuborilyapti */
+    if (res.status === 202 || res.ok) {
+      state.value = 'ok'
+      Object.assign(form, { name: '', phone: '', email: '', message: '', consent: true })
+      return
+    }
+    if (res.status === 400) {
+      const err = await res.json().catch(() => ({}))
+      errText.value = err.message || ''
+    }
+    state.value = 'err'
   } catch (e) {
     state.value = 'err'
   }
@@ -122,7 +167,7 @@ async function submit () {
         <p v-if="state === 'ok'" class="msg msg--ok">{{ CONFIG.formEndpoint ? t('form.ok') : t('form.mailto') }}</p>
       </Transition>
       <Transition name="pop">
-        <p v-if="state === 'err'" class="msg msg--err">{{ t('form.err') }}</p>
+        <p v-if="state === 'err'" class="msg msg--err">{{ errText || t('form.err') }}</p>
       </Transition>
     </div>
   </form>
