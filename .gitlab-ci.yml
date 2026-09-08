@@ -1,0 +1,24 @@
+
+stages:
+ - deploy
+deploy:
+  stage: deploy
+  image: docker:latest
+  before_script:
+  #  - export GRADLE_USER_HOME=pwd/.gradle_home
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      changes:  
+        - makefile
+        - docker-compose.yml
+      when: never  
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      when: on_success 
+  tags:
+    - shell
+  script:
+  #  - gradle clean build -x test --parallel
+    - docker-compose build --parallel
+    - docker-compose down
+    - docker-compose up -d
