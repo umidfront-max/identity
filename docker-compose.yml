@@ -1,0 +1,14 @@
+services:
+  frontend:
+    container_name: identityfront
+    image: identityfront:latest
+    restart: on-failure
+    build:
+      context: . # Context will be the project root
+      dockerfile: ./Dockerfile
+      args:
+        version: 1.0.0-SNAPSHOT
+    ports:
+      - 5173:5173
+    volumes:
+      - ./:/app
