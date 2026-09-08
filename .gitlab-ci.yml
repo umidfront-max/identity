@@ -22,4 +22,3 @@ deploy:
     - docker-compose build --parallel
     - docker-compose down
     - docker-compose up -d
-    
