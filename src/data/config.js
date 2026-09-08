@@ -9,6 +9,9 @@ export const CONFIG = {
   /* Google Tag Manager konteyner ID (ixtiyoriy): 'GTM-XXXXXXX' */
   gtmId: '',
 
+  /* Yandex.Metrika hisoblagich raqami. Bo'sh bo'lsa Metrika yuklanmaydi. */
+  yandexMetrikaId: '112383354',
+
   /* Lead API — forma shu manzilga POST qiladi, backend esa zayavkani
      Telegram botga yuboradi. Spetsifikatsiya: lead-api-doc.html
      Muvaffaqiyat = 202 Accepted. Bo'sh bo'lsa forma mailto ga qaytadi. */
