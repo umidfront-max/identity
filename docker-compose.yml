@@ -9,6 +9,6 @@ services:
       args:
         version: 1.0.0-SNAPSHOT
     ports:
-      - 5173:5173
+      - 5172:5173
     volumes:
       - ./:/app
