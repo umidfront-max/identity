@@ -5,6 +5,7 @@
 import { SITE, seoFor } from '@/data/seo.js'
 
 const LANGS = ['uz', 'ru', 'en']
+const DEFAULT_LANG = 'uz'
 
 /* Nomi bo'yicha <meta> topadi yoki yaratadi. attr: 'name' yoki 'property'. */
 function meta (attr, key, content) {
@@ -63,10 +64,17 @@ function jsonLd (lang) {
   el.textContent = JSON.stringify(data)
 }
 
-/* Joriy sahifaning kanonik manzili — so'rov parametrlarisiz va fragmentsiz */
-function canonicalUrl () {
-  const path = location.pathname === '/' ? '/' : location.pathname.replace(/\/+$/, '')
-  return SITE.url + path
+/* Joriy yo'l — fragmentsiz va so'rov parametrlarisiz */
+function cleanPath () {
+  return location.pathname === '/' ? '/' : location.pathname.replace(/\/+$/, '')
+}
+
+/* Til uchun manzil. Sayt tili ?lang= parametri bilan tanlanadi, shuning
+   uchun har bir til alohida manzilga ega bo'ladi va qidiruv tizimlari
+   uchalasini ham indekslay oladi. Asosiy til (uz) parametrsiz. */
+function urlFor (lang) {
+  const url = SITE.url + cleanPath()
+  return lang === DEFAULT_LANG ? url : url + '?lang=' + lang
 }
 
 export function applySeo (routeName, slug, lang) {
@@ -78,7 +86,8 @@ export function applySeo (routeName, slug, lang) {
   meta('name', 'description', description)
   meta('name', 'keywords', keywords)
 
-  const url = canonicalUrl()
+  /* canonical — shu til nusxasining o'z manzili */
+  const url = urlFor(lang)
   meta('property', 'og:title', title)
   meta('property', 'og:description', description)
   meta('property', 'og:type', routeName === 'home' ? 'website' : 'article')
@@ -93,10 +102,10 @@ export function applySeo (routeName, slug, lang) {
   meta('name', 'twitter:image', SITE.image)
 
   link('canonical', url)
-  /* Til almashtirgich URL ni o'zgartirmaydi (til localStorage'da saqlanadi),
-     shuning uchun hreflang barcha tillarga bir xil manzilni ko'rsatadi. */
-  for (const l of LANGS) link('alternate', url, l)
-  link('alternate', url, 'x-default')
+  /* hreflang — har bir til o'z manzilini ko'rsatadi, shunda Google
+     ruscha so'rovga ruscha sahifani, o'zbekchaga o'zbekchasini chiqaradi. */
+  for (const l of LANGS) link('alternate', urlFor(l), l)
+  link('alternate', urlFor(DEFAULT_LANG), 'x-default')
 
   jsonLd(lang)
 }

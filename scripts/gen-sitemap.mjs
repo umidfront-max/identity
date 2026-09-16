@@ -20,19 +20,29 @@ const pages = [
 
 const today = new Date().toISOString().slice(0, 10)
 
-const body = pages.map(p => `  <url>
-    <loc>${SITE.url}${p.loc}</loc>
+/* Sayt tili ?lang= parametri bilan tanlanadi, shuning uchun har bir sahifa
+   uch tilda uch alohida manzil. Har birida qolgan tillarga xhtml:link
+   ishorasi turadi - Google qaysi so'rovga qaysi nusxani chiqarishni biladi. */
+const LANGS = ['uz', 'ru', 'en']
+const DEFAULT_LANG = 'uz'
+const urlFor = (loc, l) => SITE.url + loc + (l === DEFAULT_LANG ? '' : '?lang=' + l)
+
+const body = pages.flatMap(p => LANGS.map(l => `  <url>
+    <loc>${urlFor(p.loc, l)}</loc>
+${LANGS.map(a => `    <xhtml:link rel="alternate" hreflang="${a}" href="${urlFor(p.loc, a)}"/>`).join('\n')}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor(p.loc, DEFAULT_LANG)}"/>
     <lastmod>${today}</lastmod>
     <changefreq>${p.freq}</changefreq>
     <priority>${p.pri}</priority>
-  </url>`).join('\n')
+  </url>`)).join('\n')
 
 writeFileSync('public/sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>
 <!-- Avtomatik yasaladi: scripts/gen-sitemap.mjs. Qo'lda tahrirlamang. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${body}
 </urlset>
 `)
 
-console.log('sitemap.xml:', pages.length, 'ta manzil')
+console.log('sitemap.xml:', pages.length * LANGS.length, 'ta manzil (' + pages.length + ' sahifa x ' + LANGS.length + ' til)')
