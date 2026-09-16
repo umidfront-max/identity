@@ -63,10 +63,10 @@ function jsonLd (lang) {
   el.textContent = JSON.stringify(data)
 }
 
-/* Joriy sahifaning kanonik manzili. Hash-marshrutda fragment ham qoladi. */
+/* Joriy sahifaning kanonik manzili — so'rov parametrlarisiz va fragmentsiz */
 function canonicalUrl () {
-  const hash = location.hash && location.hash !== '#/' ? location.hash : ''
-  return SITE.url + '/' + hash
+  const path = location.pathname === '/' ? '/' : location.pathname.replace(/\/+$/, '')
+  return SITE.url + path
 }
 
 export function applySeo (routeName, slug, lang) {

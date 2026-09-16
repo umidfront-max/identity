@@ -72,7 +72,7 @@ export function topInterest () {
 
 export function useAnalytics () {
   function track (event, params = {}) {
-    const data = { ...params, page_path: location.hash || '#/' }
+    const data = { ...params, page_path: location.pathname || '/' }
     if (window.gtag) window.gtag('event', event, data)
     window.dataLayer.push({ event, ...data })
 

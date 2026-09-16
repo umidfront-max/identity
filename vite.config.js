@@ -11,7 +11,9 @@ const allowedHosts = [
 ]
 
 export default defineConfig({
-  base: './',
+  /* history rejimida manzil ichma-ich bo'ladi (/p/faceid), shuning uchun
+     resurslar ildizdan olinadi — './' bo'lsa /p/assets/... deb qidirardi. */
+  base: '/',
   plugins: [vue()],
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) }

@@ -304,13 +304,55 @@ export const PRODUCT_SEO = {
 
 }
 
+/* Aksiya sahifalari — slug bo'yicha */
+export const PROMO_SEO = {
+
+'deepfake': {
+  uz: {
+    title: 'DeepFake aniqlash — biznesni soxta video va ovozdan himoya',
+    description: 'DeepFake aniqlash yechimi: soxta video va ovozni fosh etish, antispoofing va liveness tekshiruvi. Aksiya shartlari bilan tanishing.',
+    keywords: ['deepfake aniqlash', 'antifrod tizimi', 'yuzni tanish tizimi']
+  },
+  ru: {
+    title: 'Защита от дипфейков — обнаружение поддельного видео',
+    description: 'Решение для защиты от дипфейков: выявление поддельного видео и голоса, антиспуфинг и проверка liveness. Условия акции.',
+    keywords: ['защита от дипфейков', 'антифрод система', 'антиспуфинг']
+  },
+  en: {
+    title: 'Deepfake Detection — Protect Your Business from Fakes',
+    description: 'Deepfake detection: exposing forged video and voice, anti-spoofing and liveness detection. See the current offer.',
+    keywords: ['deepfake detection', 'fraud detection system', 'liveness detection']
+  }
+},
+
+'luna-line': {
+  uz: {
+    title: 'Luna Line — yuzni tanish asosidagi videoanalitika aksiyasi',
+    description: 'Luna Line yechimi bo\'yicha maxsus taklif: aqlli videokuzatuv, kamera orqali yuzni aniqlash va tashriflar analitikasi.',
+    keywords: ['videoanalitika', 'aqlli videokuzatuv', 'yuzni tanish tizimi']
+  },
+  ru: {
+    title: 'Luna Line — акция на видеоаналитику с распознаванием лиц',
+    description: 'Специальное предложение на решение Luna Line: интеллектуальное видеонаблюдение и распознавание лиц. VisionLabs LUNA в Узбекистане.',
+    keywords: ['VisionLabs LUNA Узбекистан', 'видеоаналитика', 'распознавание лиц']
+  },
+  en: {
+    title: 'Luna Line — Face Recognition Video Analytics Offer',
+    description: 'Special offer on the Luna Line solution: intelligent video surveillance and face recognition with visitor analytics.',
+    keywords: ['video analytics', 'intelligent video surveillance', 'face recognition']
+  }
+}
+
+}
+
 /* Sahifa uchun yakuniy SEO obyekti. Topilmasa — bosh sahifanikiga qaytadi. */
 export function seoFor (routeName, slug, lang) {
   const L = lang || 'uz'
   const pick = o => (o && (o[L] || o.uz)) || null
-  const found = routeName === 'product'
-    ? pick(PRODUCT_SEO[slug])
-    : pick(PAGES[routeName])
+  let found = null
+  if (routeName === 'product') found = pick(PRODUCT_SEO[slug])
+  else if (routeName === 'promo') found = pick(PROMO_SEO[slug])
+  else found = pick(PAGES[routeName])
   const base = pick(PAGES.home)
   const seo = found || base
   return {

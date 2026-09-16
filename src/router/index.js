@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   { path: '/', name: 'home', component: () => import('@/views/HomeView.vue') },
@@ -12,8 +12,16 @@ const routes = [
   { path: '/:pathMatch(.*)*', name: 'notfound', component: () => import('@/views/NotFoundView.vue') }
 ]
 
+/* Eski #/... havolalar (ilgari tarqatilgan, qidiruvda saqlanib qolgan)
+   yangi manzilga yo'naltiriladi: /#/p/faceid -> /p/faceid.
+   Router yaratilishidan oldin bajarilishi shart. */
+if (typeof window !== 'undefined' && window.location.hash.startsWith('#/')) {
+  const target = window.location.hash.slice(1)
+  window.history.replaceState(null, '', target)
+}
+
 export const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior (to, from, saved) {
     if (saved) return saved
