@@ -7,6 +7,7 @@ import ScrollProgress from '@/components/ScrollProgress.vue'
 import CallFab from '@/components/CallFab.vue'
 import { useLang } from '@/composables/useLang.js'
 import { useAnalytics } from '@/composables/useAnalytics.js'
+import { applySeo } from '@/composables/useSeo.js'
 import { PRODUCTS } from '@/data/products.js'
 
 const route = useRoute()
@@ -30,12 +31,10 @@ const pageTitle = computed(() => {
   return map[route.name] || 'Identity'
 })
 
-/* Sarlavha va analitika — har bir marshrut/til o'zgarishida */
-watch([pageTitle, lang], () => {
-  /* Bosh sahifada — kompaniya to'liq tavsifi, boshqa sahifalarda «Sahifa — IDENTITY» */
-  document.title = route.name === 'home'
-    ? t('meta.home')
-    : pageTitle.value + t('meta.suffix')
+/* SEO meta-teglar — har bir marshrut/til o'zgarishida qayta yoziladi:
+   title, description, keywords, Open Graph, canonical, hreflang, JSON-LD. */
+watch([() => route.fullPath, lang], () => {
+  applySeo(route.name, route.params.slug, lang.value)
 }, { immediate: true })
 
 watch(() => route.fullPath, () => {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sayt hash-marshrutda ishlaydi (#/...), qidiruv tizimlari esa fragmentni
+     alohida manzil deb hisoblamaydi. Shuning uchun sitemap'da faqat bosh
+     sahifa turibdi. Marshrut history rejimiga o'tkazilsa, bu yerga barcha
+     mahsulot sahifalari qo'shiladi. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://identity-uz.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Hujjatlar va taqdimotlar indekslanmasin
+Disallow: /docs/
+Disallow: /presentations/
+
+Sitemap: https://identity-uz.com/sitemap.xml
