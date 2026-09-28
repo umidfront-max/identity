@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 import { useLang } from '@/composables/useLang.js'
 import { useAnalytics } from '@/composables/useAnalytics.js'
 import { PRODUCTS } from '@/data/products.js'
-import { CONFIG } from '@/data/config.js'
+import { CONFIG, publicUrl } from '@/data/config.js'
 import PageHero from '@/components/PageHero.vue'
 import SectionHead from '@/components/SectionHead.vue'
 import LeadForm from '@/components/LeadForm.vue'
@@ -15,7 +15,7 @@ import ProductGallery from '@/components/ProductGallery.vue'
 import ProductCarousel from '@/components/ProductCarousel.vue'
 
 const props = defineProps({ slug: String })
-const { t, p } = useLang()
+const { t, p, lang } = useLang()
 const { track, bumpInterest } = useAnalytics()
 const router = useRouter()
 
@@ -23,7 +23,14 @@ const product = computed(() => PRODUCTS.find(x => x.slug === props.slug) || null
 const data = computed(() => (product.value ? p(product.value) : {}))
 
 /* Taqdimot fayli config'da ko'rsatilgan bo'lsagina tugma chiziladi */
-const presentation = computed(() => (CONFIG.presentations || {})[props.slug] || null)
+/* Taqdimot: config'da satr (barcha tillarga bitta fayl) yoki
+   {uz,ru,en} kartasi bo'lishi mumkin. Karta bo'lsa — joriy til. */
+const presentation = computed(() => {
+  const v = (CONFIG.presentations || {})[props.slug]
+  if (!v) return null
+  const f = typeof v === 'string' ? v : (v[lang.value] || v.uz || '')
+  return f ? publicUrl(f) : null
+})
 
 /* Matnni bo'laklarga ajratadi: **qalin** va [[havola]] — v-html ishlatmasdan.
    [[...]] product.sourceUrl ga olib boradigan havola bo'lib chiziladi. */

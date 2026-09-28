@@ -24,7 +24,13 @@ export const CONFIG = {
      (buzilgan havola paydo bo'lmasligi uchun). */
   presentations: {
     'video-analytics': 'presentations/video-analytics.pptx',
-    'faceid': 'presentations/faceid.pptx'
+    'faceid': 'presentations/faceid.pptx',
+    /* Tilga qarab beriladi: joriy til uchun fayl bo'lmasa uz olinadi */
+    'dlp': {
+      uz: 'presentations/dlp-uz.pdf',
+      ru: 'presentations/dlp-ru.pdf',
+      en: 'presentations/dlp-en.pdf'
+    }
   },
 
   /* NDA shabloni — sayt tiliga qarab beriladi. Fayllar public/docs/ da.
@@ -48,3 +54,12 @@ export const CONFIG = {
     addressKey: 'contacts.address'
   }
 };
+
+/* public/ papkasidagi faylga manzil. Sayt manzillari ichma-ich bo'lgani
+   uchun (/p/dlp, /promo/deepfake) nisbiy yo'l /p/presentations/... ga
+   aylanib ketardi va fayl o'rniga sahifa yuklanardi — shuning uchun
+   boshiga '/' qo'yamiz. Tashqi havolalar o'zgarishsiz qoladi. */
+export function publicUrl (path) {
+  if (!path) return ''
+  return /^(https?:)?\/\//.test(path) ? path : '/' + String(path).replace(/^\/+/, '')
+}
