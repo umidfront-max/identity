@@ -30,6 +30,11 @@ export const CONFIG = {
       uz: 'presentations/dlp-uz.pdf',
       ru: 'presentations/dlp-ru.pdf',
       en: 'presentations/dlp-en.pdf'
+    },
+    'edr': {
+      uz: 'presentations/edr-uz.pptx',
+      ru: 'presentations/edr-ru.pptx',
+      en: 'presentations/edr-en.pptx'
     }
   },
 
