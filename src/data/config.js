@@ -17,14 +17,12 @@ export const CONFIG = {
      Muvaffaqiyat = 202 Accepted. Bo'sh bo'lsa forma mailto ga qaytadi. */
   formEndpoint: 'https://face-id.uz/api/call/lead',
 
-  /* Mahsulot taqdimotlari. Kalit — mahsulot slug'i, qiymat — fayl manzili.
-     Faylni public/presentations/ ichiga qo'ying va shu yerga yozing, masalan:
-       'faceid': 'presentations/faceid.pdf'
+  /* Mahsulot taqdimotlari. Kalit — mahsulot slug'i, qiymat — fayl manzili
+     yoki tillar kartasi. Fayllar public/presentations/ ichida, PDF ko'rinishida:
+     har qanday qurilmada ochiladi va o'zgartirib bo'lmaydi.
      Slug ro'yxatda bo'lmasa — «Taqdimotni yuklab olish» tugmasi ko'rsatilmaydi
-     (buzilgan havola paydo bo'lmasligi uchun). */
+     (buzilgan yoki bo'sh havola paydo bo'lmasligi uchun). */
   presentations: {
-    'video-analytics': 'presentations/video-analytics.pptx',
-    'faceid': 'presentations/faceid.pptx',
     /* Tilga qarab beriladi: joriy til uchun fayl bo'lmasa uz olinadi */
     'dlp': {
       uz: 'presentations/dlp-uz.pdf',
@@ -32,10 +30,13 @@ export const CONFIG = {
       en: 'presentations/dlp-en.pdf'
     },
     'edr': {
-      uz: 'presentations/edr-uz.pptx',
-      ru: 'presentations/edr-ru.pptx',
-      en: 'presentations/edr-en.pptx'
+      uz: 'presentations/edr-uz.pdf',
+      ru: 'presentations/edr-ru.pdf',
+      en: 'presentations/edr-en.pdf'
     }
+    /* faceid va video-analytics: haqiqiy taqdimot kelganda shu yerga
+       qo'shiladi. Ilgari bu yerda bo'sh o'rinbosar fayllar turgan edi —
+       tashrifchi bo'm-bo'sh fayl yuklab olardi, shuning uchun olib tashlandi. */
   },
 
   /* NDA shabloni — sayt tiliga qarab beriladi. Fayllar public/docs/ da.
